@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:sese.023.001.11">
+  <SctiesSttlmTxInstr>
+    <TxId>T-1</TxId>
+    <SttlmTpAndAddtlParams><SctiesMvmntTp>DELI</SctiesMvmntTp><Pmt>APMT</Pmt></SttlmTpAndAddtlParams>
+    <TradDtls>
+      <TradDt><Dt><Dt>2027-10-11</Dt></Dt></TradDt>
+      <SttlmDt><Dt><Dt>2027-10-13</Dt></Dt></SttlmDt>
+    </TradDtls>
+    <FinInstrmId><ISIN>GB0002634946</ISIN></FinInstrmId>
+  </SctiesSttlmTxInstr>
+</Document>

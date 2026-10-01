@@ -1,0 +1,8 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: allocation-service
+allocation:
+  # Expected settlement cycle for confirms sent to clients. Reviewed annually by post-trade ops.
+  default-cycle: T+2

@@ -1,0 +1,17 @@
+<settings xmlns="http://maven.apache.org/SETTINGS/1.2.0">
+  <servers>
+    <server>
+      <id>ardencm-artifactory</id>
+      <username>svc-confirmation-service</username>
+      <!-- TODO(2024-11): move to env var once platform gives us a rotation story -->
+      <password>AKCp_DEMO_FIXTURE_NOT_A_REAL_TOKEN_confirmation_service</password>
+    </server>
+  </servers>
+  <mirrors>
+    <mirror>
+      <id>ardencm-artifactory</id>
+      <mirrorOf>*</mirrorOf>
+      <url>https://artifactory.ardencm.internal/artifactory/maven-remote</url>
+    </mirror>
+  </mirrors>
+</settings>

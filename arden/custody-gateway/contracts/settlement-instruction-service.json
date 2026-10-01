@@ -1,0 +1,13 @@
+{
+  "consumer": "custody-gateway",
+  "provider": "settlement-instruction-service",
+  "version": "2025.11.2",
+  "fix": {
+    "tag63": { "allowed": ["1", "2", "3", "4"] },
+    "tag64": { "format": "LocalMktDate", "pattern": "^[0-9]{8}$" }
+  },
+  "examples": [
+    { "tradeId": "T-1", "isin": "GB0002634946", "mic": "XLON", "tradeDate": "2027-10-11", "expectedTag64": "20271013" },
+    { "tradeId": "T-2", "isin": "GB0002634946", "mic": "XLON", "tradeDate": "2027-08-27", "expectedTag64": "20270901" }
+  ]
+}
