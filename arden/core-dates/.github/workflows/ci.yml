@@ -1,0 +1,7 @@
+name: ci
+on: [push, pull_request]
+jobs:
+  build:
+    uses: ardencm/ci-shared-workflows/.github/workflows/java-build.yml@v3
+    secrets:
+      ARTIFACTORY_TOKEN: ${{ secrets.ARTIFACTORY_TOKEN }}

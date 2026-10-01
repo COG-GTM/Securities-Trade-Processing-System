@@ -1,0 +1,8 @@
+server:
+  port: 8087
+spring:
+  application:
+    name: corporate-actions-service
+corpactions:
+  # Dual-listed names (XSWX primary, XLON secondary) use the primary listing's calendar for ex-date.
+  dual-listing-calendar-policy: primary

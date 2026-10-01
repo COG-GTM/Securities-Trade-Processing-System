@@ -1,0 +1,15 @@
+server:
+  port: 8083
+spring:
+  application:
+    name: settlement-instruction-service
+settlement:
+  cycles:
+    XNYS: T_PLUS_1
+    XNAS: T_PLUS_1
+    XTSE: T_PLUS_1
+    # EU/UK/CH venues: regular way T+2 (CSDR art. 5). Migration to T+1 scheduled 11 Oct 2027 — see SETTLE-4471.
+    XLON: T_PLUS_2
+    XPAR: T_PLUS_2
+    XETR: T_PLUS_2
+    XSWX: T_PLUS_2

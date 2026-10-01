@@ -1,0 +1,3 @@
+*                 @ardencm/settlements-core
+/ci/              @ardencm/platform-eng @ardencm/settlements-core
+/src/main/resources/application.yml   @ardencm/settlements-core @ardencm/market-ops

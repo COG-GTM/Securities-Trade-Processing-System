@@ -1,0 +1,9 @@
+server:
+  port: 8084
+spring:
+  application:
+    name: custody-gateway
+custody:
+  # Instructions must reach the CSD before the T+1 12:00 CET matching cut-off for T+2 settlement.
+  matching-cutoff: "12:00 Europe/Paris"
+  cutoff-offset-days: 1

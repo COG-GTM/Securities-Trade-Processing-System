@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.ardencm.platform</groupId>
+  <artifactId>common-java-bom</artifactId>
+  <version>2026.3.0</version>
+  <packaging>pom</packaging>
+  <name>Arden Capital Markets — common Java BOM</name>
+  <description>Approved versions for all Java services. Owned by platform-eng. Changes require an ADR.</description>
+
+  <properties>
+    <java.version>17</java.version>
+    <spring-boot.version>3.3.4</spring-boot.version>
+    <!-- Internal libraries -->
+    <core-dates.version>1.4.0</core-dates.version>
+    <!-- Third party pins that override Spring Boot's dependency management -->
+    <commons-compress.version>1.24.0</commons-compress.version>
+  </properties>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-dependencies</artifactId>
+        <version>${spring-boot.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+      <dependency>
+        <groupId>com.ardencm.posttrade</groupId>
+        <artifactId>core-dates</artifactId>
+        <version>${core-dates.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.commons</groupId>
+        <artifactId>commons-compress</artifactId>
+        <version>${commons-compress.version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+  <distributionManagement>
+    <repository>
+      <id>arden-artifactory</id>
+      <url>https://artifactory.ardencm.internal/artifactory/libs-release-local</url>
+    </repository>
+  </distributionManagement>
+</project>

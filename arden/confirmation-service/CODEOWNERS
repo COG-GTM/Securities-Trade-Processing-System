@@ -1,0 +1,3 @@
+*                 @ardencm/post-trade-confirms
+/ci/              @ardencm/platform-eng @ardencm/post-trade-confirms
+/src/main/resources/application.yml   @ardencm/post-trade-confirms @ardencm/market-ops

@@ -1,0 +1,2 @@
+# Platform engineering owns the BOM. Any version change needs an ADR link in the PR.
+*       @ardencm/platform-eng

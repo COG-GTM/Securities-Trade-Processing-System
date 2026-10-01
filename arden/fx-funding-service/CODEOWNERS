@@ -1,0 +1,3 @@
+*                 @ardencm/treasury-tech
+/ci/              @ardencm/platform-eng @ardencm/treasury-tech
+/src/main/resources/application.yml   @ardencm/treasury-tech @ardencm/market-ops
