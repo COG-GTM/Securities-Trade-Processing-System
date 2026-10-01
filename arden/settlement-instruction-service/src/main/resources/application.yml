@@ -8,8 +8,5 @@ settlement:
     XNYS: T_PLUS_1
     XNAS: T_PLUS_1
     XTSE: T_PLUS_1
-    # EU/UK/CH venues: regular way T+2 (CSDR art. 5). Migration to T+1 scheduled 11 Oct 2027 — see SETTLE-4471.
-    XLON: T_PLUS_2
-    XPAR: T_PLUS_2
-    XETR: T_PLUS_2
-    XSWX: T_PLUS_2
+    # EU/UK/CH venues are intentionally NOT pinned: core-dates resolves T+2 / T+1 from the trade date
+    # (go-live 2027-10-11, SETTLE-4471). Add a pin here only for a venue that deviates from the market default.
