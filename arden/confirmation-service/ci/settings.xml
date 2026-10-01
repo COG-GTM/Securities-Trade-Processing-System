@@ -3,8 +3,7 @@
     <server>
       <id>ardencm-artifactory</id>
       <username>svc-confirmation-service</username>
-      <!-- TODO(2024-11): move to env var once platform gives us a rotation story -->
-      <password>AKCp_DEMO_FIXTURE_NOT_A_REAL_TOKEN_confirmation_service</password>
+      <password>${env.ARTIFACTORY_TOKEN}</password>
     </server>
   </servers>
   <mirrors>
