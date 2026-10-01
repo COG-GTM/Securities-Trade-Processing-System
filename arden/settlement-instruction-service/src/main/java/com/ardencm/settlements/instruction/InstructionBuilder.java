@@ -16,7 +16,7 @@ public class InstructionBuilder {
     }
 
     public Instruction build(String tradeId, String isin, String mic, LocalDate tradeDate) {
-        SettlementCycle cycle = config.cycleFor(mic);
+        SettlementCycle cycle = config.cycleFor(mic, tradeDate);
         LocalDate settlement = SettlementDates.settlementDate(tradeDate, mic, cycle);
         return new Instruction(tradeId, isin, mic, tradeDate, settlement,
                 FixDates.tag64(settlement), FixDates.tag63(cycle), settlement.toString());
