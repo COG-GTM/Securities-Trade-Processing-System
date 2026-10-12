@@ -17,6 +17,11 @@ public class TradeConsumerService {
     public void consumeTrade(Trade trade) {
         System.out.println("✅ Received Trade: " + trade);
 
+        if (tradeRepository.findByTradeId(trade.getTradeId()) != null) {
+            System.out.println("⚠️ Duplicate trade ignored, already booked: " + trade.getTradeId());
+            return;
+        }
+
         // Convert Trade model to TradeEntity (for database storage)
         TradeEntity tradeEntity = new TradeEntity(trade.getTradeId(), trade.getSymbol(), trade.getQuantity(), trade.getPrice());
 
