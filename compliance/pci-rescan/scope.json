@@ -1,0 +1,20 @@
+{
+  "description": "Repos in the quarterly PCI rescan, their PCI DSS scope, and owners. remediation_days is the organisation's risk-based policy (PCI DSS v4.0.1 Req 6.3.3).",
+  "repos": {
+    "Springboot-BankApp": {
+      "git": "https://github.com/COG-GTM/Springboot-BankApp.git",
+      "branch": "DevOps",
+      "pci_scope": "cde",
+      "owner": "digital-banking-eng",
+      "security_owner": "appsec-oncall"
+    },
+    "Securities-Trade-Processing-System": {
+      "git": "https://github.com/COG-GTM/Securities-Trade-Processing-System.git",
+      "branch": "main",
+      "pci_scope": "connected",
+      "owner": "post-trade-eng",
+      "security_owner": "appsec-oncall"
+    }
+  },
+  "remediation_days": {"critical": 30, "high": 30, "medium": 90, "low": 180}
+}

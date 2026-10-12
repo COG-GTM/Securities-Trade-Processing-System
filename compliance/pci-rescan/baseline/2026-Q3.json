@@ -1,0 +1,1437 @@
+{
+  "quarter": "2026-Q3",
+  "seeded": true,
+  "cutoff": "2026-07-01",
+  "entries": [
+    {
+      "id": "Securities-Trade-Processing-System:ch.qos.logback:logback-core:GHSA-25qh-j22f-pwp8",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-09-29",
+      "severity": "medium",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:ch.qos.logback:logback-core:GHSA-jhq6-gfmj-v8fx",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-12-28",
+      "severity": "low",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:ch.qos.logback:logback-core:GHSA-p47f-322f-whfh",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-12-28",
+      "severity": "low",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:ch.qos.logback:logback-core:GHSA-qqpg-mvqg-649v",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-12-28",
+      "severity": "low",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:com.fasterxml.jackson.core:jackson-core:GHSA-72hv-8253-57qq",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-09-29",
+      "severity": "medium",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:com.fasterxml.jackson.core:jackson-databind:GHSA-5jmj-h7xm-6q6v",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-09-29",
+      "severity": "medium",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:com.fasterxml.jackson.core:jackson-databind:GHSA-hgj6-7826-r7m5",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-09-29",
+      "severity": "medium",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:com.fasterxml.jackson.core:jackson-databind:GHSA-j3rv-43j4-c7qm",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-07-31",
+      "severity": "high",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:com.fasterxml.jackson.core:jackson-databind:GHSA-rmj7-2vxq-3g9f",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-07-31",
+      "severity": "high",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:commons-beanutils:commons-beanutils:GHSA-wxr5-93ph-8wr9",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-07-31",
+      "severity": "high",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:commons-io:commons-io:GHSA-78wr-2p64-hpwj",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-07-31",
+      "severity": "high",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:io.netty:netty-codec:GHSA-3p8m-j85q-pgmj",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-09-29",
+      "severity": "medium",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:io.netty:netty-codec:GHSA-mj4r-2hfc-f8p6",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-07-31",
+      "severity": "high",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:io.netty:netty-common:GHSA-389x-839f-4rhx",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-09-29",
+      "severity": "medium",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:io.netty:netty-handler:GHSA-3qp7-7mw8-wx86",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-07-31",
+      "severity": "high",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:io.netty:netty-handler:GHSA-4g8c-wm8x-jfhw",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-07-31",
+      "severity": "high",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:io.netty:netty-handler:GHSA-c653-97m9-rcg9",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-07-31",
+      "severity": "high",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:io.netty:netty-handler:GHSA-x4gw-5cx5-pgmh",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-07-31",
+      "severity": "high",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:io.netty:netty-transport-native-epoll:GHSA-w573-9ffj-6ff9",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-09-29",
+      "severity": "medium",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:net.minidev:json-smart:GHSA-pq2g-wx69-c263",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-07-31",
+      "severity": "high",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.apache.kafka:kafka-clients:GHSA-5qcv-4rpc-jp93",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-07-31",
+      "severity": "high",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.apache.kafka:kafka-clients:GHSA-vgq5-3255-v292",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-09-29",
+      "severity": "medium",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.apache.kafka:kafka-clients:GHSA-wf66-mphr-4c4r",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-09-29",
+      "severity": "medium",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.apache.kafka:kafka_2.13:GHSA-76qp-h5mr-frr4",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-07-31",
+      "severity": "high",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.apache.kafka:kafka_2.13:GHSA-mcwh-c9pg-xw43",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-07-31",
+      "severity": "high",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.apache.tomcat.embed:tomcat-embed-core:GHSA-23hv-mwm6-g8jf",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-09-29",
+      "severity": "medium",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.apache.tomcat.embed:tomcat-embed-core:GHSA-25xr-qj8w-c4vf",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-07-31",
+      "severity": "high",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.apache.tomcat.embed:tomcat-embed-core:GHSA-3p2h-wqq4-wf4h",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-09-29",
+      "severity": "medium",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.apache.tomcat.embed:tomcat-embed-core:GHSA-42wg-hm62-jcwg",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-09-29",
+      "severity": "medium",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.apache.tomcat.embed:tomcat-embed-core:GHSA-563x-q5rq-57qp",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-07-31",
+      "severity": "high",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.apache.tomcat.embed:tomcat-embed-core:GHSA-5m62-pw8w-7w9f",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-07-31",
+      "severity": "critical",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.apache.tomcat.embed:tomcat-embed-core:GHSA-5mp6-jrq3-r938",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-07-31",
+      "severity": "high",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.apache.tomcat.embed:tomcat-embed-core:GHSA-83qj-6fr2-vhqg",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-07-31",
+      "severity": "critical",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.apache.tomcat.embed:tomcat-embed-core:GHSA-9m3c-qcxr-9x87",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-09-29",
+      "severity": "medium",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.apache.tomcat.embed:tomcat-embed-core:GHSA-9m89-8frq-c98c",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-12-28",
+      "severity": "low",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.apache.tomcat.embed:tomcat-embed-core:GHSA-ff77-26x5-69cr",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-12-28",
+      "severity": "low",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.apache.tomcat.embed:tomcat-embed-core:GHSA-fpj8-gq4v-p354",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-09-29",
+      "severity": "medium",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.apache.tomcat.embed:tomcat-embed-core:GHSA-fv25-8xcx-gqjc",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-07-31",
+      "severity": "high",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.apache.tomcat.embed:tomcat-embed-core:GHSA-gqp3-2cvr-x8m3",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-07-31",
+      "severity": "high",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.apache.tomcat.embed:tomcat-embed-core:GHSA-gx5v-xp9w-j4cg",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-07-31",
+      "severity": "high",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.apache.tomcat.embed:tomcat-embed-core:GHSA-h2fw-rfh5-95r3",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-12-28",
+      "severity": "low",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.apache.tomcat.embed:tomcat-embed-core:GHSA-h3gc-qfqq-6h8f",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-07-31",
+      "severity": "high",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.apache.tomcat.embed:tomcat-embed-core:GHSA-h6fc-48rj-7qqh",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-07-31",
+      "severity": "critical",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.apache.tomcat.embed:tomcat-embed-core:GHSA-hgrr-935x-pq79",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-12-28",
+      "severity": "low",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.apache.tomcat.embed:tomcat-embed-core:GHSA-mgp5-rv84-w37q",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-07-31",
+      "severity": "high",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.apache.tomcat.embed:tomcat-embed-core:GHSA-r29c-68gh-xp6x",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-07-31",
+      "severity": "critical",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.apache.tomcat.embed:tomcat-embed-core:GHSA-rv64-5gf8-9qq8",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-07-31",
+      "severity": "high",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.apache.tomcat.embed:tomcat-embed-core:GHSA-vfww-5hm6-hx2j",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-12-28",
+      "severity": "low",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.apache.tomcat.embed:tomcat-embed-core:GHSA-wc4r-xq3c-5cf3",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-09-29",
+      "severity": "medium",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.apache.tomcat.embed:tomcat-embed-core:GHSA-wmwf-9ccg-fff5",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-07-31",
+      "severity": "high",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.apache.tomcat.embed:tomcat-embed-core:GHSA-wr62-c79q-cv37",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-07-31",
+      "severity": "high",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.apache.tomcat.embed:tomcat-embed-core:GHSA-x4m4-345f-5h5g",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-07-31",
+      "severity": "high",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.apache.zookeeper:zookeeper:GHSA-7xrh-hqfc-g7qr",
+      "status": "risk-accepted",
+      "first_seen": "2026-07-01",
+      "accepted_until": "2027-01-31",
+      "acceptance_ref": "RA-2026-031 (demo seed): ZooKeeper is test-scope only via spring-kafka-test"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.apache.zookeeper:zookeeper:GHSA-crhr-qqj8-rpxc",
+      "status": "risk-accepted",
+      "first_seen": "2026-07-01",
+      "accepted_until": "2027-01-31",
+      "acceptance_ref": "RA-2026-031 (demo seed): ZooKeeper is test-scope only via spring-kafka-test"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.assertj:assertj-core:GHSA-rqfh-9r24-8c9r",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-07-31",
+      "severity": "high",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.bitbucket.b_c:jose4j:GHSA-3677-xxcr-wjqv",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-07-31",
+      "severity": "high",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.lz4:lz4-java:GHSA-cmp6-m4wj-q63q",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-07-31",
+      "severity": "high",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.lz4:lz4-java:GHSA-vqf4-7m7x-wgfc",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-07-31",
+      "severity": "high",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.postgresql:postgresql:GHSA-98qh-xjc8-98pq",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-07-31",
+      "severity": "high",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.postgresql:postgresql:GHSA-hq9p-pm7w-8p54",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-07-31",
+      "severity": "high",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.springframework.boot:spring-boot-autoconfigure:GHSA-ggg2-9786-hwc8",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-09-29",
+      "severity": "medium",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.springframework.boot:spring-boot:GHSA-rc42-6c7j-7h5r",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-07-31",
+      "severity": "high",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.springframework.boot:spring-boot:GHSA-wwpq-f5c3-7hvx",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-07-31",
+      "severity": "high",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.springframework.data:spring-data-commons:GHSA-5m4m-73w9-8433",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-09-29",
+      "severity": "medium",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.springframework.data:spring-data-commons:GHSA-5vpf-xvv7-c8vh",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-09-29",
+      "severity": "medium",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.springframework.data:spring-data-commons:GHSA-9fw2-h3hf-293r",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-07-31",
+      "severity": "high",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.springframework.kafka:spring-kafka:GHSA-53w6-v7cv-fc9h",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-09-29",
+      "severity": "medium",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.springframework.kafka:spring-kafka:GHSA-xq69-5h5v-x9x4",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-07-31",
+      "severity": "high",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.springframework.kafka:spring-kafka:GHSA-xvfq-4q6q-gxx7",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-09-29",
+      "severity": "medium",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.springframework.retry:spring-retry:GHSA-2827-2mxx-j8pv",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-09-29",
+      "severity": "medium",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.springframework:spring-context:GHSA-4wp7-92pw-q264",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-12-28",
+      "severity": "low",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.springframework:spring-core:GHSA-659m-px2c-25wj",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-12-28",
+      "severity": "low",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.springframework:spring-core:GHSA-jmp9-x22r-554x",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-07-31",
+      "severity": "high",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.springframework:spring-expression:GHSA-9f52-rjqv-25qv",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-12-28",
+      "severity": "low",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.springframework:spring-expression:GHSA-r5w3-xv2f-j59q",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-07-31",
+      "severity": "high",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.springframework:spring-expression:GHSA-wxpp-56q6-5pcg",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-09-29",
+      "severity": "medium",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.springframework:spring-web:GHSA-6r3c-xf4w-jxjm",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-09-29",
+      "severity": "medium",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.springframework:spring-web:GHSA-7m2p-62gw-p8qq",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-09-29",
+      "severity": "medium",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.springframework:spring-webmvc:GHSA-3chg-m5w7-qfv5",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-07-31",
+      "severity": "high",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.springframework:spring-webmvc:GHSA-4773-3jfm-qmx3",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-09-29",
+      "severity": "medium",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.springframework:spring-webmvc:GHSA-6hcq-hmm3-jj3c",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-12-28",
+      "severity": "low",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.springframework:spring-webmvc:GHSA-6p4f-wcwh-5vvm",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-09-29",
+      "severity": "medium",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.springframework:spring-webmvc:GHSA-72pg-x5f8-j25j",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-09-29",
+      "severity": "medium",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.springframework:spring-webmvc:GHSA-957g-f97v-vppc",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-09-29",
+      "severity": "medium",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.springframework:spring-webmvc:GHSA-cjpg-rgq5-fr37",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-09-29",
+      "severity": "medium",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.springframework:spring-webmvc:GHSA-h3qp-gqrc-q736",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-09-29",
+      "severity": "medium",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.springframework:spring-webmvc:GHSA-mq64-j8f9-9gcj",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-09-29",
+      "severity": "medium",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.springframework:spring-webmvc:GHSA-r936-gwx5-v52f",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-09-29",
+      "severity": "medium",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.springframework:spring-webmvc:GHSA-wg35-8jpf-2xv3",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-12-28",
+      "severity": "low",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.springframework:spring-webmvc:GHSA-x23c-287f-qqv5",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-07-31",
+      "severity": "high",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:secret:src/main/resources/application.properties:spring.datasource.password",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-07-31",
+      "severity": "high",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Springboot-BankApp:ch.qos.logback:logback-core:GHSA-25qh-j22f-pwp8",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-09-29",
+      "severity": "medium",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Springboot-BankApp:ch.qos.logback:logback-core:GHSA-6v67-2wr5-gvf4",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-12-28",
+      "severity": "low",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Springboot-BankApp:ch.qos.logback:logback-core:GHSA-jhq6-gfmj-v8fx",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-12-28",
+      "severity": "low",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Springboot-BankApp:ch.qos.logback:logback-core:GHSA-p47f-322f-whfh",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-12-28",
+      "severity": "low",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Springboot-BankApp:ch.qos.logback:logback-core:GHSA-pr98-23f8-jwxv",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-09-29",
+      "severity": "medium",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Springboot-BankApp:ch.qos.logback:logback-core:GHSA-qqpg-mvqg-649v",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-12-28",
+      "severity": "low",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Springboot-BankApp:com.fasterxml.jackson.core:jackson-core:GHSA-72hv-8253-57qq",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-09-29",
+      "severity": "medium",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Springboot-BankApp:com.fasterxml.jackson.core:jackson-databind:GHSA-5jmj-h7xm-6q6v",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-09-29",
+      "severity": "medium",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Springboot-BankApp:com.fasterxml.jackson.core:jackson-databind:GHSA-hgj6-7826-r7m5",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-09-29",
+      "severity": "medium",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Springboot-BankApp:com.fasterxml.jackson.core:jackson-databind:GHSA-j3rv-43j4-c7qm",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-07-31",
+      "severity": "high",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Springboot-BankApp:com.fasterxml.jackson.core:jackson-databind:GHSA-rmj7-2vxq-3g9f",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-07-31",
+      "severity": "high",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Springboot-BankApp:com.mysql:mysql-connector-j:GHSA-m6vm-37g8-gqvh",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-07-31",
+      "severity": "high",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Springboot-BankApp:net.minidev:json-smart:GHSA-pq2g-wx69-c263",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-07-31",
+      "severity": "high",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Springboot-BankApp:org.apache.tomcat.embed:tomcat-embed-core:GHSA-23hv-mwm6-g8jf",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-09-29",
+      "severity": "medium",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Springboot-BankApp:org.apache.tomcat.embed:tomcat-embed-core:GHSA-25xr-qj8w-c4vf",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-07-31",
+      "severity": "high",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Springboot-BankApp:org.apache.tomcat.embed:tomcat-embed-core:GHSA-27hp-xhwr-wr2m",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-07-31",
+      "severity": "high",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Springboot-BankApp:org.apache.tomcat.embed:tomcat-embed-core:GHSA-3p2h-wqq4-wf4h",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-09-29",
+      "severity": "medium",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Springboot-BankApp:org.apache.tomcat.embed:tomcat-embed-core:GHSA-42wg-hm62-jcwg",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-09-29",
+      "severity": "medium",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Springboot-BankApp:org.apache.tomcat.embed:tomcat-embed-core:GHSA-563x-q5rq-57qp",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-07-31",
+      "severity": "high",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Springboot-BankApp:org.apache.tomcat.embed:tomcat-embed-core:GHSA-5j33-cvvr-w245",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-07-31",
+      "severity": "high",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Springboot-BankApp:org.apache.tomcat.embed:tomcat-embed-core:GHSA-5m62-pw8w-7w9f",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-07-31",
+      "severity": "critical",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Springboot-BankApp:org.apache.tomcat.embed:tomcat-embed-core:GHSA-5mp6-jrq3-r938",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-07-31",
+      "severity": "high",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Springboot-BankApp:org.apache.tomcat.embed:tomcat-embed-core:GHSA-83qj-6fr2-vhqg",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-07-31",
+      "severity": "critical",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Springboot-BankApp:org.apache.tomcat.embed:tomcat-embed-core:GHSA-9m3c-qcxr-9x87",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-09-29",
+      "severity": "medium",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Springboot-BankApp:org.apache.tomcat.embed:tomcat-embed-core:GHSA-9m89-8frq-c98c",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-12-28",
+      "severity": "low",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Springboot-BankApp:org.apache.tomcat.embed:tomcat-embed-core:GHSA-ff77-26x5-69cr",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-12-28",
+      "severity": "low",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Springboot-BankApp:org.apache.tomcat.embed:tomcat-embed-core:GHSA-fpj8-gq4v-p354",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-09-29",
+      "severity": "medium",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Springboot-BankApp:org.apache.tomcat.embed:tomcat-embed-core:GHSA-fv25-8xcx-gqjc",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-07-31",
+      "severity": "high",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Springboot-BankApp:org.apache.tomcat.embed:tomcat-embed-core:GHSA-gqp3-2cvr-x8m3",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-07-31",
+      "severity": "high",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Springboot-BankApp:org.apache.tomcat.embed:tomcat-embed-core:GHSA-gx5v-xp9w-j4cg",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-07-31",
+      "severity": "high",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Springboot-BankApp:org.apache.tomcat.embed:tomcat-embed-core:GHSA-h2fw-rfh5-95r3",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-12-28",
+      "severity": "low",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Springboot-BankApp:org.apache.tomcat.embed:tomcat-embed-core:GHSA-h3gc-qfqq-6h8f",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-07-31",
+      "severity": "high",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Springboot-BankApp:org.apache.tomcat.embed:tomcat-embed-core:GHSA-h6fc-48rj-7qqh",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-07-31",
+      "severity": "critical",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Springboot-BankApp:org.apache.tomcat.embed:tomcat-embed-core:GHSA-hgrr-935x-pq79",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-12-28",
+      "severity": "low",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Springboot-BankApp:org.apache.tomcat.embed:tomcat-embed-core:GHSA-mgp5-rv84-w37q",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-07-31",
+      "severity": "high",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Springboot-BankApp:org.apache.tomcat.embed:tomcat-embed-core:GHSA-qvf5-hvjx-wm27",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-09-29",
+      "severity": "medium",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Springboot-BankApp:org.apache.tomcat.embed:tomcat-embed-core:GHSA-r29c-68gh-xp6x",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-07-31",
+      "severity": "critical",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Springboot-BankApp:org.apache.tomcat.embed:tomcat-embed-core:GHSA-rv64-5gf8-9qq8",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-07-31",
+      "severity": "high",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Springboot-BankApp:org.apache.tomcat.embed:tomcat-embed-core:GHSA-vfww-5hm6-hx2j",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-12-28",
+      "severity": "low",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Springboot-BankApp:org.apache.tomcat.embed:tomcat-embed-core:GHSA-wc4r-xq3c-5cf3",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-09-29",
+      "severity": "medium",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Springboot-BankApp:org.apache.tomcat.embed:tomcat-embed-core:GHSA-wmwf-9ccg-fff5",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-07-31",
+      "severity": "high",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Springboot-BankApp:org.apache.tomcat.embed:tomcat-embed-core:GHSA-wr62-c79q-cv37",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-07-31",
+      "severity": "high",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Springboot-BankApp:org.apache.tomcat.embed:tomcat-embed-core:GHSA-x4m4-345f-5h5g",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-07-31",
+      "severity": "high",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Springboot-BankApp:org.assertj:assertj-core:GHSA-rqfh-9r24-8c9r",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-07-31",
+      "severity": "high",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Springboot-BankApp:org.springframework.boot:spring-boot-autoconfigure:GHSA-ggg2-9786-hwc8",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-09-29",
+      "severity": "medium",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Springboot-BankApp:org.springframework.boot:spring-boot:GHSA-rc42-6c7j-7h5r",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-07-31",
+      "severity": "high",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Springboot-BankApp:org.springframework.boot:spring-boot:GHSA-wwpq-f5c3-7hvx",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-07-31",
+      "severity": "high",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Springboot-BankApp:org.springframework.data:spring-data-commons:GHSA-5m4m-73w9-8433",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-09-29",
+      "severity": "medium",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Springboot-BankApp:org.springframework.data:spring-data-commons:GHSA-5vpf-xvv7-c8vh",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-09-29",
+      "severity": "medium",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Springboot-BankApp:org.springframework.data:spring-data-commons:GHSA-9fw2-h3hf-293r",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-07-31",
+      "severity": "high",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Springboot-BankApp:org.springframework.security:spring-security-core:GHSA-q3v6-hm2v-pw99",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-09-29",
+      "severity": "medium",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Springboot-BankApp:org.springframework.security:spring-security-core:GHSA-vxf7-qj7q-83fh",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-12-28",
+      "severity": "low",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Springboot-BankApp:org.springframework.security:spring-security-crypto:GHSA-mg83-c7gq-rv5c",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-07-31",
+      "severity": "high",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Springboot-BankApp:org.springframework.security:spring-security-web:GHSA-293q-567p-wmwq",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-09-29",
+      "severity": "medium",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Springboot-BankApp:org.springframework.security:spring-security-web:GHSA-c4q5-6c82-3qpw",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-07-31",
+      "severity": "critical",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Springboot-BankApp:org.springframework.security:spring-security-web:GHSA-mf92-479x-3373",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-07-31",
+      "severity": "critical",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Springboot-BankApp:org.springframework.security:spring-security-web:GHSA-x2r2-rvhq-2mqv",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-09-29",
+      "severity": "medium",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Springboot-BankApp:org.springframework:spring-context:GHSA-4gc7-5j7h-4qph",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-09-29",
+      "severity": "medium",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Springboot-BankApp:org.springframework:spring-context:GHSA-4wp7-92pw-q264",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-12-28",
+      "severity": "low",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Springboot-BankApp:org.springframework:spring-core:GHSA-659m-px2c-25wj",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-12-28",
+      "severity": "low",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Springboot-BankApp:org.springframework:spring-core:GHSA-jmp9-x22r-554x",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-07-31",
+      "severity": "high",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Springboot-BankApp:org.springframework:spring-expression:GHSA-9f52-rjqv-25qv",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-12-28",
+      "severity": "low",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Springboot-BankApp:org.springframework:spring-expression:GHSA-r5w3-xv2f-j59q",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-07-31",
+      "severity": "high",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Springboot-BankApp:org.springframework:spring-expression:GHSA-wxpp-56q6-5pcg",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-09-29",
+      "severity": "medium",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Springboot-BankApp:org.springframework:spring-web:GHSA-4gc7-5j7h-4qph",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-09-29",
+      "severity": "medium",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Springboot-BankApp:org.springframework:spring-web:GHSA-6r3c-xf4w-jxjm",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-09-29",
+      "severity": "medium",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Springboot-BankApp:org.springframework:spring-webmvc:GHSA-3chg-m5w7-qfv5",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-07-31",
+      "severity": "high",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Springboot-BankApp:org.springframework:spring-webmvc:GHSA-4773-3jfm-qmx3",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-09-29",
+      "severity": "medium",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Springboot-BankApp:org.springframework:spring-webmvc:GHSA-6hcq-hmm3-jj3c",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-12-28",
+      "severity": "low",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Springboot-BankApp:org.springframework:spring-webmvc:GHSA-6p4f-wcwh-5vvm",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-09-29",
+      "severity": "medium",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Springboot-BankApp:org.springframework:spring-webmvc:GHSA-72pg-x5f8-j25j",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-09-29",
+      "severity": "medium",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Springboot-BankApp:org.springframework:spring-webmvc:GHSA-957g-f97v-vppc",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-09-29",
+      "severity": "medium",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Springboot-BankApp:org.springframework:spring-webmvc:GHSA-cjpg-rgq5-fr37",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-09-29",
+      "severity": "medium",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Springboot-BankApp:org.springframework:spring-webmvc:GHSA-cx7f-g6mp-7hqm",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-07-31",
+      "severity": "high",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Springboot-BankApp:org.springframework:spring-webmvc:GHSA-g5vr-rgqm-vf78",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-07-31",
+      "severity": "high",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Springboot-BankApp:org.springframework:spring-webmvc:GHSA-h3qp-gqrc-q736",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-09-29",
+      "severity": "medium",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Springboot-BankApp:org.springframework:spring-webmvc:GHSA-mq64-j8f9-9gcj",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-09-29",
+      "severity": "medium",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Springboot-BankApp:org.springframework:spring-webmvc:GHSA-r936-gwx5-v52f",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-09-29",
+      "severity": "medium",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Springboot-BankApp:org.springframework:spring-webmvc:GHSA-wg35-8jpf-2xv3",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-12-28",
+      "severity": "low",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Springboot-BankApp:org.springframework:spring-webmvc:GHSA-x23c-287f-qqv5",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-07-31",
+      "severity": "high",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Springboot-BankApp:org.thymeleaf:thymeleaf-spring6:GHSA-c9ph-gxww-7744",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-07-31",
+      "severity": "critical",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Springboot-BankApp:org.thymeleaf:thymeleaf-spring6:GHSA-r4v4-5mwr-2fwr",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-07-31",
+      "severity": "critical",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Springboot-BankApp:org.thymeleaf:thymeleaf-spring6:GHSA-xjw8-8c5c-9r79",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-07-31",
+      "severity": "critical",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Springboot-BankApp:org.thymeleaf:thymeleaf:GHSA-c9ph-gxww-7744",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-07-31",
+      "severity": "critical",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Springboot-BankApp:org.thymeleaf:thymeleaf:GHSA-r4v4-5mwr-2fwr",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-07-31",
+      "severity": "critical",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Springboot-BankApp:org.thymeleaf:thymeleaf:GHSA-xjw8-8c5c-9r79",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-07-31",
+      "severity": "critical",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Springboot-BankApp:org.xmlunit:xmlunit-core:GHSA-chfm-68vv-pvw5",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-12-28",
+      "severity": "low",
+      "owner": "appsec-oncall"
+    },
+    {
+      "id": "Springboot-BankApp:secret:src/main/resources/application.properties:spring.datasource.password",
+      "status": "open",
+      "first_seen": "2026-07-01",
+      "due": "2026-07-31",
+      "severity": "high",
+      "owner": "appsec-oncall"
+    }
+  ]
+}

@@ -1,0 +1,4452 @@
+{
+  "scanned_at": "2026-10-12T23:45:13+00:00",
+  "scanner": "Maven dependency:list + OSV.dev querybatch; pci-rescan secret check",
+  "repos": {
+    "Springboot-BankApp": {
+      "commit": "305826d755587d70eb24a7076eaf0797743548b3",
+      "path": "/home/ubuntu/pci-workspace/Springboot-BankApp"
+    },
+    "Securities-Trade-Processing-System": {
+      "commit": "e48795df5da55cb333f572bc6050490b416b77a3",
+      "path": "/home/ubuntu/pci-workspace/Securities-Trade-Processing-System"
+    }
+  },
+  "findings": [
+    {
+      "id": "Springboot-BankApp:ch.qos.logback:logback-core:GHSA-25qh-j22f-pwp8",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-25qh-j22f-pwp8",
+      "aliases": [
+        "CVE-2025-11226"
+      ],
+      "severity": "medium",
+      "title": "QOS.CH logback-core is vulnerable to Arbitrary Code Execution through file processing",
+      "package": "ch.qos.logback:logback-core",
+      "version": "1.5.7",
+      "fixed_in": [
+        "1.5.19"
+      ],
+      "location": "pom.xml",
+      "published": "2025-10-01",
+      "reference": "https://osv.dev/vulnerability/GHSA-25qh-j22f-pwp8"
+    },
+    {
+      "id": "Springboot-BankApp:ch.qos.logback:logback-core:GHSA-6v67-2wr5-gvf4",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-6v67-2wr5-gvf4",
+      "aliases": [
+        "CVE-2024-12801"
+      ],
+      "severity": "low",
+      "title": "QOS.CH logback-core Server-Side Request Forgery vulnerability",
+      "package": "ch.qos.logback:logback-core",
+      "version": "1.5.7",
+      "fixed_in": [
+        "1.5.13"
+      ],
+      "location": "pom.xml",
+      "published": "2024-12-19",
+      "reference": "https://osv.dev/vulnerability/GHSA-6v67-2wr5-gvf4"
+    },
+    {
+      "id": "Springboot-BankApp:ch.qos.logback:logback-core:GHSA-jhq6-gfmj-v8fx",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-jhq6-gfmj-v8fx",
+      "aliases": [
+        "CVE-2026-10532"
+      ],
+      "severity": "low",
+      "title": "Logback vulnerable to Object Injection through HardenedObjectInputStream modules",
+      "package": "ch.qos.logback:logback-core",
+      "version": "1.5.7",
+      "fixed_in": [
+        "1.5.34"
+      ],
+      "location": "pom.xml",
+      "published": "2026-06-01",
+      "reference": "https://osv.dev/vulnerability/GHSA-jhq6-gfmj-v8fx"
+    },
+    {
+      "id": "Springboot-BankApp:ch.qos.logback:logback-core:GHSA-p47f-322f-whfh",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-p47f-322f-whfh",
+      "aliases": [
+        "CVE-2026-9828"
+      ],
+      "severity": "low",
+      "title": "QOS.CH Sarl logback logback-core has a deserialization of untrusted data vulnerability",
+      "package": "ch.qos.logback:logback-core",
+      "version": "1.5.7",
+      "fixed_in": [
+        "1.5.33"
+      ],
+      "location": "pom.xml",
+      "published": "2026-05-28",
+      "reference": "https://osv.dev/vulnerability/GHSA-p47f-322f-whfh"
+    },
+    {
+      "id": "Springboot-BankApp:ch.qos.logback:logback-core:GHSA-pr98-23f8-jwxv",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-pr98-23f8-jwxv",
+      "aliases": [
+        "CVE-2024-12798"
+      ],
+      "severity": "medium",
+      "title": "QOS.CH logback-core Expression Language Injection vulnerability",
+      "package": "ch.qos.logback:logback-core",
+      "version": "1.5.7",
+      "fixed_in": [
+        "1.5.13"
+      ],
+      "location": "pom.xml",
+      "published": "2024-12-19",
+      "reference": "https://osv.dev/vulnerability/GHSA-pr98-23f8-jwxv"
+    },
+    {
+      "id": "Springboot-BankApp:ch.qos.logback:logback-core:GHSA-qqpg-mvqg-649v",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-qqpg-mvqg-649v",
+      "aliases": [
+        "CVE-2026-1225"
+      ],
+      "severity": "low",
+      "title": "Logback allows an attacker to instantiate classes already present on the class path",
+      "package": "ch.qos.logback:logback-core",
+      "version": "1.5.7",
+      "fixed_in": [
+        "1.5.25"
+      ],
+      "location": "pom.xml",
+      "published": "2026-01-22",
+      "reference": "https://osv.dev/vulnerability/GHSA-qqpg-mvqg-649v"
+    },
+    {
+      "id": "Springboot-BankApp:com.fasterxml.jackson.core:jackson-core:GHSA-72hv-8253-57qq",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-72hv-8253-57qq",
+      "aliases": [
+        "CVE-2026-18401"
+      ],
+      "severity": "medium",
+      "title": "jackson-core: Number Length Constraint Bypass in Async Parser Leads to Potential DoS Condition",
+      "package": "com.fasterxml.jackson.core:jackson-core",
+      "version": "2.17.2",
+      "fixed_in": [
+        "2.18.6"
+      ],
+      "location": "pom.xml",
+      "published": "2026-02-28",
+      "reference": "https://osv.dev/vulnerability/GHSA-72hv-8253-57qq"
+    },
+    {
+      "id": "Springboot-BankApp:com.fasterxml.jackson.core:jackson-core:GHSA-7hhh-6rmp-j9qf",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-7hhh-6rmp-j9qf",
+      "aliases": [
+        "CVE-2026-89425"
+      ],
+      "severity": "high",
+      "title": "jackson-core: UTF8DataInputJsonParser._reportInvalidToken() missing maxErrorTokenLength limit -> unbounded StringBuilder growth (DoS)",
+      "package": "com.fasterxml.jackson.core:jackson-core",
+      "version": "2.17.2",
+      "fixed_in": [
+        "2.18.11"
+      ],
+      "location": "pom.xml",
+      "published": "2026-10-01",
+      "reference": "https://osv.dev/vulnerability/GHSA-7hhh-6rmp-j9qf"
+    },
+    {
+      "id": "Springboot-BankApp:com.fasterxml.jackson.core:jackson-core:GHSA-p6pp-m3f8-5c89",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-p6pp-m3f8-5c89",
+      "aliases": [
+        "CVE-2026-89407"
+      ],
+      "severity": "high",
+      "title": " jackson-core: ReDoS: quadratic backtracking in NumberInput.PATTERN_FLOAT via looksLikeValidNumber()",
+      "package": "com.fasterxml.jackson.core:jackson-core",
+      "version": "2.17.2",
+      "fixed_in": [
+        "2.18.11"
+      ],
+      "location": "pom.xml",
+      "published": "2026-10-01",
+      "reference": "https://osv.dev/vulnerability/GHSA-p6pp-m3f8-5c89"
+    },
+    {
+      "id": "Springboot-BankApp:com.fasterxml.jackson.core:jackson-core:GHSA-r7wm-3cxj-wff9",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-r7wm-3cxj-wff9",
+      "aliases": [
+        "CVE-2026-68494"
+      ],
+      "severity": "high",
+      "title": "jackson-core: Async parser maxNumberLength bypass via chunked digit accumulation (incomplete fix for GHSA-72hv-8253-57qq)",
+      "package": "com.fasterxml.jackson.core:jackson-core",
+      "version": "2.17.2",
+      "fixed_in": [
+        "2.18.8"
+      ],
+      "location": "pom.xml",
+      "published": "2026-07-21",
+      "reference": "https://osv.dev/vulnerability/GHSA-r7wm-3cxj-wff9"
+    },
+    {
+      "id": "Springboot-BankApp:com.fasterxml.jackson.core:jackson-databind:GHSA-3pjw-73gf-8qr5",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-3pjw-73gf-8qr5",
+      "aliases": [
+        "CVE-2026-59888"
+      ],
+      "severity": "medium",
+      "title": "jackson-databind: @JsonIgnore on a Record property is bypassed with a PropertyNamingStrategy",
+      "package": "com.fasterxml.jackson.core:jackson-databind",
+      "version": "2.17.2",
+      "fixed_in": [
+        "2.18.8"
+      ],
+      "location": "pom.xml",
+      "published": "2026-07-21",
+      "reference": "https://osv.dev/vulnerability/GHSA-3pjw-73gf-8qr5"
+    },
+    {
+      "id": "Springboot-BankApp:com.fasterxml.jackson.core:jackson-databind:GHSA-5jmj-h7xm-6q6v",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-5jmj-h7xm-6q6v",
+      "aliases": [
+        "CVE-2026-54515"
+      ],
+      "severity": "medium",
+      "title": "jackson-databind has case-insensitive deserialization bypasses per-property @JsonIgnoreProperties",
+      "package": "com.fasterxml.jackson.core:jackson-databind",
+      "version": "2.17.2",
+      "fixed_in": [
+        "2.18.9"
+      ],
+      "location": "pom.xml",
+      "published": "2026-06-23",
+      "reference": "https://osv.dev/vulnerability/GHSA-5jmj-h7xm-6q6v"
+    },
+    {
+      "id": "Springboot-BankApp:com.fasterxml.jackson.core:jackson-databind:GHSA-cxp5-3px4-pw24",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-cxp5-3px4-pw24",
+      "aliases": [
+        "CVE-2026-91777"
+      ],
+      "severity": "high",
+      "title": "jackson-databind quadratic forward-reference completion ",
+      "package": "com.fasterxml.jackson.core:jackson-databind",
+      "version": "2.17.2",
+      "fixed_in": [
+        "2.18.11"
+      ],
+      "location": "pom.xml",
+      "published": "2026-09-30",
+      "reference": "https://osv.dev/vulnerability/GHSA-cxp5-3px4-pw24"
+    },
+    {
+      "id": "Springboot-BankApp:com.fasterxml.jackson.core:jackson-databind:GHSA-gx83-3vf8-gh7j",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-gx83-3vf8-gh7j",
+      "aliases": [
+        "CVE-2026-83557"
+      ],
+      "severity": "medium",
+      "title": "jackson-databind: Comparable missing from DefaultBaseTypeLimitingValidator's unsafe base types (incomplete PolymorphicTypeValidator denylist)",
+      "package": "com.fasterxml.jackson.core:jackson-databind",
+      "version": "2.17.2",
+      "fixed_in": [
+        "2.18.10"
+      ],
+      "location": "pom.xml",
+      "published": "2026-09-28",
+      "reference": "https://osv.dev/vulnerability/GHSA-gx83-3vf8-gh7j"
+    },
+    {
+      "id": "Springboot-BankApp:com.fasterxml.jackson.core:jackson-databind:GHSA-hgj6-7826-r7m5",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-hgj6-7826-r7m5",
+      "aliases": [
+        "CVE-2026-54514"
+      ],
+      "severity": "medium",
+      "title": "jackson-databind: InetSocketAddress deserialization triggers eager DNS resolution (SSRF)",
+      "package": "com.fasterxml.jackson.core:jackson-databind",
+      "version": "2.17.2",
+      "fixed_in": [
+        "2.18.8"
+      ],
+      "location": "pom.xml",
+      "published": "2026-06-23",
+      "reference": "https://osv.dev/vulnerability/GHSA-hgj6-7826-r7m5"
+    },
+    {
+      "id": "Springboot-BankApp:com.fasterxml.jackson.core:jackson-databind:GHSA-j3rv-43j4-c7qm",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-j3rv-43j4-c7qm",
+      "aliases": [
+        "CVE-2026-54512"
+      ],
+      "severity": "high",
+      "title": "jackson-databind has a PolymorphicTypeValidator bypass via generic type parameters that allows arbitrary class instantiation",
+      "package": "com.fasterxml.jackson.core:jackson-databind",
+      "version": "2.17.2",
+      "fixed_in": [
+        "2.18.8"
+      ],
+      "location": "pom.xml",
+      "published": "2026-06-23",
+      "reference": "https://osv.dev/vulnerability/GHSA-j3rv-43j4-c7qm"
+    },
+    {
+      "id": "Springboot-BankApp:com.fasterxml.jackson.core:jackson-databind:GHSA-q4xh-88c3-wmh7",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-q4xh-88c3-wmh7",
+      "aliases": [
+        "CVE-2026-68497"
+      ],
+      "severity": "high",
+      "title": "jackson-databind: Duration XMLGregorianCalendar Unbounded Number Parse DoS",
+      "package": "com.fasterxml.jackson.core:jackson-databind",
+      "version": "2.17.2",
+      "fixed_in": [
+        "2.18.10"
+      ],
+      "location": "pom.xml",
+      "published": "2026-09-28",
+      "reference": "https://osv.dev/vulnerability/GHSA-q4xh-88c3-wmh7"
+    },
+    {
+      "id": "Springboot-BankApp:com.fasterxml.jackson.core:jackson-databind:GHSA-rmj7-2vxq-3g9f",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-rmj7-2vxq-3g9f",
+      "aliases": [
+        "CVE-2026-54513"
+      ],
+      "severity": "high",
+      "title": "jackson-databind has an array subtype allowlist bypass in BasicPolymorphicTypeValidator (allowIfSubTypeIsArray)",
+      "package": "com.fasterxml.jackson.core:jackson-databind",
+      "version": "2.17.2",
+      "fixed_in": [
+        "2.18.8"
+      ],
+      "location": "pom.xml",
+      "published": "2026-06-23",
+      "reference": "https://osv.dev/vulnerability/GHSA-rmj7-2vxq-3g9f"
+    },
+    {
+      "id": "Springboot-BankApp:com.fasterxml.jackson.core:jackson-databind:GHSA-vvgp-rfg2-7rr6",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-vvgp-rfg2-7rr6",
+      "aliases": [
+        "CVE-2026-77310"
+      ],
+      "severity": "medium",
+      "title": "jackson-databind: Incomplete fix for CVE-2026-54514: eager DNS resolution (SSRF) still present in InetAddress deserialization",
+      "package": "com.fasterxml.jackson.core:jackson-databind",
+      "version": "2.17.2",
+      "fixed_in": [
+        "2.18.9"
+      ],
+      "location": "pom.xml",
+      "published": "2026-09-28",
+      "reference": "https://osv.dev/vulnerability/GHSA-vvgp-rfg2-7rr6"
+    },
+    {
+      "id": "Springboot-BankApp:com.fasterxml.jackson.core:jackson-databind:GHSA-wjgm-6hv5-3cvf",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-wjgm-6hv5-3cvf",
+      "aliases": [
+        "CVE-2026-19032"
+      ],
+      "severity": "medium",
+      "title": "jackson-databind: Path Deserialization Missing Scheme Allowlist for FileSystemProvider Resolution",
+      "package": "com.fasterxml.jackson.core:jackson-databind",
+      "version": "2.17.2",
+      "fixed_in": [
+        "2.18.10"
+      ],
+      "location": "pom.xml",
+      "published": "2026-09-28",
+      "reference": "https://osv.dev/vulnerability/GHSA-wjgm-6hv5-3cvf"
+    },
+    {
+      "id": "Springboot-BankApp:com.fasterxml.jackson.core:jackson-databind:GHSA-wv8q-qhhj-9h54",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-wv8q-qhhj-9h54",
+      "aliases": [
+        "CVE-2026-91776"
+      ],
+      "severity": "high",
+      "title": "jackson-databind retains every unknown raw type ID ",
+      "package": "com.fasterxml.jackson.core:jackson-databind",
+      "version": "2.17.2",
+      "fixed_in": [
+        "2.18.11"
+      ],
+      "location": "pom.xml",
+      "published": "2026-09-30",
+      "reference": "https://osv.dev/vulnerability/GHSA-wv8q-qhhj-9h54"
+    },
+    {
+      "id": "Springboot-BankApp:com.mysql:mysql-connector-j:GHSA-m6vm-37g8-gqvh",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-m6vm-37g8-gqvh",
+      "aliases": [
+        "CVE-2023-22102"
+      ],
+      "severity": "high",
+      "title": "MySQL Connectors takeover vulnerability",
+      "package": "com.mysql:mysql-connector-j",
+      "version": "8.0.33",
+      "fixed_in": [
+        "8.2.0"
+      ],
+      "location": "pom.xml",
+      "published": "2023-10-18",
+      "reference": "https://osv.dev/vulnerability/GHSA-m6vm-37g8-gqvh"
+    },
+    {
+      "id": "Springboot-BankApp:net.minidev:json-smart:GHSA-pq2g-wx69-c263",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-pq2g-wx69-c263",
+      "aliases": [
+        "CVE-2024-57699"
+      ],
+      "severity": "high",
+      "title": "Netplex Json-smart Uncontrolled Recursion vulnerability",
+      "package": "net.minidev:json-smart",
+      "version": "2.5.1",
+      "fixed_in": [
+        "2.5.2"
+      ],
+      "location": "pom.xml",
+      "published": "2025-02-06",
+      "reference": "https://osv.dev/vulnerability/GHSA-pq2g-wx69-c263"
+    },
+    {
+      "id": "Springboot-BankApp:org.apache.logging.log4j:log4j-api:GHSA-qv9r-c865-cp47",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-qv9r-c865-cp47",
+      "aliases": [
+        "CVE-2026-49844"
+      ],
+      "severity": "medium",
+      "title": "Apache Log4j API: Improper encoding of non-finite floating-point values during MapMessage JSON serialization",
+      "package": "org.apache.logging.log4j:log4j-api",
+      "version": "2.23.1",
+      "fixed_in": [
+        "2.25.5"
+      ],
+      "location": "pom.xml",
+      "published": "2026-07-11",
+      "reference": "https://osv.dev/vulnerability/GHSA-qv9r-c865-cp47"
+    },
+    {
+      "id": "Springboot-BankApp:org.apache.tomcat.embed:tomcat-embed-core:GHSA-23hv-mwm6-g8jf",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-23hv-mwm6-g8jf",
+      "aliases": [
+        "CVE-2025-55668"
+      ],
+      "severity": "medium",
+      "title": "Apache Tomcat Session Fixation vulnerability",
+      "package": "org.apache.tomcat.embed:tomcat-embed-core",
+      "version": "10.1.28",
+      "fixed_in": [
+        "10.1.42"
+      ],
+      "location": "pom.xml",
+      "published": "2025-08-13",
+      "reference": "https://osv.dev/vulnerability/GHSA-23hv-mwm6-g8jf"
+    },
+    {
+      "id": "Springboot-BankApp:org.apache.tomcat.embed:tomcat-embed-core:GHSA-25xr-qj8w-c4vf",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-25xr-qj8w-c4vf",
+      "aliases": [
+        "CVE-2025-53506"
+      ],
+      "severity": "high",
+      "title": "Apache Tomcat Coyote vulnerable to Denial of Service via excessive HTTP/2 streams",
+      "package": "org.apache.tomcat.embed:tomcat-embed-core",
+      "version": "10.1.28",
+      "fixed_in": [
+        "10.1.43"
+      ],
+      "location": "pom.xml",
+      "published": "2025-07-10",
+      "reference": "https://osv.dev/vulnerability/GHSA-25xr-qj8w-c4vf"
+    },
+    {
+      "id": "Springboot-BankApp:org.apache.tomcat.embed:tomcat-embed-core:GHSA-27hp-xhwr-wr2m",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-27hp-xhwr-wr2m",
+      "aliases": [
+        "CVE-2024-56337"
+      ],
+      "severity": "high",
+      "title": "Apache Tomcat Time-of-check Time-of-use (TOCTOU) Race Condition vulnerability",
+      "package": "org.apache.tomcat.embed:tomcat-embed-core",
+      "version": "10.1.28",
+      "fixed_in": [
+        "10.1.34"
+      ],
+      "location": "pom.xml",
+      "published": "2024-12-20",
+      "reference": "https://osv.dev/vulnerability/GHSA-27hp-xhwr-wr2m"
+    },
+    {
+      "id": "Springboot-BankApp:org.apache.tomcat.embed:tomcat-embed-core:GHSA-3p2h-wqq4-wf4h",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-3p2h-wqq4-wf4h",
+      "aliases": [
+        "CVE-2025-31650"
+      ],
+      "severity": "medium",
+      "title": "Apache Tomcat Denial of Service via invalid HTTP priority header",
+      "package": "org.apache.tomcat.embed:tomcat-embed-core",
+      "version": "10.1.28",
+      "fixed_in": [
+        "10.1.40"
+      ],
+      "location": "pom.xml",
+      "published": "2025-04-28",
+      "reference": "https://osv.dev/vulnerability/GHSA-3p2h-wqq4-wf4h"
+    },
+    {
+      "id": "Springboot-BankApp:org.apache.tomcat.embed:tomcat-embed-core:GHSA-42wg-hm62-jcwg",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-42wg-hm62-jcwg",
+      "aliases": [
+        "CVE-2025-49124"
+      ],
+      "severity": "medium",
+      "title": "Apache Tomcat installer for Windows has an untrusted search path vulnerability",
+      "package": "org.apache.tomcat.embed:tomcat-embed-core",
+      "version": "10.1.28",
+      "fixed_in": [
+        "10.1.42"
+      ],
+      "location": "pom.xml",
+      "published": "2025-06-16",
+      "reference": "https://osv.dev/vulnerability/GHSA-42wg-hm62-jcwg"
+    },
+    {
+      "id": "Springboot-BankApp:org.apache.tomcat.embed:tomcat-embed-core:GHSA-563x-q5rq-57qp",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-563x-q5rq-57qp",
+      "aliases": [
+        "CVE-2026-24880"
+      ],
+      "severity": "high",
+      "title": "Apache Tomcat has an HTTP Request/Response Smuggling vulnerability",
+      "package": "org.apache.tomcat.embed:tomcat-embed-core",
+      "version": "10.1.28",
+      "fixed_in": [
+        "10.1.52"
+      ],
+      "location": "pom.xml",
+      "published": "2026-04-09",
+      "reference": "https://osv.dev/vulnerability/GHSA-563x-q5rq-57qp"
+    },
+    {
+      "id": "Springboot-BankApp:org.apache.tomcat.embed:tomcat-embed-core:GHSA-5j33-cvvr-w245",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-5j33-cvvr-w245",
+      "aliases": [
+        "CVE-2024-50379"
+      ],
+      "severity": "high",
+      "title": "Apache Tomcat Time-of-check Time-of-use (TOCTOU) Race Condition vulnerability",
+      "package": "org.apache.tomcat.embed:tomcat-embed-core",
+      "version": "10.1.28",
+      "fixed_in": [
+        "10.1.34"
+      ],
+      "location": "pom.xml",
+      "published": "2024-12-17",
+      "reference": "https://osv.dev/vulnerability/GHSA-5j33-cvvr-w245"
+    },
+    {
+      "id": "Springboot-BankApp:org.apache.tomcat.embed:tomcat-embed-core:GHSA-5m62-pw8w-7w9f",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-5m62-pw8w-7w9f",
+      "aliases": [
+        "CVE-2026-43515"
+      ],
+      "severity": "critical",
+      "title": "Apache Tomcat - Security constraints not correctly applied",
+      "package": "org.apache.tomcat.embed:tomcat-embed-core",
+      "version": "10.1.28",
+      "fixed_in": [
+        "10.1.55"
+      ],
+      "location": "pom.xml",
+      "published": "2026-05-12",
+      "reference": "https://osv.dev/vulnerability/GHSA-5m62-pw8w-7w9f"
+    },
+    {
+      "id": "Springboot-BankApp:org.apache.tomcat.embed:tomcat-embed-core:GHSA-5mp6-jrq3-r938",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-5mp6-jrq3-r938",
+      "aliases": [
+        "CVE-2026-43513"
+      ],
+      "severity": "high",
+      "title": "Apache Tomcat: LockOutRealm treats user names as case-sensitive",
+      "package": "org.apache.tomcat.embed:tomcat-embed-core",
+      "version": "10.1.28",
+      "fixed_in": [
+        "10.1.55"
+      ],
+      "location": "pom.xml",
+      "published": "2026-05-12",
+      "reference": "https://osv.dev/vulnerability/GHSA-5mp6-jrq3-r938"
+    },
+    {
+      "id": "Springboot-BankApp:org.apache.tomcat.embed:tomcat-embed-core:GHSA-83qj-6fr2-vhqg",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-83qj-6fr2-vhqg",
+      "aliases": [
+        "CVE-2025-24813"
+      ],
+      "severity": "critical",
+      "title": "Apache Tomcat: Potential RCE and/or information disclosure and/or information corruption with partial PUT",
+      "package": "org.apache.tomcat.embed:tomcat-embed-core",
+      "version": "10.1.28",
+      "fixed_in": [
+        "10.1.35"
+      ],
+      "location": "pom.xml",
+      "published": "2025-03-10",
+      "reference": "https://osv.dev/vulnerability/GHSA-83qj-6fr2-vhqg"
+    },
+    {
+      "id": "Springboot-BankApp:org.apache.tomcat.embed:tomcat-embed-core:GHSA-9m3c-qcxr-9x87",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-9m3c-qcxr-9x87",
+      "aliases": [
+        "CVE-2026-25854"
+      ],
+      "severity": "medium",
+      "title": "Apache Tomcat has an Open Redirect vulnerability",
+      "package": "org.apache.tomcat.embed:tomcat-embed-core",
+      "version": "10.1.28",
+      "fixed_in": [
+        "10.1.53"
+      ],
+      "location": "pom.xml",
+      "published": "2026-04-09",
+      "reference": "https://osv.dev/vulnerability/GHSA-9m3c-qcxr-9x87"
+    },
+    {
+      "id": "Springboot-BankApp:org.apache.tomcat.embed:tomcat-embed-core:GHSA-9m89-8frq-c98c",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-9m89-8frq-c98c",
+      "aliases": [
+        "CVE-2026-43514"
+      ],
+      "severity": "low",
+      "title": "Apache Tomcat - AJP secret compared in non-constant time",
+      "package": "org.apache.tomcat.embed:tomcat-embed-core",
+      "version": "10.1.28",
+      "fixed_in": [
+        "10.1.55"
+      ],
+      "location": "pom.xml",
+      "published": "2026-05-12",
+      "reference": "https://osv.dev/vulnerability/GHSA-9m89-8frq-c98c"
+    },
+    {
+      "id": "Springboot-BankApp:org.apache.tomcat.embed:tomcat-embed-core:GHSA-9xv2-5v5q-p794",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-9xv2-5v5q-p794",
+      "aliases": [
+        "CVE-2026-65905"
+      ],
+      "severity": "critical",
+      "title": "Apache Tomcat's DIGEST authenticator has an Authentication Bypass by Capture-replay vulnerability",
+      "package": "org.apache.tomcat.embed:tomcat-embed-core",
+      "version": "10.1.28",
+      "fixed_in": [
+        "10.1.58"
+      ],
+      "location": "pom.xml",
+      "published": "2026-08-26",
+      "reference": "https://osv.dev/vulnerability/GHSA-9xv2-5v5q-p794"
+    },
+    {
+      "id": "Springboot-BankApp:org.apache.tomcat.embed:tomcat-embed-core:GHSA-ff77-26x5-69cr",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-ff77-26x5-69cr",
+      "aliases": [
+        "CVE-2025-31651"
+      ],
+      "severity": "low",
+      "title": "Apache Tomcat Rewrite rule bypass",
+      "package": "org.apache.tomcat.embed:tomcat-embed-core",
+      "version": "10.1.28",
+      "fixed_in": [
+        "10.1.40"
+      ],
+      "location": "pom.xml",
+      "published": "2025-04-28",
+      "reference": "https://osv.dev/vulnerability/GHSA-ff77-26x5-69cr"
+    },
+    {
+      "id": "Springboot-BankApp:org.apache.tomcat.embed:tomcat-embed-core:GHSA-fpj8-gq4v-p354",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-fpj8-gq4v-p354",
+      "aliases": [
+        "CVE-2025-66614"
+      ],
+      "severity": "medium",
+      "title": "Apache Tomcat - Client certificate verification bypass",
+      "package": "org.apache.tomcat.embed:tomcat-embed-core",
+      "version": "10.1.28",
+      "fixed_in": [
+        "10.1.50"
+      ],
+      "location": "pom.xml",
+      "published": "2026-02-17",
+      "reference": "https://osv.dev/vulnerability/GHSA-fpj8-gq4v-p354"
+    },
+    {
+      "id": "Springboot-BankApp:org.apache.tomcat.embed:tomcat-embed-core:GHSA-fv25-8xcx-gqjc",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-fv25-8xcx-gqjc",
+      "aliases": [
+        "CVE-2026-42498"
+      ],
+      "severity": "high",
+      "title": "Apache Tomcat - WebSocket authentication header exposure",
+      "package": "org.apache.tomcat.embed:tomcat-embed-core",
+      "version": "10.1.28",
+      "fixed_in": [
+        "10.1.55"
+      ],
+      "location": "pom.xml",
+      "published": "2026-05-12",
+      "reference": "https://osv.dev/vulnerability/GHSA-fv25-8xcx-gqjc"
+    },
+    {
+      "id": "Springboot-BankApp:org.apache.tomcat.embed:tomcat-embed-core:GHSA-gcx9-497g-6cp6",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-gcx9-497g-6cp6",
+      "aliases": [
+        "CVE-2026-65182"
+      ],
+      "severity": "critical",
+      "title": "Apache Tomcat has an Improper Access Control, Incorrect Authorization vulnerability",
+      "package": "org.apache.tomcat.embed:tomcat-embed-core",
+      "version": "10.1.28",
+      "fixed_in": [
+        "10.1.58"
+      ],
+      "location": "pom.xml",
+      "published": "2026-08-26",
+      "reference": "https://osv.dev/vulnerability/GHSA-gcx9-497g-6cp6"
+    },
+    {
+      "id": "Springboot-BankApp:org.apache.tomcat.embed:tomcat-embed-core:GHSA-gqp3-2cvr-x8m3",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-gqp3-2cvr-x8m3",
+      "aliases": [
+        "CVE-2025-48989"
+      ],
+      "severity": "high",
+      "title": "Apache Tomcat Improper Resource Shutdown or Release vulnerability",
+      "package": "org.apache.tomcat.embed:tomcat-embed-core",
+      "version": "10.1.28",
+      "fixed_in": [
+        "10.1.44"
+      ],
+      "location": "pom.xml",
+      "published": "2025-08-13",
+      "reference": "https://osv.dev/vulnerability/GHSA-gqp3-2cvr-x8m3"
+    },
+    {
+      "id": "Springboot-BankApp:org.apache.tomcat.embed:tomcat-embed-core:GHSA-gx5v-xp9w-j4cg",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-gx5v-xp9w-j4cg",
+      "aliases": [
+        "CVE-2026-41284"
+      ],
+      "severity": "high",
+      "title": "Apache Tomcat: Unbounded read in WebDAV LOCK and  PROPFIND handling",
+      "package": "org.apache.tomcat.embed:tomcat-embed-core",
+      "version": "10.1.28",
+      "fixed_in": [
+        "10.1.55"
+      ],
+      "location": "pom.xml",
+      "published": "2026-05-12",
+      "reference": "https://osv.dev/vulnerability/GHSA-gx5v-xp9w-j4cg"
+    },
+    {
+      "id": "Springboot-BankApp:org.apache.tomcat.embed:tomcat-embed-core:GHSA-h2fw-rfh5-95r3",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-h2fw-rfh5-95r3",
+      "aliases": [
+        "CVE-2025-46701"
+      ],
+      "severity": "low",
+      "title": "Apache Tomcat - CGI security constraint bypass",
+      "package": "org.apache.tomcat.embed:tomcat-embed-core",
+      "version": "10.1.28",
+      "fixed_in": [
+        "10.1.41"
+      ],
+      "location": "pom.xml",
+      "published": "2025-05-29",
+      "reference": "https://osv.dev/vulnerability/GHSA-h2fw-rfh5-95r3"
+    },
+    {
+      "id": "Springboot-BankApp:org.apache.tomcat.embed:tomcat-embed-core:GHSA-h3gc-qfqq-6h8f",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-h3gc-qfqq-6h8f",
+      "aliases": [
+        "CVE-2025-48988"
+      ],
+      "severity": "high",
+      "title": "Apache Tomcat - DoS in multipart upload",
+      "package": "org.apache.tomcat.embed:tomcat-embed-core",
+      "version": "10.1.28",
+      "fixed_in": [
+        "10.1.42"
+      ],
+      "location": "pom.xml",
+      "published": "2025-06-16",
+      "reference": "https://osv.dev/vulnerability/GHSA-h3gc-qfqq-6h8f"
+    },
+    {
+      "id": "Springboot-BankApp:org.apache.tomcat.embed:tomcat-embed-core:GHSA-h3x4-894j-xpx5",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-h3x4-894j-xpx5",
+      "aliases": [
+        "CVE-2026-68525"
+      ],
+      "severity": "critical",
+      "title": "Apache Tomcat's FORM authentication process has an Incorrect Authorization vulnerability",
+      "package": "org.apache.tomcat.embed:tomcat-embed-core",
+      "version": "10.1.28",
+      "fixed_in": [
+        "10.1.58"
+      ],
+      "location": "pom.xml",
+      "published": "2026-08-26",
+      "reference": "https://osv.dev/vulnerability/GHSA-h3x4-894j-xpx5"
+    },
+    {
+      "id": "Springboot-BankApp:org.apache.tomcat.embed:tomcat-embed-core:GHSA-h6fc-48rj-7qqh",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-h6fc-48rj-7qqh",
+      "aliases": [
+        "CVE-2026-43512"
+      ],
+      "severity": "critical",
+      "title": "Apache Tomcat - Digest authenticator will authenticate any unknown user",
+      "package": "org.apache.tomcat.embed:tomcat-embed-core",
+      "version": "10.1.28",
+      "fixed_in": [
+        "10.1.55"
+      ],
+      "location": "pom.xml",
+      "published": "2026-05-12",
+      "reference": "https://osv.dev/vulnerability/GHSA-h6fc-48rj-7qqh"
+    },
+    {
+      "id": "Springboot-BankApp:org.apache.tomcat.embed:tomcat-embed-core:GHSA-hgrr-935x-pq79",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-hgrr-935x-pq79",
+      "aliases": [
+        "CVE-2025-61795"
+      ],
+      "severity": "low",
+      "title": "Apache Tomcat Vulnerable to Improper Resource Shutdown or Release",
+      "package": "org.apache.tomcat.embed:tomcat-embed-core",
+      "version": "10.1.28",
+      "fixed_in": [
+        "10.1.47"
+      ],
+      "location": "pom.xml",
+      "published": "2025-10-27",
+      "reference": "https://osv.dev/vulnerability/GHSA-hgrr-935x-pq79"
+    },
+    {
+      "id": "Springboot-BankApp:org.apache.tomcat.embed:tomcat-embed-core:GHSA-mgp5-rv84-w37q",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-mgp5-rv84-w37q",
+      "aliases": [
+        "CVE-2026-24734"
+      ],
+      "severity": "high",
+      "title": "Apache Tomcat has an Improper Input Validation vulnerability",
+      "package": "org.apache.tomcat.embed:tomcat-embed-core",
+      "version": "10.1.28",
+      "fixed_in": [
+        "10.1.52"
+      ],
+      "location": "pom.xml",
+      "published": "2026-02-17",
+      "reference": "https://osv.dev/vulnerability/GHSA-mgp5-rv84-w37q"
+    },
+    {
+      "id": "Springboot-BankApp:org.apache.tomcat.embed:tomcat-embed-core:GHSA-qvf5-hvjx-wm27",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-qvf5-hvjx-wm27",
+      "aliases": [
+        "CVE-2024-52317"
+      ],
+      "severity": "medium",
+      "title": "Apache Tomcat Request and/or response mix-up",
+      "package": "org.apache.tomcat.embed:tomcat-embed-core",
+      "version": "10.1.28",
+      "fixed_in": [
+        "10.1.31"
+      ],
+      "location": "pom.xml",
+      "published": "2024-11-18",
+      "reference": "https://osv.dev/vulnerability/GHSA-qvf5-hvjx-wm27"
+    },
+    {
+      "id": "Springboot-BankApp:org.apache.tomcat.embed:tomcat-embed-core:GHSA-r29c-68gh-xp6x",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-r29c-68gh-xp6x",
+      "aliases": [
+        "CVE-2026-41293"
+      ],
+      "severity": "critical",
+      "title": "Apache Tomcat - HTTP/2 request headers not validated",
+      "package": "org.apache.tomcat.embed:tomcat-embed-core",
+      "version": "10.1.28",
+      "fixed_in": [
+        "10.1.55"
+      ],
+      "location": "pom.xml",
+      "published": "2026-05-12",
+      "reference": "https://osv.dev/vulnerability/GHSA-r29c-68gh-xp6x"
+    },
+    {
+      "id": "Springboot-BankApp:org.apache.tomcat.embed:tomcat-embed-core:GHSA-rv64-5gf8-9qq8",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-rv64-5gf8-9qq8",
+      "aliases": [
+        "CVE-2026-34483"
+      ],
+      "severity": "high",
+      "title": "Apache Tomcat has an Improper Encoding or Escaping of Output vulnerability in the JsonAccessLogValve",
+      "package": "org.apache.tomcat.embed:tomcat-embed-core",
+      "version": "10.1.28",
+      "fixed_in": [
+        "10.1.54"
+      ],
+      "location": "pom.xml",
+      "published": "2026-04-09",
+      "reference": "https://osv.dev/vulnerability/GHSA-rv64-5gf8-9qq8"
+    },
+    {
+      "id": "Springboot-BankApp:org.apache.tomcat.embed:tomcat-embed-core:GHSA-vfww-5hm6-hx2j",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-vfww-5hm6-hx2j",
+      "aliases": [
+        "CVE-2025-55754"
+      ],
+      "severity": "low",
+      "title": "Apache Tomcat Vulnerable to Improper Neutralization of Escape, Meta, or Control Sequences",
+      "package": "org.apache.tomcat.embed:tomcat-embed-core",
+      "version": "10.1.28",
+      "fixed_in": [
+        "10.1.45"
+      ],
+      "location": "pom.xml",
+      "published": "2025-10-27",
+      "reference": "https://osv.dev/vulnerability/GHSA-vfww-5hm6-hx2j"
+    },
+    {
+      "id": "Springboot-BankApp:org.apache.tomcat.embed:tomcat-embed-core:GHSA-wc4r-xq3c-5cf3",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-wc4r-xq3c-5cf3",
+      "aliases": [
+        "CVE-2025-49125"
+      ],
+      "severity": "medium",
+      "title": "Apache Tomcat - Security constraint bypass for pre/post-resources",
+      "package": "org.apache.tomcat.embed:tomcat-embed-core",
+      "version": "10.1.28",
+      "fixed_in": [
+        "10.1.42"
+      ],
+      "location": "pom.xml",
+      "published": "2025-06-16",
+      "reference": "https://osv.dev/vulnerability/GHSA-wc4r-xq3c-5cf3"
+    },
+    {
+      "id": "Springboot-BankApp:org.apache.tomcat.embed:tomcat-embed-core:GHSA-wmwf-9ccg-fff5",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-wmwf-9ccg-fff5",
+      "aliases": [
+        "CVE-2025-55752"
+      ],
+      "severity": "high",
+      "title": "Apache Tomcat Vulnerable to Relative Path Traversal",
+      "package": "org.apache.tomcat.embed:tomcat-embed-core",
+      "version": "10.1.28",
+      "fixed_in": [
+        "10.1.45"
+      ],
+      "location": "pom.xml",
+      "published": "2025-10-27",
+      "reference": "https://osv.dev/vulnerability/GHSA-wmwf-9ccg-fff5"
+    },
+    {
+      "id": "Springboot-BankApp:org.apache.tomcat.embed:tomcat-embed-core:GHSA-wr62-c79q-cv37",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-wr62-c79q-cv37",
+      "aliases": [
+        "CVE-2025-52520"
+      ],
+      "severity": "high",
+      "title": "Apache Tomcat Catalina is vulnerable to DoS attack through bypassing of size limits",
+      "package": "org.apache.tomcat.embed:tomcat-embed-core",
+      "version": "10.1.28",
+      "fixed_in": [
+        "10.1.43"
+      ],
+      "location": "pom.xml",
+      "published": "2025-07-10",
+      "reference": "https://osv.dev/vulnerability/GHSA-wr62-c79q-cv37"
+    },
+    {
+      "id": "Springboot-BankApp:org.apache.tomcat.embed:tomcat-embed-core:GHSA-x4m4-345f-5h5g",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-x4m4-345f-5h5g",
+      "aliases": [
+        "CVE-2026-34487"
+      ],
+      "severity": "high",
+      "title": "Apache Tomcat vulnerable to Insertion of Sensitive Information into Log File",
+      "package": "org.apache.tomcat.embed:tomcat-embed-core",
+      "version": "10.1.28",
+      "fixed_in": [
+        "10.1.54"
+      ],
+      "location": "pom.xml",
+      "published": "2026-04-09",
+      "reference": "https://osv.dev/vulnerability/GHSA-x4m4-345f-5h5g"
+    },
+    {
+      "id": "Springboot-BankApp:org.assertj:assertj-core:GHSA-rqfh-9r24-8c9r",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-rqfh-9r24-8c9r",
+      "aliases": [
+        "CVE-2026-24400"
+      ],
+      "severity": "high",
+      "title": "AssertJ has XML External Entity (XXE) vulnerability when parsing untrusted XML via isXmlEqualTo assertion",
+      "package": "org.assertj:assertj-core",
+      "version": "3.25.3",
+      "fixed_in": [
+        "3.27.7"
+      ],
+      "location": "pom.xml",
+      "published": "2026-01-26",
+      "reference": "https://osv.dev/vulnerability/GHSA-rqfh-9r24-8c9r"
+    },
+    {
+      "id": "Springboot-BankApp:org.springframework.boot:spring-boot:GHSA-rc42-6c7j-7h5r",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-rc42-6c7j-7h5r",
+      "aliases": [
+        "CVE-2025-22235"
+      ],
+      "severity": "high",
+      "title": "Spring Boot EndpointRequest.to() creates wrong matcher if actuator endpoint is not exposed",
+      "package": "org.springframework.boot:spring-boot",
+      "version": "3.3.3",
+      "fixed_in": [
+        "3.3.11"
+      ],
+      "location": "pom.xml",
+      "published": "2025-04-28",
+      "reference": "https://osv.dev/vulnerability/GHSA-rc42-6c7j-7h5r"
+    },
+    {
+      "id": "Springboot-BankApp:org.springframework.boot:spring-boot:GHSA-wwpq-f5c3-7hvx",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-wwpq-f5c3-7hvx",
+      "aliases": [
+        "CVE-2026-40973"
+      ],
+      "severity": "high",
+      "title": "Spring Boot accepts predictable temp directory without ownership verification",
+      "package": "org.springframework.boot:spring-boot",
+      "version": "3.3.3",
+      "fixed_in": [
+        "3.5.14"
+      ],
+      "location": "pom.xml",
+      "published": "2026-04-28",
+      "reference": "https://osv.dev/vulnerability/GHSA-wwpq-f5c3-7hvx"
+    },
+    {
+      "id": "Springboot-BankApp:org.springframework.boot:spring-boot-autoconfigure:GHSA-ggg2-9786-hwc8",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-ggg2-9786-hwc8",
+      "aliases": [
+        "CVE-2026-41001"
+      ],
+      "severity": "medium",
+      "title": "Spring Boot: Predictable Temp Directory in Artemis Auto-configuration",
+      "package": "org.springframework.boot:spring-boot-autoconfigure",
+      "version": "3.3.3",
+      "fixed_in": [
+        "3.5.15"
+      ],
+      "location": "pom.xml",
+      "published": "2026-06-11",
+      "reference": "https://osv.dev/vulnerability/GHSA-ggg2-9786-hwc8"
+    },
+    {
+      "id": "Springboot-BankApp:org.springframework.data:spring-data-commons:GHSA-5m4m-73w9-8433",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-5m4m-73w9-8433",
+      "aliases": [
+        "CVE-2026-41721"
+      ],
+      "severity": "medium",
+      "title": "Spring Data Commons: Denial of Service via excessive memory allocation in projection binding",
+      "package": "org.springframework.data:spring-data-commons",
+      "version": "3.3.3",
+      "fixed_in": [
+        "3.5.12"
+      ],
+      "location": "pom.xml",
+      "published": "2026-06-10",
+      "reference": "https://osv.dev/vulnerability/GHSA-5m4m-73w9-8433"
+    },
+    {
+      "id": "Springboot-BankApp:org.springframework.data:spring-data-commons:GHSA-5vpf-xvv7-c8vh",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-5vpf-xvv7-c8vh",
+      "aliases": [
+        "CVE-2026-41711"
+      ],
+      "severity": "medium",
+      "title": "Spring Data Commons: StackOverflowException when parsing Sort parameters (DoS)",
+      "package": "org.springframework.data:spring-data-commons",
+      "version": "3.3.3",
+      "fixed_in": [
+        "3.5.12"
+      ],
+      "location": "pom.xml",
+      "published": "2026-06-10",
+      "reference": "https://osv.dev/vulnerability/GHSA-5vpf-xvv7-c8vh"
+    },
+    {
+      "id": "Springboot-BankApp:org.springframework.data:spring-data-commons:GHSA-9fw2-h3hf-293r",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-9fw2-h3hf-293r",
+      "aliases": [
+        "CVE-2026-41716"
+      ],
+      "severity": "high",
+      "title": "Spring Data Commons: Heap exhaustion from unbounded property-lookup cache retaining crafted string keys",
+      "package": "org.springframework.data:spring-data-commons",
+      "version": "3.3.3",
+      "fixed_in": [
+        "3.5.12"
+      ],
+      "location": "pom.xml",
+      "published": "2026-06-10",
+      "reference": "https://osv.dev/vulnerability/GHSA-9fw2-h3hf-293r"
+    },
+    {
+      "id": "Springboot-BankApp:org.springframework.security:spring-security-core:GHSA-q3v6-hm2v-pw99",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-q3v6-hm2v-pw99",
+      "aliases": [
+        "CVE-2024-38827"
+      ],
+      "severity": "medium",
+      "title": "Spring Framework has Authorization Bypass for Case Sensitive Comparisons",
+      "package": "org.springframework.security:spring-security-core",
+      "version": "6.3.3",
+      "fixed_in": [
+        "6.3.5"
+      ],
+      "location": "pom.xml",
+      "published": "2024-12-02",
+      "reference": "https://osv.dev/vulnerability/GHSA-q3v6-hm2v-pw99"
+    },
+    {
+      "id": "Springboot-BankApp:org.springframework.security:spring-security-core:GHSA-vxf7-qj7q-83fh",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-vxf7-qj7q-83fh",
+      "aliases": [
+        "CVE-2026-22746"
+      ],
+      "severity": "low",
+      "title": "Spring Security Vulnerable to User Attribute Enumeration when Using DaoAuthenticationProvider",
+      "package": "org.springframework.security:spring-security-core",
+      "version": "6.3.3",
+      "fixed_in": [
+        "6.5.10"
+      ],
+      "location": "pom.xml",
+      "published": "2026-04-22",
+      "reference": "https://osv.dev/vulnerability/GHSA-vxf7-qj7q-83fh"
+    },
+    {
+      "id": "Springboot-BankApp:org.springframework.security:spring-security-crypto:GHSA-mg83-c7gq-rv5c",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-mg83-c7gq-rv5c",
+      "aliases": [
+        "CVE-2025-22228"
+      ],
+      "severity": "high",
+      "title": "Spring Security Does Not Enforce Password Length",
+      "package": "org.springframework.security:spring-security-crypto",
+      "version": "6.3.3",
+      "fixed_in": [
+        "6.3.8"
+      ],
+      "location": "pom.xml",
+      "published": "2025-03-20",
+      "reference": "https://osv.dev/vulnerability/GHSA-mg83-c7gq-rv5c"
+    },
+    {
+      "id": "Springboot-BankApp:org.springframework.security:spring-security-web:GHSA-293q-567p-wmwq",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-293q-567p-wmwq",
+      "aliases": [
+        "CVE-2026-47838"
+      ],
+      "severity": "medium",
+      "title": "Spring Security Vulnerable to Unauthorized User Impersonation when Using X.509 Client Certificates",
+      "package": "org.springframework.security:spring-security-web",
+      "version": "6.3.3",
+      "fixed_in": [
+        "6.5.11"
+      ],
+      "location": "pom.xml",
+      "published": "2026-06-10",
+      "reference": "https://osv.dev/vulnerability/GHSA-293q-567p-wmwq"
+    },
+    {
+      "id": "Springboot-BankApp:org.springframework.security:spring-security-web:GHSA-c4q5-6c82-3qpw",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-c4q5-6c82-3qpw",
+      "aliases": [
+        "CVE-2024-38821"
+      ],
+      "severity": "critical",
+      "title": "Spring Security vulnerable to Authorization Bypass of Static Resources in WebFlux Applications",
+      "package": "org.springframework.security:spring-security-web",
+      "version": "6.3.3",
+      "fixed_in": [
+        "6.3.4"
+      ],
+      "location": "pom.xml",
+      "published": "2024-10-28",
+      "reference": "https://osv.dev/vulnerability/GHSA-c4q5-6c82-3qpw"
+    },
+    {
+      "id": "Springboot-BankApp:org.springframework.security:spring-security-web:GHSA-mf92-479x-3373",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-mf92-479x-3373",
+      "aliases": [
+        "CVE-2026-22732"
+      ],
+      "severity": "critical",
+      "title": "Spring Security HTTP Headers Are not Written Under Some Conditions",
+      "package": "org.springframework.security:spring-security-web",
+      "version": "6.3.3",
+      "fixed_in": [
+        "6.5.9"
+      ],
+      "location": "pom.xml",
+      "published": "2026-03-20",
+      "reference": "https://osv.dev/vulnerability/GHSA-mf92-479x-3373"
+    },
+    {
+      "id": "Springboot-BankApp:org.springframework.security:spring-security-web:GHSA-x2r2-rvhq-2mqv",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-x2r2-rvhq-2mqv",
+      "aliases": [
+        "CVE-2026-41706"
+      ],
+      "severity": "medium",
+      "title": "Spring Security: Open Redirect via Unvalidated Post-Login Redirect URL Stored in CookieRequestCache",
+      "package": "org.springframework.security:spring-security-web",
+      "version": "6.3.3",
+      "fixed_in": [
+        "6.5.11"
+      ],
+      "location": "pom.xml",
+      "published": "2026-06-10",
+      "reference": "https://osv.dev/vulnerability/GHSA-x2r2-rvhq-2mqv"
+    },
+    {
+      "id": "Springboot-BankApp:org.springframework:spring-context:GHSA-4gc7-5j7h-4qph",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-4gc7-5j7h-4qph",
+      "aliases": [
+        "CVE-2024-38820"
+      ],
+      "severity": "medium",
+      "title": "Spring Framework DataBinder Case Sensitive Match Exception",
+      "package": "org.springframework:spring-context",
+      "version": "6.1.12",
+      "fixed_in": [
+        "6.1.14"
+      ],
+      "location": "pom.xml",
+      "published": "2024-10-18",
+      "reference": "https://osv.dev/vulnerability/GHSA-4gc7-5j7h-4qph"
+    },
+    {
+      "id": "Springboot-BankApp:org.springframework:spring-context:GHSA-4wp7-92pw-q264",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-4wp7-92pw-q264",
+      "aliases": [
+        "CVE-2025-22233"
+      ],
+      "severity": "low",
+      "title": "Spring Framework DataBinder Case Sensitive Match Exception",
+      "package": "org.springframework:spring-context",
+      "version": "6.1.12",
+      "fixed_in": [
+        "6.1.20"
+      ],
+      "location": "pom.xml",
+      "published": "2025-05-16",
+      "reference": "https://osv.dev/vulnerability/GHSA-4wp7-92pw-q264"
+    },
+    {
+      "id": "Springboot-BankApp:org.springframework:spring-core:GHSA-659m-px2c-25wj",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-659m-px2c-25wj",
+      "aliases": [
+        "CVE-2026-41848"
+      ],
+      "severity": "low",
+      "title": "Spring Framework Denial of Service via AntPathMatcher",
+      "package": "org.springframework:spring-core",
+      "version": "6.1.12",
+      "fixed_in": [
+        "6.2.19"
+      ],
+      "location": "pom.xml",
+      "published": "2026-06-09",
+      "reference": "https://osv.dev/vulnerability/GHSA-659m-px2c-25wj"
+    },
+    {
+      "id": "Springboot-BankApp:org.springframework:spring-core:GHSA-jmp9-x22r-554x",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-jmp9-x22r-554x",
+      "aliases": [
+        "CVE-2025-41249"
+      ],
+      "severity": "high",
+      "title": "Spring Framework annotation detection mechanism may result in improper authorization",
+      "package": "org.springframework:spring-core",
+      "version": "6.1.12",
+      "fixed_in": [
+        "6.2.11"
+      ],
+      "location": "pom.xml",
+      "published": "2025-09-16",
+      "reference": "https://osv.dev/vulnerability/GHSA-jmp9-x22r-554x"
+    },
+    {
+      "id": "Springboot-BankApp:org.springframework:spring-expression:GHSA-9f52-rjqv-25qv",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-9f52-rjqv-25qv",
+      "aliases": [
+        "CVE-2026-41852"
+      ],
+      "severity": "low",
+      "title": "Spring Framework Arbitrary Method Invocation in SpEL Expressions",
+      "package": "org.springframework:spring-expression",
+      "version": "6.1.12",
+      "fixed_in": [
+        "6.2.19"
+      ],
+      "location": "pom.xml",
+      "published": "2026-06-09",
+      "reference": "https://osv.dev/vulnerability/GHSA-9f52-rjqv-25qv"
+    },
+    {
+      "id": "Springboot-BankApp:org.springframework:spring-expression:GHSA-r5w3-xv2f-j59q",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-r5w3-xv2f-j59q",
+      "aliases": [
+        "CVE-2026-41850"
+      ],
+      "severity": "high",
+      "title": "Spring Framework Algorithmic Denial of Service via SpEL Expressions",
+      "package": "org.springframework:spring-expression",
+      "version": "6.1.12",
+      "fixed_in": [
+        "6.2.19"
+      ],
+      "location": "pom.xml",
+      "published": "2026-06-09",
+      "reference": "https://osv.dev/vulnerability/GHSA-r5w3-xv2f-j59q"
+    },
+    {
+      "id": "Springboot-BankApp:org.springframework:spring-expression:GHSA-wxpp-56q6-5pcg",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-wxpp-56q6-5pcg",
+      "aliases": [
+        "CVE-2026-41851"
+      ],
+      "severity": "medium",
+      "title": "Spring Framework Denial of Service via Unbounded Cache in SpEL",
+      "package": "org.springframework:spring-expression",
+      "version": "6.1.12",
+      "fixed_in": [
+        "6.2.19"
+      ],
+      "location": "pom.xml",
+      "published": "2026-06-09",
+      "reference": "https://osv.dev/vulnerability/GHSA-wxpp-56q6-5pcg"
+    },
+    {
+      "id": "Springboot-BankApp:org.springframework:spring-web:GHSA-4gc7-5j7h-4qph",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-4gc7-5j7h-4qph",
+      "aliases": [
+        "CVE-2024-38820"
+      ],
+      "severity": "medium",
+      "title": "Spring Framework DataBinder Case Sensitive Match Exception",
+      "package": "org.springframework:spring-web",
+      "version": "6.1.12",
+      "fixed_in": [
+        "6.1.14"
+      ],
+      "location": "pom.xml",
+      "published": "2024-10-18",
+      "reference": "https://osv.dev/vulnerability/GHSA-4gc7-5j7h-4qph"
+    },
+    {
+      "id": "Springboot-BankApp:org.springframework:spring-web:GHSA-6r3c-xf4w-jxjm",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-6r3c-xf4w-jxjm",
+      "aliases": [
+        "CVE-2025-41234"
+      ],
+      "severity": "medium",
+      "title": "Spring Framework vulnerable to a reflected file download (RFD)",
+      "package": "org.springframework:spring-web",
+      "version": "6.1.12",
+      "fixed_in": [
+        "6.1.21"
+      ],
+      "location": "pom.xml",
+      "published": "2025-06-13",
+      "reference": "https://osv.dev/vulnerability/GHSA-6r3c-xf4w-jxjm"
+    },
+    {
+      "id": "Springboot-BankApp:org.springframework:spring-webmvc:GHSA-3chg-m5w7-qfv5",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-3chg-m5w7-qfv5",
+      "aliases": [
+        "CVE-2026-41845"
+      ],
+      "severity": "high",
+      "title": "Spring Framework Cross-site Scripting via JavaScriptUtils",
+      "package": "org.springframework:spring-webmvc",
+      "version": "6.1.12",
+      "fixed_in": [
+        "6.2.19"
+      ],
+      "location": "pom.xml",
+      "published": "2026-06-09",
+      "reference": "https://osv.dev/vulnerability/GHSA-3chg-m5w7-qfv5"
+    },
+    {
+      "id": "Springboot-BankApp:org.springframework:spring-webmvc:GHSA-4773-3jfm-qmx3",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-4773-3jfm-qmx3",
+      "aliases": [
+        "CVE-2026-22737"
+      ],
+      "severity": "medium",
+      "title": "Spring Framework Improper Path Limitation with Script View Templates",
+      "package": "org.springframework:spring-webmvc",
+      "version": "6.1.12",
+      "fixed_in": [
+        "6.2.17"
+      ],
+      "location": "pom.xml",
+      "published": "2026-03-20",
+      "reference": "https://osv.dev/vulnerability/GHSA-4773-3jfm-qmx3"
+    },
+    {
+      "id": "Springboot-BankApp:org.springframework:spring-webmvc:GHSA-6hcq-hmm3-jj3c",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-6hcq-hmm3-jj3c",
+      "aliases": [
+        "CVE-2026-22735"
+      ],
+      "severity": "low",
+      "title": "Spring MVC and WebFlux has Server Sent Event stream corruption",
+      "package": "org.springframework:spring-webmvc",
+      "version": "6.1.12",
+      "fixed_in": [
+        "6.2.17"
+      ],
+      "location": "pom.xml",
+      "published": "2026-03-20",
+      "reference": "https://osv.dev/vulnerability/GHSA-6hcq-hmm3-jj3c"
+    },
+    {
+      "id": "Springboot-BankApp:org.springframework:spring-webmvc:GHSA-6p4f-wcwh-5vvm",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-6p4f-wcwh-5vvm",
+      "aliases": [
+        "CVE-2026-22745"
+      ],
+      "severity": "medium",
+      "title": "Spring MVC and WebFlux applications are vulnerable to Denial of Service attacks when resolving static resources",
+      "package": "org.springframework:spring-webmvc",
+      "version": "6.1.12",
+      "fixed_in": [
+        "6.2.18"
+      ],
+      "location": "pom.xml",
+      "published": "2026-04-29",
+      "reference": "https://osv.dev/vulnerability/GHSA-6p4f-wcwh-5vvm"
+    },
+    {
+      "id": "Springboot-BankApp:org.springframework:spring-webmvc:GHSA-72pg-x5f8-j25j",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-72pg-x5f8-j25j",
+      "aliases": [
+        "CVE-2026-41843"
+      ],
+      "severity": "medium",
+      "title": "Spring Framework Path Traversal via Versioned Static Resources in Spring MVC and WebFlux",
+      "package": "org.springframework:spring-webmvc",
+      "version": "6.1.12",
+      "fixed_in": [
+        "6.2.19"
+      ],
+      "location": "pom.xml",
+      "published": "2026-06-09",
+      "reference": "https://osv.dev/vulnerability/GHSA-72pg-x5f8-j25j"
+    },
+    {
+      "id": "Springboot-BankApp:org.springframework:spring-webmvc:GHSA-957g-f97v-vppc",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-957g-f97v-vppc",
+      "aliases": [
+        "CVE-2026-41846"
+      ],
+      "severity": "medium",
+      "title": "Spring Framework Cross-site Scripting via JSP Form Tags",
+      "package": "org.springframework:spring-webmvc",
+      "version": "6.1.12",
+      "fixed_in": [
+        "6.2.19"
+      ],
+      "location": "pom.xml",
+      "published": "2026-06-09",
+      "reference": "https://osv.dev/vulnerability/GHSA-957g-f97v-vppc"
+    },
+    {
+      "id": "Springboot-BankApp:org.springframework:spring-webmvc:GHSA-cjpg-rgq5-fr37",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-cjpg-rgq5-fr37",
+      "aliases": [
+        "CVE-2026-41853"
+      ],
+      "severity": "medium",
+      "title": "Spring Framework Multipart Request Smuggling in Spring MVC and WebFlux",
+      "package": "org.springframework:spring-webmvc",
+      "version": "6.1.12",
+      "fixed_in": [
+        "6.2.19"
+      ],
+      "location": "pom.xml",
+      "published": "2026-06-09",
+      "reference": "https://osv.dev/vulnerability/GHSA-cjpg-rgq5-fr37"
+    },
+    {
+      "id": "Springboot-BankApp:org.springframework:spring-webmvc:GHSA-cx7f-g6mp-7hqm",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-cx7f-g6mp-7hqm",
+      "aliases": [
+        "CVE-2024-38816"
+      ],
+      "severity": "high",
+      "title": "Path traversal vulnerability in functional web frameworks",
+      "package": "org.springframework:spring-webmvc",
+      "version": "6.1.12",
+      "fixed_in": [
+        "6.1.13"
+      ],
+      "location": "pom.xml",
+      "published": "2024-09-13",
+      "reference": "https://osv.dev/vulnerability/GHSA-cx7f-g6mp-7hqm"
+    },
+    {
+      "id": "Springboot-BankApp:org.springframework:spring-webmvc:GHSA-g5vr-rgqm-vf78",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-g5vr-rgqm-vf78",
+      "aliases": [
+        "CVE-2024-38819"
+      ],
+      "severity": "high",
+      "title": "Spring Framework Path Traversal vulnerability",
+      "package": "org.springframework:spring-webmvc",
+      "version": "6.1.12",
+      "fixed_in": [
+        "6.1.14"
+      ],
+      "location": "pom.xml",
+      "published": "2024-12-19",
+      "reference": "https://osv.dev/vulnerability/GHSA-g5vr-rgqm-vf78"
+    },
+    {
+      "id": "Springboot-BankApp:org.springframework:spring-webmvc:GHSA-h3qp-gqrc-q736",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-h3qp-gqrc-q736",
+      "aliases": [
+        "CVE-2026-41844"
+      ],
+      "severity": "medium",
+      "title": "Spring Framework Open Redirect in Spring MVC and WebFlux",
+      "package": "org.springframework:spring-webmvc",
+      "version": "6.1.12",
+      "fixed_in": [
+        "6.2.19"
+      ],
+      "location": "pom.xml",
+      "published": "2026-06-09",
+      "reference": "https://osv.dev/vulnerability/GHSA-h3qp-gqrc-q736"
+    },
+    {
+      "id": "Springboot-BankApp:org.springframework:spring-webmvc:GHSA-mq64-j8f9-9gcj",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-mq64-j8f9-9gcj",
+      "aliases": [
+        "CVE-2026-41841"
+      ],
+      "severity": "medium",
+      "title": "Spring Framework Information Disclosure via Static Resource Cache in Spring MVC and WebFlux",
+      "package": "org.springframework:spring-webmvc",
+      "version": "6.1.12",
+      "fixed_in": [
+        "6.2.19"
+      ],
+      "location": "pom.xml",
+      "published": "2026-06-09",
+      "reference": "https://osv.dev/vulnerability/GHSA-mq64-j8f9-9gcj"
+    },
+    {
+      "id": "Springboot-BankApp:org.springframework:spring-webmvc:GHSA-pc63-qcmh-9cmg",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-pc63-qcmh-9cmg",
+      "aliases": [
+        "CVE-2026-47884"
+      ],
+      "severity": "critical",
+      "title": "Spring Framework Improper Path Limitation in XsltView",
+      "package": "org.springframework:spring-webmvc",
+      "version": "6.1.12",
+      "fixed_in": [
+        "7.0.9"
+      ],
+      "location": "pom.xml",
+      "published": "2026-08-27",
+      "reference": "https://osv.dev/vulnerability/GHSA-pc63-qcmh-9cmg"
+    },
+    {
+      "id": "Springboot-BankApp:org.springframework:spring-webmvc:GHSA-r936-gwx5-v52f",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-r936-gwx5-v52f",
+      "aliases": [
+        "CVE-2025-41242"
+      ],
+      "severity": "medium",
+      "title": "Spring Framework MVC Applications Path Traversal Vulnerability",
+      "package": "org.springframework:spring-webmvc",
+      "version": "6.1.12",
+      "fixed_in": [
+        "6.2.10"
+      ],
+      "location": "pom.xml",
+      "published": "2025-08-18",
+      "reference": "https://osv.dev/vulnerability/GHSA-r936-gwx5-v52f"
+    },
+    {
+      "id": "Springboot-BankApp:org.springframework:spring-webmvc:GHSA-wg35-8jpf-2xv3",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-wg35-8jpf-2xv3",
+      "aliases": [
+        "CVE-2026-22741"
+      ],
+      "severity": "low",
+      "title": "Spring MVC and WebFlux applications are vulnerable to cache poisoning when resolving static resources.",
+      "package": "org.springframework:spring-webmvc",
+      "version": "6.1.12",
+      "fixed_in": [
+        "6.2.18"
+      ],
+      "location": "pom.xml",
+      "published": "2026-04-29",
+      "reference": "https://osv.dev/vulnerability/GHSA-wg35-8jpf-2xv3"
+    },
+    {
+      "id": "Springboot-BankApp:org.springframework:spring-webmvc:GHSA-x23c-287f-qqv5",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-x23c-287f-qqv5",
+      "aliases": [
+        "CVE-2026-41842"
+      ],
+      "severity": "high",
+      "title": "Spring Framework Denial of Service via Versioned Resources in Spring MVC and WebFlux",
+      "package": "org.springframework:spring-webmvc",
+      "version": "6.1.12",
+      "fixed_in": [
+        "6.2.19"
+      ],
+      "location": "pom.xml",
+      "published": "2026-06-09",
+      "reference": "https://osv.dev/vulnerability/GHSA-x23c-287f-qqv5"
+    },
+    {
+      "id": "Springboot-BankApp:org.thymeleaf:thymeleaf:GHSA-c9ph-gxww-7744",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-c9ph-gxww-7744",
+      "aliases": [
+        "CVE-2026-41901"
+      ],
+      "severity": "critical",
+      "title": "Sandboxed Thymeleaf expressions vulnerable to improper recognition of unauthorized syntax patterns",
+      "package": "org.thymeleaf:thymeleaf",
+      "version": "3.1.2.RELEASE",
+      "fixed_in": [
+        "3.1.5.RELEASE"
+      ],
+      "location": "pom.xml",
+      "published": "2026-05-04",
+      "reference": "https://osv.dev/vulnerability/GHSA-c9ph-gxww-7744"
+    },
+    {
+      "id": "Springboot-BankApp:org.thymeleaf:thymeleaf:GHSA-r4v4-5mwr-2fwr",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-r4v4-5mwr-2fwr",
+      "aliases": [
+        "CVE-2026-40477"
+      ],
+      "severity": "critical",
+      "title": "Improper restriction of the scope of accessible objects in Thymeleaf expressions",
+      "package": "org.thymeleaf:thymeleaf",
+      "version": "3.1.2.RELEASE",
+      "fixed_in": [
+        "3.1.4.RELEASE"
+      ],
+      "location": "pom.xml",
+      "published": "2026-04-15",
+      "reference": "https://osv.dev/vulnerability/GHSA-r4v4-5mwr-2fwr"
+    },
+    {
+      "id": "Springboot-BankApp:org.thymeleaf:thymeleaf:GHSA-xjw8-8c5c-9r79",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-xjw8-8c5c-9r79",
+      "aliases": [
+        "CVE-2026-40478"
+      ],
+      "severity": "critical",
+      "title": "Improper neutralization of specific syntax patterns for unauthorized expressions in Thymeleaf",
+      "package": "org.thymeleaf:thymeleaf",
+      "version": "3.1.2.RELEASE",
+      "fixed_in": [
+        "3.1.4.RELEASE"
+      ],
+      "location": "pom.xml",
+      "published": "2026-04-15",
+      "reference": "https://osv.dev/vulnerability/GHSA-xjw8-8c5c-9r79"
+    },
+    {
+      "id": "Springboot-BankApp:org.thymeleaf:thymeleaf-spring6:GHSA-c9ph-gxww-7744",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-c9ph-gxww-7744",
+      "aliases": [
+        "CVE-2026-41901"
+      ],
+      "severity": "critical",
+      "title": "Sandboxed Thymeleaf expressions vulnerable to improper recognition of unauthorized syntax patterns",
+      "package": "org.thymeleaf:thymeleaf-spring6",
+      "version": "3.1.2.RELEASE",
+      "fixed_in": [
+        "3.1.5.RELEASE"
+      ],
+      "location": "pom.xml",
+      "published": "2026-05-04",
+      "reference": "https://osv.dev/vulnerability/GHSA-c9ph-gxww-7744"
+    },
+    {
+      "id": "Springboot-BankApp:org.thymeleaf:thymeleaf-spring6:GHSA-r4v4-5mwr-2fwr",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-r4v4-5mwr-2fwr",
+      "aliases": [
+        "CVE-2026-40477"
+      ],
+      "severity": "critical",
+      "title": "Improper restriction of the scope of accessible objects in Thymeleaf expressions",
+      "package": "org.thymeleaf:thymeleaf-spring6",
+      "version": "3.1.2.RELEASE",
+      "fixed_in": [
+        "3.1.4.RELEASE"
+      ],
+      "location": "pom.xml",
+      "published": "2026-04-15",
+      "reference": "https://osv.dev/vulnerability/GHSA-r4v4-5mwr-2fwr"
+    },
+    {
+      "id": "Springboot-BankApp:org.thymeleaf:thymeleaf-spring6:GHSA-xjw8-8c5c-9r79",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-xjw8-8c5c-9r79",
+      "aliases": [
+        "CVE-2026-40478"
+      ],
+      "severity": "critical",
+      "title": "Improper neutralization of specific syntax patterns for unauthorized expressions in Thymeleaf",
+      "package": "org.thymeleaf:thymeleaf-spring6",
+      "version": "3.1.2.RELEASE",
+      "fixed_in": [
+        "3.1.4.RELEASE"
+      ],
+      "location": "pom.xml",
+      "published": "2026-04-15",
+      "reference": "https://osv.dev/vulnerability/GHSA-xjw8-8c5c-9r79"
+    },
+    {
+      "id": "Springboot-BankApp:org.xmlunit:xmlunit-core:GHSA-chfm-68vv-pvw5",
+      "repo": "Springboot-BankApp",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-chfm-68vv-pvw5",
+      "aliases": [
+        "CVE-2024-31573"
+      ],
+      "severity": "low",
+      "title": "XMLUnit for Java has Insecure Defaults when Processing XSLT Stylesheets",
+      "package": "org.xmlunit:xmlunit-core",
+      "version": "2.9.1",
+      "fixed_in": [
+        "2.10.0"
+      ],
+      "location": "pom.xml",
+      "published": "2024-05-01",
+      "reference": "https://osv.dev/vulnerability/GHSA-chfm-68vv-pvw5"
+    },
+    {
+      "id": "Springboot-BankApp:secret:src/main/resources/application.properties:spring.datasource.password",
+      "repo": "Springboot-BankApp",
+      "kind": "credential",
+      "source": "pci-rescan secret check",
+      "advisory": "CWE-798",
+      "aliases": [],
+      "severity": "high",
+      "title": "Literal credential in src/main/resources/application.properties (spring.datasource.password)",
+      "package": null,
+      "version": null,
+      "fixed_in": [],
+      "location": "src/main/resources/application.properties:5",
+      "published": null,
+      "reference": "https://cwe.mitre.org/data/definitions/798.html"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:ch.qos.logback:logback-core:GHSA-25qh-j22f-pwp8",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-25qh-j22f-pwp8",
+      "aliases": [
+        "CVE-2025-11226"
+      ],
+      "severity": "medium",
+      "title": "QOS.CH logback-core is vulnerable to Arbitrary Code Execution through file processing",
+      "package": "ch.qos.logback:logback-core",
+      "version": "1.5.16",
+      "fixed_in": [
+        "1.5.19"
+      ],
+      "location": "pom.xml",
+      "published": "2025-10-01",
+      "reference": "https://osv.dev/vulnerability/GHSA-25qh-j22f-pwp8"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:ch.qos.logback:logback-core:GHSA-jhq6-gfmj-v8fx",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-jhq6-gfmj-v8fx",
+      "aliases": [
+        "CVE-2026-10532"
+      ],
+      "severity": "low",
+      "title": "Logback vulnerable to Object Injection through HardenedObjectInputStream modules",
+      "package": "ch.qos.logback:logback-core",
+      "version": "1.5.16",
+      "fixed_in": [
+        "1.5.34"
+      ],
+      "location": "pom.xml",
+      "published": "2026-06-01",
+      "reference": "https://osv.dev/vulnerability/GHSA-jhq6-gfmj-v8fx"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:ch.qos.logback:logback-core:GHSA-p47f-322f-whfh",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-p47f-322f-whfh",
+      "aliases": [
+        "CVE-2026-9828"
+      ],
+      "severity": "low",
+      "title": "QOS.CH Sarl logback logback-core has a deserialization of untrusted data vulnerability",
+      "package": "ch.qos.logback:logback-core",
+      "version": "1.5.16",
+      "fixed_in": [
+        "1.5.33"
+      ],
+      "location": "pom.xml",
+      "published": "2026-05-28",
+      "reference": "https://osv.dev/vulnerability/GHSA-p47f-322f-whfh"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:ch.qos.logback:logback-core:GHSA-qqpg-mvqg-649v",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-qqpg-mvqg-649v",
+      "aliases": [
+        "CVE-2026-1225"
+      ],
+      "severity": "low",
+      "title": "Logback allows an attacker to instantiate classes already present on the class path",
+      "package": "ch.qos.logback:logback-core",
+      "version": "1.5.16",
+      "fixed_in": [
+        "1.5.25"
+      ],
+      "location": "pom.xml",
+      "published": "2026-01-22",
+      "reference": "https://osv.dev/vulnerability/GHSA-qqpg-mvqg-649v"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:com.fasterxml.jackson.core:jackson-core:GHSA-72hv-8253-57qq",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-72hv-8253-57qq",
+      "aliases": [
+        "CVE-2026-18401"
+      ],
+      "severity": "medium",
+      "title": "jackson-core: Number Length Constraint Bypass in Async Parser Leads to Potential DoS Condition",
+      "package": "com.fasterxml.jackson.core:jackson-core",
+      "version": "2.18.2",
+      "fixed_in": [
+        "2.18.6"
+      ],
+      "location": "pom.xml",
+      "published": "2026-02-28",
+      "reference": "https://osv.dev/vulnerability/GHSA-72hv-8253-57qq"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:com.fasterxml.jackson.core:jackson-core:GHSA-7hhh-6rmp-j9qf",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-7hhh-6rmp-j9qf",
+      "aliases": [
+        "CVE-2026-89425"
+      ],
+      "severity": "high",
+      "title": "jackson-core: UTF8DataInputJsonParser._reportInvalidToken() missing maxErrorTokenLength limit -> unbounded StringBuilder growth (DoS)",
+      "package": "com.fasterxml.jackson.core:jackson-core",
+      "version": "2.18.2",
+      "fixed_in": [
+        "2.18.11"
+      ],
+      "location": "pom.xml",
+      "published": "2026-10-01",
+      "reference": "https://osv.dev/vulnerability/GHSA-7hhh-6rmp-j9qf"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:com.fasterxml.jackson.core:jackson-core:GHSA-p6pp-m3f8-5c89",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-p6pp-m3f8-5c89",
+      "aliases": [
+        "CVE-2026-89407"
+      ],
+      "severity": "high",
+      "title": " jackson-core: ReDoS: quadratic backtracking in NumberInput.PATTERN_FLOAT via looksLikeValidNumber()",
+      "package": "com.fasterxml.jackson.core:jackson-core",
+      "version": "2.18.2",
+      "fixed_in": [
+        "2.18.11"
+      ],
+      "location": "pom.xml",
+      "published": "2026-10-01",
+      "reference": "https://osv.dev/vulnerability/GHSA-p6pp-m3f8-5c89"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:com.fasterxml.jackson.core:jackson-core:GHSA-r7wm-3cxj-wff9",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-r7wm-3cxj-wff9",
+      "aliases": [
+        "CVE-2026-68494"
+      ],
+      "severity": "high",
+      "title": "jackson-core: Async parser maxNumberLength bypass via chunked digit accumulation (incomplete fix for GHSA-72hv-8253-57qq)",
+      "package": "com.fasterxml.jackson.core:jackson-core",
+      "version": "2.18.2",
+      "fixed_in": [
+        "2.18.8"
+      ],
+      "location": "pom.xml",
+      "published": "2026-07-21",
+      "reference": "https://osv.dev/vulnerability/GHSA-r7wm-3cxj-wff9"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:com.fasterxml.jackson.core:jackson-databind:GHSA-3pjw-73gf-8qr5",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-3pjw-73gf-8qr5",
+      "aliases": [
+        "CVE-2026-59888"
+      ],
+      "severity": "medium",
+      "title": "jackson-databind: @JsonIgnore on a Record property is bypassed with a PropertyNamingStrategy",
+      "package": "com.fasterxml.jackson.core:jackson-databind",
+      "version": "2.18.2",
+      "fixed_in": [
+        "2.18.8"
+      ],
+      "location": "pom.xml",
+      "published": "2026-07-21",
+      "reference": "https://osv.dev/vulnerability/GHSA-3pjw-73gf-8qr5"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:com.fasterxml.jackson.core:jackson-databind:GHSA-5gvw-p9qm-jgwh",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-5gvw-p9qm-jgwh",
+      "aliases": [
+        "CVE-2026-59889"
+      ],
+      "severity": "medium",
+      "title": "jackson-databind: @JsonView bypassed for @JsonUnwrapped container properties on deserialization",
+      "package": "com.fasterxml.jackson.core:jackson-databind",
+      "version": "2.18.2",
+      "fixed_in": [
+        "2.18.9"
+      ],
+      "location": "pom.xml",
+      "published": "2026-07-21",
+      "reference": "https://osv.dev/vulnerability/GHSA-5gvw-p9qm-jgwh"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:com.fasterxml.jackson.core:jackson-databind:GHSA-5jmj-h7xm-6q6v",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-5jmj-h7xm-6q6v",
+      "aliases": [
+        "CVE-2026-54515"
+      ],
+      "severity": "medium",
+      "title": "jackson-databind has case-insensitive deserialization bypasses per-property @JsonIgnoreProperties",
+      "package": "com.fasterxml.jackson.core:jackson-databind",
+      "version": "2.18.2",
+      "fixed_in": [
+        "2.18.9"
+      ],
+      "location": "pom.xml",
+      "published": "2026-06-23",
+      "reference": "https://osv.dev/vulnerability/GHSA-5jmj-h7xm-6q6v"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:com.fasterxml.jackson.core:jackson-databind:GHSA-cxp5-3px4-pw24",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-cxp5-3px4-pw24",
+      "aliases": [
+        "CVE-2026-91777"
+      ],
+      "severity": "high",
+      "title": "jackson-databind quadratic forward-reference completion ",
+      "package": "com.fasterxml.jackson.core:jackson-databind",
+      "version": "2.18.2",
+      "fixed_in": [
+        "2.18.11"
+      ],
+      "location": "pom.xml",
+      "published": "2026-09-30",
+      "reference": "https://osv.dev/vulnerability/GHSA-cxp5-3px4-pw24"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:com.fasterxml.jackson.core:jackson-databind:GHSA-gx83-3vf8-gh7j",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-gx83-3vf8-gh7j",
+      "aliases": [
+        "CVE-2026-83557"
+      ],
+      "severity": "medium",
+      "title": "jackson-databind: Comparable missing from DefaultBaseTypeLimitingValidator's unsafe base types (incomplete PolymorphicTypeValidator denylist)",
+      "package": "com.fasterxml.jackson.core:jackson-databind",
+      "version": "2.18.2",
+      "fixed_in": [
+        "2.18.10"
+      ],
+      "location": "pom.xml",
+      "published": "2026-09-28",
+      "reference": "https://osv.dev/vulnerability/GHSA-gx83-3vf8-gh7j"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:com.fasterxml.jackson.core:jackson-databind:GHSA-hgj6-7826-r7m5",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-hgj6-7826-r7m5",
+      "aliases": [
+        "CVE-2026-54514"
+      ],
+      "severity": "medium",
+      "title": "jackson-databind: InetSocketAddress deserialization triggers eager DNS resolution (SSRF)",
+      "package": "com.fasterxml.jackson.core:jackson-databind",
+      "version": "2.18.2",
+      "fixed_in": [
+        "2.18.8"
+      ],
+      "location": "pom.xml",
+      "published": "2026-06-23",
+      "reference": "https://osv.dev/vulnerability/GHSA-hgj6-7826-r7m5"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:com.fasterxml.jackson.core:jackson-databind:GHSA-j3rv-43j4-c7qm",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-j3rv-43j4-c7qm",
+      "aliases": [
+        "CVE-2026-54512"
+      ],
+      "severity": "high",
+      "title": "jackson-databind has a PolymorphicTypeValidator bypass via generic type parameters that allows arbitrary class instantiation",
+      "package": "com.fasterxml.jackson.core:jackson-databind",
+      "version": "2.18.2",
+      "fixed_in": [
+        "2.18.8"
+      ],
+      "location": "pom.xml",
+      "published": "2026-06-23",
+      "reference": "https://osv.dev/vulnerability/GHSA-j3rv-43j4-c7qm"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:com.fasterxml.jackson.core:jackson-databind:GHSA-mhm7-754m-9p8w",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-mhm7-754m-9p8w",
+      "aliases": [],
+      "severity": "medium",
+      "title": "jackson-databind: `@JsonView` bypass for creator properties with `@JsonTypeInfo(include=As.EXTERNAL_PROPERTY)`",
+      "package": "com.fasterxml.jackson.core:jackson-databind",
+      "version": "2.18.2",
+      "fixed_in": [
+        "2.18.9"
+      ],
+      "location": "pom.xml",
+      "published": "2026-07-21",
+      "reference": "https://osv.dev/vulnerability/GHSA-mhm7-754m-9p8w"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:com.fasterxml.jackson.core:jackson-databind:GHSA-q4xh-88c3-wmh7",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-q4xh-88c3-wmh7",
+      "aliases": [
+        "CVE-2026-68497"
+      ],
+      "severity": "high",
+      "title": "jackson-databind: Duration XMLGregorianCalendar Unbounded Number Parse DoS",
+      "package": "com.fasterxml.jackson.core:jackson-databind",
+      "version": "2.18.2",
+      "fixed_in": [
+        "2.18.10"
+      ],
+      "location": "pom.xml",
+      "published": "2026-09-28",
+      "reference": "https://osv.dev/vulnerability/GHSA-q4xh-88c3-wmh7"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:com.fasterxml.jackson.core:jackson-databind:GHSA-rmj7-2vxq-3g9f",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-rmj7-2vxq-3g9f",
+      "aliases": [
+        "CVE-2026-54513"
+      ],
+      "severity": "high",
+      "title": "jackson-databind has an array subtype allowlist bypass in BasicPolymorphicTypeValidator (allowIfSubTypeIsArray)",
+      "package": "com.fasterxml.jackson.core:jackson-databind",
+      "version": "2.18.2",
+      "fixed_in": [
+        "2.18.8"
+      ],
+      "location": "pom.xml",
+      "published": "2026-06-23",
+      "reference": "https://osv.dev/vulnerability/GHSA-rmj7-2vxq-3g9f"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:com.fasterxml.jackson.core:jackson-databind:GHSA-vvgp-rfg2-7rr6",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-vvgp-rfg2-7rr6",
+      "aliases": [
+        "CVE-2026-77310"
+      ],
+      "severity": "medium",
+      "title": "jackson-databind: Incomplete fix for CVE-2026-54514: eager DNS resolution (SSRF) still present in InetAddress deserialization",
+      "package": "com.fasterxml.jackson.core:jackson-databind",
+      "version": "2.18.2",
+      "fixed_in": [
+        "2.18.9"
+      ],
+      "location": "pom.xml",
+      "published": "2026-09-28",
+      "reference": "https://osv.dev/vulnerability/GHSA-vvgp-rfg2-7rr6"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:com.fasterxml.jackson.core:jackson-databind:GHSA-wjgm-6hv5-3cvf",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-wjgm-6hv5-3cvf",
+      "aliases": [
+        "CVE-2026-19032"
+      ],
+      "severity": "medium",
+      "title": "jackson-databind: Path Deserialization Missing Scheme Allowlist for FileSystemProvider Resolution",
+      "package": "com.fasterxml.jackson.core:jackson-databind",
+      "version": "2.18.2",
+      "fixed_in": [
+        "2.18.10"
+      ],
+      "location": "pom.xml",
+      "published": "2026-09-28",
+      "reference": "https://osv.dev/vulnerability/GHSA-wjgm-6hv5-3cvf"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:com.fasterxml.jackson.core:jackson-databind:GHSA-wv8q-qhhj-9h54",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-wv8q-qhhj-9h54",
+      "aliases": [
+        "CVE-2026-91776"
+      ],
+      "severity": "high",
+      "title": "jackson-databind retains every unknown raw type ID ",
+      "package": "com.fasterxml.jackson.core:jackson-databind",
+      "version": "2.18.2",
+      "fixed_in": [
+        "2.18.11"
+      ],
+      "location": "pom.xml",
+      "published": "2026-09-30",
+      "reference": "https://osv.dev/vulnerability/GHSA-wv8q-qhhj-9h54"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:commons-beanutils:commons-beanutils:GHSA-wxr5-93ph-8wr9",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-wxr5-93ph-8wr9",
+      "aliases": [
+        "CVE-2025-48734"
+      ],
+      "severity": "high",
+      "title": "Apache Commons Improper Access Control vulnerability",
+      "package": "commons-beanutils:commons-beanutils",
+      "version": "1.9.4",
+      "fixed_in": [
+        "1.11.0"
+      ],
+      "location": "pom.xml",
+      "published": "2025-05-28",
+      "reference": "https://osv.dev/vulnerability/GHSA-wxr5-93ph-8wr9"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:commons-io:commons-io:GHSA-78wr-2p64-hpwj",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-78wr-2p64-hpwj",
+      "aliases": [
+        "CVE-2024-47554"
+      ],
+      "severity": "high",
+      "title": "Apache Commons IO: Possible denial of service attack on untrusted input to XmlStreamReader",
+      "package": "commons-io:commons-io",
+      "version": "2.11.0",
+      "fixed_in": [
+        "2.14.0"
+      ],
+      "location": "pom.xml",
+      "published": "2024-10-03",
+      "reference": "https://osv.dev/vulnerability/GHSA-78wr-2p64-hpwj"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:io.netty:netty-codec:GHSA-3p8m-j85q-pgmj",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-3p8m-j85q-pgmj",
+      "aliases": [
+        "CVE-2025-58057"
+      ],
+      "severity": "medium",
+      "title": "Netty's decoders vulnerable to DoS via zip bomb style attack",
+      "package": "io.netty:netty-codec",
+      "version": "4.1.117.Final",
+      "fixed_in": [
+        "4.1.125.Final"
+      ],
+      "location": "pom.xml",
+      "published": "2025-09-03",
+      "reference": "https://osv.dev/vulnerability/GHSA-3p8m-j85q-pgmj"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:io.netty:netty-codec:GHSA-558v-64gr-wgg4",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-558v-64gr-wgg4",
+      "aliases": [
+        "CVE-2026-59901"
+      ],
+      "severity": "high",
+      "title": "Netty: [Bzip2Decoder] Infinite Loop in RLE State Machine Leads to Event-Loop Thread Hang",
+      "package": "io.netty:netty-codec",
+      "version": "4.1.117.Final",
+      "fixed_in": [
+        "4.1.136.Final"
+      ],
+      "location": "pom.xml",
+      "published": "2026-07-22",
+      "reference": "https://osv.dev/vulnerability/GHSA-558v-64gr-wgg4"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:io.netty:netty-codec:GHSA-mj4r-2hfc-f8p6",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-mj4r-2hfc-f8p6",
+      "aliases": [
+        "CVE-2026-42583"
+      ],
+      "severity": "high",
+      "title": "Netty Lz4FrameDecoder is vulnerable to resource exhaustion ",
+      "package": "io.netty:netty-codec",
+      "version": "4.1.117.Final",
+      "fixed_in": [
+        "4.1.133.Final"
+      ],
+      "location": "pom.xml",
+      "published": "2026-05-07",
+      "reference": "https://osv.dev/vulnerability/GHSA-mj4r-2hfc-f8p6"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:io.netty:netty-common:GHSA-389x-839f-4rhx",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-389x-839f-4rhx",
+      "aliases": [
+        "CVE-2025-25193"
+      ],
+      "severity": "medium",
+      "title": "Denial of Service attack on windows app using Netty",
+      "package": "io.netty:netty-common",
+      "version": "4.1.117.Final",
+      "fixed_in": [
+        "4.1.118.Final"
+      ],
+      "location": "pom.xml",
+      "published": "2025-02-10",
+      "reference": "https://osv.dev/vulnerability/GHSA-389x-839f-4rhx"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:io.netty:netty-handler:GHSA-3qp7-7mw8-wx86",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-3qp7-7mw8-wx86",
+      "aliases": [
+        "CVE-2026-44249"
+      ],
+      "severity": "high",
+      "title": "Netty has an IPv6 Subnet Filter Bypass via Incorrect Comparator Masking",
+      "package": "io.netty:netty-handler",
+      "version": "4.1.117.Final",
+      "fixed_in": [
+        "4.1.135.Final"
+      ],
+      "location": "pom.xml",
+      "published": "2026-06-08",
+      "reference": "https://osv.dev/vulnerability/GHSA-3qp7-7mw8-wx86"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:io.netty:netty-handler:GHSA-4g8c-wm8x-jfhw",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-4g8c-wm8x-jfhw",
+      "aliases": [
+        "CVE-2025-24970"
+      ],
+      "severity": "high",
+      "title": "SslHandler doesn't correctly validate packets which can lead to native crash when using native SSLEngine",
+      "package": "io.netty:netty-handler",
+      "version": "4.1.117.Final",
+      "fixed_in": [
+        "4.1.118.Final"
+      ],
+      "location": "pom.xml",
+      "published": "2025-02-10",
+      "reference": "https://osv.dev/vulnerability/GHSA-4g8c-wm8x-jfhw"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:io.netty:netty-handler:GHSA-c4c3-7fpv-j4q5",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-c4c3-7fpv-j4q5",
+      "aliases": [
+        "CVE-2026-75595"
+      ],
+      "severity": "critical",
+      "title": "Netty: SNI Routing Bypass via Fragmented TLS ClientHello Causing Fallback to Default SslContext",
+      "package": "io.netty:netty-handler",
+      "version": "4.1.117.Final",
+      "fixed_in": [
+        "4.1.137.Final"
+      ],
+      "location": "pom.xml",
+      "published": "2026-09-08",
+      "reference": "https://osv.dev/vulnerability/GHSA-c4c3-7fpv-j4q5"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:io.netty:netty-handler:GHSA-c653-97m9-rcg9",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-c653-97m9-rcg9",
+      "aliases": [
+        "CVE-2026-50010"
+      ],
+      "severity": "high",
+      "title": "Netty: Wrapping plain trust manager silently disables hostname verification",
+      "package": "io.netty:netty-handler",
+      "version": "4.1.117.Final",
+      "fixed_in": [
+        "4.1.135.Final"
+      ],
+      "location": "pom.xml",
+      "published": "2026-06-15",
+      "reference": "https://osv.dev/vulnerability/GHSA-c653-97m9-rcg9"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:io.netty:netty-handler:GHSA-fccg-mwvh-qqg4",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-fccg-mwvh-qqg4",
+      "aliases": [
+        "CVE-2026-75596"
+      ],
+      "severity": "medium",
+      "title": "Netty: Fragmented ClientHello records trigger quadratic pre-handshake reassembly in default SNI parsing",
+      "package": "io.netty:netty-handler",
+      "version": "4.1.117.Final",
+      "fixed_in": [
+        "4.1.137.Final"
+      ],
+      "location": "pom.xml",
+      "published": "2026-09-08",
+      "reference": "https://osv.dev/vulnerability/GHSA-fccg-mwvh-qqg4"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:io.netty:netty-handler:GHSA-x4gw-5cx5-pgmh",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-x4gw-5cx5-pgmh",
+      "aliases": [
+        "CVE-2026-45416"
+      ],
+      "severity": "high",
+      "title": "Netty: SNI handler pre-allocates up to 16 MiB from nine attacker bytes",
+      "package": "io.netty:netty-handler",
+      "version": "4.1.117.Final",
+      "fixed_in": [
+        "4.1.135.Final"
+      ],
+      "location": "pom.xml",
+      "published": "2026-06-08",
+      "reference": "https://osv.dev/vulnerability/GHSA-x4gw-5cx5-pgmh"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:io.netty:netty-transport-native-epoll:GHSA-w573-9ffj-6ff9",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-w573-9ffj-6ff9",
+      "aliases": [
+        "CVE-2026-45536"
+      ],
+      "severity": "medium",
+      "title": "Netty: Unix-socket fd receive leaks descriptors when peer sends two at once",
+      "package": "io.netty:netty-transport-native-epoll",
+      "version": "4.1.117.Final",
+      "fixed_in": [
+        "4.1.135.Final"
+      ],
+      "location": "pom.xml",
+      "published": "2026-06-08",
+      "reference": "https://osv.dev/vulnerability/GHSA-w573-9ffj-6ff9"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:net.minidev:json-smart:GHSA-pq2g-wx69-c263",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-pq2g-wx69-c263",
+      "aliases": [
+        "CVE-2024-57699"
+      ],
+      "severity": "high",
+      "title": "Netplex Json-smart Uncontrolled Recursion vulnerability",
+      "package": "net.minidev:json-smart",
+      "version": "2.5.1",
+      "fixed_in": [
+        "2.5.2"
+      ],
+      "location": "pom.xml",
+      "published": "2025-02-06",
+      "reference": "https://osv.dev/vulnerability/GHSA-pq2g-wx69-c263"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.apache.kafka:kafka-clients:GHSA-5qcv-4rpc-jp93",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-5qcv-4rpc-jp93",
+      "aliases": [
+        "CVE-2026-35554"
+      ],
+      "severity": "high",
+      "title": "Apache Kafka Clients: Kafka Producer Message Corruption and Misrouting via Buffer Pool Race Condition",
+      "package": "org.apache.kafka:kafka-clients",
+      "version": "3.8.1",
+      "fixed_in": [
+        "3.9.2"
+      ],
+      "location": "pom.xml",
+      "published": "2026-04-07",
+      "reference": "https://osv.dev/vulnerability/GHSA-5qcv-4rpc-jp93"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.apache.kafka:kafka-clients:GHSA-vgq5-3255-v292",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-vgq5-3255-v292",
+      "aliases": [
+        "CVE-2025-27817"
+      ],
+      "severity": "medium",
+      "title": "Apache Kafka Client Arbitrary File Read and Server Side Request Forgery Vulnerability",
+      "package": "org.apache.kafka:kafka-clients",
+      "version": "3.8.1",
+      "fixed_in": [
+        "3.9.1"
+      ],
+      "location": "pom.xml",
+      "published": "2025-06-10",
+      "reference": "https://osv.dev/vulnerability/GHSA-vgq5-3255-v292"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.apache.kafka:kafka-clients:GHSA-wf66-mphr-4c4r",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-wf66-mphr-4c4r",
+      "aliases": [
+        "CVE-2026-33558"
+      ],
+      "severity": "medium",
+      "title": "Apache Kafka exposes sensitive information in its DEBUG logs",
+      "package": "org.apache.kafka:kafka-clients",
+      "version": "3.8.1",
+      "fixed_in": [
+        "3.9.2"
+      ],
+      "location": "pom.xml",
+      "published": "2026-04-20",
+      "reference": "https://osv.dev/vulnerability/GHSA-wf66-mphr-4c4r"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.apache.kafka:kafka_2.13:GHSA-76qp-h5mr-frr4",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-76qp-h5mr-frr4",
+      "aliases": [
+        "CVE-2025-27818"
+      ],
+      "severity": "high",
+      "title": "Apache Kafka Deserialization of Untrusted Data vulnerability",
+      "package": "org.apache.kafka:kafka_2.13",
+      "version": "3.8.1",
+      "fixed_in": [
+        "3.9.1"
+      ],
+      "location": "pom.xml",
+      "published": "2025-06-10",
+      "reference": "https://osv.dev/vulnerability/GHSA-76qp-h5mr-frr4"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.apache.kafka:kafka_2.13:GHSA-mcwh-c9pg-xw43",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-mcwh-c9pg-xw43",
+      "aliases": [
+        "CVE-2025-27819"
+      ],
+      "severity": "high",
+      "title": "Apache Kafka Deserialization of Untrusted Data vulnerability",
+      "package": "org.apache.kafka:kafka_2.13",
+      "version": "test",
+      "fixed_in": [
+        "3.4.0"
+      ],
+      "location": "pom.xml",
+      "published": "2025-06-10",
+      "reference": "https://osv.dev/vulnerability/GHSA-mcwh-c9pg-xw43"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.apache.logging.log4j:log4j-api:GHSA-qv9r-c865-cp47",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-qv9r-c865-cp47",
+      "aliases": [
+        "CVE-2026-49844"
+      ],
+      "severity": "medium",
+      "title": "Apache Log4j API: Improper encoding of non-finite floating-point values during MapMessage JSON serialization",
+      "package": "org.apache.logging.log4j:log4j-api",
+      "version": "2.24.3",
+      "fixed_in": [
+        "2.25.5"
+      ],
+      "location": "pom.xml",
+      "published": "2026-07-11",
+      "reference": "https://osv.dev/vulnerability/GHSA-qv9r-c865-cp47"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.apache.tomcat.embed:tomcat-embed-core:GHSA-23hv-mwm6-g8jf",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-23hv-mwm6-g8jf",
+      "aliases": [
+        "CVE-2025-55668"
+      ],
+      "severity": "medium",
+      "title": "Apache Tomcat Session Fixation vulnerability",
+      "package": "org.apache.tomcat.embed:tomcat-embed-core",
+      "version": "10.1.34",
+      "fixed_in": [
+        "10.1.42"
+      ],
+      "location": "pom.xml",
+      "published": "2025-08-13",
+      "reference": "https://osv.dev/vulnerability/GHSA-23hv-mwm6-g8jf"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.apache.tomcat.embed:tomcat-embed-core:GHSA-25xr-qj8w-c4vf",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-25xr-qj8w-c4vf",
+      "aliases": [
+        "CVE-2025-53506"
+      ],
+      "severity": "high",
+      "title": "Apache Tomcat Coyote vulnerable to Denial of Service via excessive HTTP/2 streams",
+      "package": "org.apache.tomcat.embed:tomcat-embed-core",
+      "version": "10.1.34",
+      "fixed_in": [
+        "10.1.43"
+      ],
+      "location": "pom.xml",
+      "published": "2025-07-10",
+      "reference": "https://osv.dev/vulnerability/GHSA-25xr-qj8w-c4vf"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.apache.tomcat.embed:tomcat-embed-core:GHSA-3p2h-wqq4-wf4h",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-3p2h-wqq4-wf4h",
+      "aliases": [
+        "CVE-2025-31650"
+      ],
+      "severity": "medium",
+      "title": "Apache Tomcat Denial of Service via invalid HTTP priority header",
+      "package": "org.apache.tomcat.embed:tomcat-embed-core",
+      "version": "10.1.34",
+      "fixed_in": [
+        "10.1.40"
+      ],
+      "location": "pom.xml",
+      "published": "2025-04-28",
+      "reference": "https://osv.dev/vulnerability/GHSA-3p2h-wqq4-wf4h"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.apache.tomcat.embed:tomcat-embed-core:GHSA-42wg-hm62-jcwg",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-42wg-hm62-jcwg",
+      "aliases": [
+        "CVE-2025-49124"
+      ],
+      "severity": "medium",
+      "title": "Apache Tomcat installer for Windows has an untrusted search path vulnerability",
+      "package": "org.apache.tomcat.embed:tomcat-embed-core",
+      "version": "10.1.34",
+      "fixed_in": [
+        "10.1.42"
+      ],
+      "location": "pom.xml",
+      "published": "2025-06-16",
+      "reference": "https://osv.dev/vulnerability/GHSA-42wg-hm62-jcwg"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.apache.tomcat.embed:tomcat-embed-core:GHSA-563x-q5rq-57qp",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-563x-q5rq-57qp",
+      "aliases": [
+        "CVE-2026-24880"
+      ],
+      "severity": "high",
+      "title": "Apache Tomcat has an HTTP Request/Response Smuggling vulnerability",
+      "package": "org.apache.tomcat.embed:tomcat-embed-core",
+      "version": "10.1.34",
+      "fixed_in": [
+        "10.1.52"
+      ],
+      "location": "pom.xml",
+      "published": "2026-04-09",
+      "reference": "https://osv.dev/vulnerability/GHSA-563x-q5rq-57qp"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.apache.tomcat.embed:tomcat-embed-core:GHSA-5m62-pw8w-7w9f",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-5m62-pw8w-7w9f",
+      "aliases": [
+        "CVE-2026-43515"
+      ],
+      "severity": "critical",
+      "title": "Apache Tomcat - Security constraints not correctly applied",
+      "package": "org.apache.tomcat.embed:tomcat-embed-core",
+      "version": "10.1.34",
+      "fixed_in": [
+        "10.1.55"
+      ],
+      "location": "pom.xml",
+      "published": "2026-05-12",
+      "reference": "https://osv.dev/vulnerability/GHSA-5m62-pw8w-7w9f"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.apache.tomcat.embed:tomcat-embed-core:GHSA-5mp6-jrq3-r938",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-5mp6-jrq3-r938",
+      "aliases": [
+        "CVE-2026-43513"
+      ],
+      "severity": "high",
+      "title": "Apache Tomcat: LockOutRealm treats user names as case-sensitive",
+      "package": "org.apache.tomcat.embed:tomcat-embed-core",
+      "version": "10.1.34",
+      "fixed_in": [
+        "10.1.55"
+      ],
+      "location": "pom.xml",
+      "published": "2026-05-12",
+      "reference": "https://osv.dev/vulnerability/GHSA-5mp6-jrq3-r938"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.apache.tomcat.embed:tomcat-embed-core:GHSA-83qj-6fr2-vhqg",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-83qj-6fr2-vhqg",
+      "aliases": [
+        "CVE-2025-24813"
+      ],
+      "severity": "critical",
+      "title": "Apache Tomcat: Potential RCE and/or information disclosure and/or information corruption with partial PUT",
+      "package": "org.apache.tomcat.embed:tomcat-embed-core",
+      "version": "10.1.34",
+      "fixed_in": [
+        "10.1.35"
+      ],
+      "location": "pom.xml",
+      "published": "2025-03-10",
+      "reference": "https://osv.dev/vulnerability/GHSA-83qj-6fr2-vhqg"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.apache.tomcat.embed:tomcat-embed-core:GHSA-9m3c-qcxr-9x87",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-9m3c-qcxr-9x87",
+      "aliases": [
+        "CVE-2026-25854"
+      ],
+      "severity": "medium",
+      "title": "Apache Tomcat has an Open Redirect vulnerability",
+      "package": "org.apache.tomcat.embed:tomcat-embed-core",
+      "version": "10.1.34",
+      "fixed_in": [
+        "10.1.53"
+      ],
+      "location": "pom.xml",
+      "published": "2026-04-09",
+      "reference": "https://osv.dev/vulnerability/GHSA-9m3c-qcxr-9x87"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.apache.tomcat.embed:tomcat-embed-core:GHSA-9m89-8frq-c98c",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-9m89-8frq-c98c",
+      "aliases": [
+        "CVE-2026-43514"
+      ],
+      "severity": "low",
+      "title": "Apache Tomcat - AJP secret compared in non-constant time",
+      "package": "org.apache.tomcat.embed:tomcat-embed-core",
+      "version": "10.1.34",
+      "fixed_in": [
+        "10.1.55"
+      ],
+      "location": "pom.xml",
+      "published": "2026-05-12",
+      "reference": "https://osv.dev/vulnerability/GHSA-9m89-8frq-c98c"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.apache.tomcat.embed:tomcat-embed-core:GHSA-9xv2-5v5q-p794",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-9xv2-5v5q-p794",
+      "aliases": [
+        "CVE-2026-65905"
+      ],
+      "severity": "critical",
+      "title": "Apache Tomcat's DIGEST authenticator has an Authentication Bypass by Capture-replay vulnerability",
+      "package": "org.apache.tomcat.embed:tomcat-embed-core",
+      "version": "10.1.34",
+      "fixed_in": [
+        "10.1.58"
+      ],
+      "location": "pom.xml",
+      "published": "2026-08-26",
+      "reference": "https://osv.dev/vulnerability/GHSA-9xv2-5v5q-p794"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.apache.tomcat.embed:tomcat-embed-core:GHSA-ff77-26x5-69cr",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-ff77-26x5-69cr",
+      "aliases": [
+        "CVE-2025-31651"
+      ],
+      "severity": "low",
+      "title": "Apache Tomcat Rewrite rule bypass",
+      "package": "org.apache.tomcat.embed:tomcat-embed-core",
+      "version": "10.1.34",
+      "fixed_in": [
+        "10.1.40"
+      ],
+      "location": "pom.xml",
+      "published": "2025-04-28",
+      "reference": "https://osv.dev/vulnerability/GHSA-ff77-26x5-69cr"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.apache.tomcat.embed:tomcat-embed-core:GHSA-fpj8-gq4v-p354",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-fpj8-gq4v-p354",
+      "aliases": [
+        "CVE-2025-66614"
+      ],
+      "severity": "medium",
+      "title": "Apache Tomcat - Client certificate verification bypass",
+      "package": "org.apache.tomcat.embed:tomcat-embed-core",
+      "version": "10.1.34",
+      "fixed_in": [
+        "10.1.50"
+      ],
+      "location": "pom.xml",
+      "published": "2026-02-17",
+      "reference": "https://osv.dev/vulnerability/GHSA-fpj8-gq4v-p354"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.apache.tomcat.embed:tomcat-embed-core:GHSA-fv25-8xcx-gqjc",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-fv25-8xcx-gqjc",
+      "aliases": [
+        "CVE-2026-42498"
+      ],
+      "severity": "high",
+      "title": "Apache Tomcat - WebSocket authentication header exposure",
+      "package": "org.apache.tomcat.embed:tomcat-embed-core",
+      "version": "10.1.34",
+      "fixed_in": [
+        "10.1.55"
+      ],
+      "location": "pom.xml",
+      "published": "2026-05-12",
+      "reference": "https://osv.dev/vulnerability/GHSA-fv25-8xcx-gqjc"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.apache.tomcat.embed:tomcat-embed-core:GHSA-gcx9-497g-6cp6",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-gcx9-497g-6cp6",
+      "aliases": [
+        "CVE-2026-65182"
+      ],
+      "severity": "critical",
+      "title": "Apache Tomcat has an Improper Access Control, Incorrect Authorization vulnerability",
+      "package": "org.apache.tomcat.embed:tomcat-embed-core",
+      "version": "10.1.34",
+      "fixed_in": [
+        "10.1.58"
+      ],
+      "location": "pom.xml",
+      "published": "2026-08-26",
+      "reference": "https://osv.dev/vulnerability/GHSA-gcx9-497g-6cp6"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.apache.tomcat.embed:tomcat-embed-core:GHSA-gqp3-2cvr-x8m3",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-gqp3-2cvr-x8m3",
+      "aliases": [
+        "CVE-2025-48989"
+      ],
+      "severity": "high",
+      "title": "Apache Tomcat Improper Resource Shutdown or Release vulnerability",
+      "package": "org.apache.tomcat.embed:tomcat-embed-core",
+      "version": "10.1.34",
+      "fixed_in": [
+        "10.1.44"
+      ],
+      "location": "pom.xml",
+      "published": "2025-08-13",
+      "reference": "https://osv.dev/vulnerability/GHSA-gqp3-2cvr-x8m3"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.apache.tomcat.embed:tomcat-embed-core:GHSA-gx5v-xp9w-j4cg",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-gx5v-xp9w-j4cg",
+      "aliases": [
+        "CVE-2026-41284"
+      ],
+      "severity": "high",
+      "title": "Apache Tomcat: Unbounded read in WebDAV LOCK and  PROPFIND handling",
+      "package": "org.apache.tomcat.embed:tomcat-embed-core",
+      "version": "10.1.34",
+      "fixed_in": [
+        "10.1.55"
+      ],
+      "location": "pom.xml",
+      "published": "2026-05-12",
+      "reference": "https://osv.dev/vulnerability/GHSA-gx5v-xp9w-j4cg"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.apache.tomcat.embed:tomcat-embed-core:GHSA-h2fw-rfh5-95r3",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-h2fw-rfh5-95r3",
+      "aliases": [
+        "CVE-2025-46701"
+      ],
+      "severity": "low",
+      "title": "Apache Tomcat - CGI security constraint bypass",
+      "package": "org.apache.tomcat.embed:tomcat-embed-core",
+      "version": "10.1.34",
+      "fixed_in": [
+        "10.1.41"
+      ],
+      "location": "pom.xml",
+      "published": "2025-05-29",
+      "reference": "https://osv.dev/vulnerability/GHSA-h2fw-rfh5-95r3"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.apache.tomcat.embed:tomcat-embed-core:GHSA-h3gc-qfqq-6h8f",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-h3gc-qfqq-6h8f",
+      "aliases": [
+        "CVE-2025-48988"
+      ],
+      "severity": "high",
+      "title": "Apache Tomcat - DoS in multipart upload",
+      "package": "org.apache.tomcat.embed:tomcat-embed-core",
+      "version": "10.1.34",
+      "fixed_in": [
+        "10.1.42"
+      ],
+      "location": "pom.xml",
+      "published": "2025-06-16",
+      "reference": "https://osv.dev/vulnerability/GHSA-h3gc-qfqq-6h8f"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.apache.tomcat.embed:tomcat-embed-core:GHSA-h3x4-894j-xpx5",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-h3x4-894j-xpx5",
+      "aliases": [
+        "CVE-2026-68525"
+      ],
+      "severity": "critical",
+      "title": "Apache Tomcat's FORM authentication process has an Incorrect Authorization vulnerability",
+      "package": "org.apache.tomcat.embed:tomcat-embed-core",
+      "version": "10.1.34",
+      "fixed_in": [
+        "10.1.58"
+      ],
+      "location": "pom.xml",
+      "published": "2026-08-26",
+      "reference": "https://osv.dev/vulnerability/GHSA-h3x4-894j-xpx5"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.apache.tomcat.embed:tomcat-embed-core:GHSA-h6fc-48rj-7qqh",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-h6fc-48rj-7qqh",
+      "aliases": [
+        "CVE-2026-43512"
+      ],
+      "severity": "critical",
+      "title": "Apache Tomcat - Digest authenticator will authenticate any unknown user",
+      "package": "org.apache.tomcat.embed:tomcat-embed-core",
+      "version": "10.1.34",
+      "fixed_in": [
+        "10.1.55"
+      ],
+      "location": "pom.xml",
+      "published": "2026-05-12",
+      "reference": "https://osv.dev/vulnerability/GHSA-h6fc-48rj-7qqh"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.apache.tomcat.embed:tomcat-embed-core:GHSA-hgrr-935x-pq79",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-hgrr-935x-pq79",
+      "aliases": [
+        "CVE-2025-61795"
+      ],
+      "severity": "low",
+      "title": "Apache Tomcat Vulnerable to Improper Resource Shutdown or Release",
+      "package": "org.apache.tomcat.embed:tomcat-embed-core",
+      "version": "10.1.34",
+      "fixed_in": [
+        "10.1.47"
+      ],
+      "location": "pom.xml",
+      "published": "2025-10-27",
+      "reference": "https://osv.dev/vulnerability/GHSA-hgrr-935x-pq79"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.apache.tomcat.embed:tomcat-embed-core:GHSA-mgp5-rv84-w37q",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-mgp5-rv84-w37q",
+      "aliases": [
+        "CVE-2026-24734"
+      ],
+      "severity": "high",
+      "title": "Apache Tomcat has an Improper Input Validation vulnerability",
+      "package": "org.apache.tomcat.embed:tomcat-embed-core",
+      "version": "10.1.34",
+      "fixed_in": [
+        "10.1.52"
+      ],
+      "location": "pom.xml",
+      "published": "2026-02-17",
+      "reference": "https://osv.dev/vulnerability/GHSA-mgp5-rv84-w37q"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.apache.tomcat.embed:tomcat-embed-core:GHSA-r29c-68gh-xp6x",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-r29c-68gh-xp6x",
+      "aliases": [
+        "CVE-2026-41293"
+      ],
+      "severity": "critical",
+      "title": "Apache Tomcat - HTTP/2 request headers not validated",
+      "package": "org.apache.tomcat.embed:tomcat-embed-core",
+      "version": "10.1.34",
+      "fixed_in": [
+        "10.1.55"
+      ],
+      "location": "pom.xml",
+      "published": "2026-05-12",
+      "reference": "https://osv.dev/vulnerability/GHSA-r29c-68gh-xp6x"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.apache.tomcat.embed:tomcat-embed-core:GHSA-rv64-5gf8-9qq8",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-rv64-5gf8-9qq8",
+      "aliases": [
+        "CVE-2026-34483"
+      ],
+      "severity": "high",
+      "title": "Apache Tomcat has an Improper Encoding or Escaping of Output vulnerability in the JsonAccessLogValve",
+      "package": "org.apache.tomcat.embed:tomcat-embed-core",
+      "version": "10.1.34",
+      "fixed_in": [
+        "10.1.54"
+      ],
+      "location": "pom.xml",
+      "published": "2026-04-09",
+      "reference": "https://osv.dev/vulnerability/GHSA-rv64-5gf8-9qq8"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.apache.tomcat.embed:tomcat-embed-core:GHSA-vfww-5hm6-hx2j",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-vfww-5hm6-hx2j",
+      "aliases": [
+        "CVE-2025-55754"
+      ],
+      "severity": "low",
+      "title": "Apache Tomcat Vulnerable to Improper Neutralization of Escape, Meta, or Control Sequences",
+      "package": "org.apache.tomcat.embed:tomcat-embed-core",
+      "version": "10.1.34",
+      "fixed_in": [
+        "10.1.45"
+      ],
+      "location": "pom.xml",
+      "published": "2025-10-27",
+      "reference": "https://osv.dev/vulnerability/GHSA-vfww-5hm6-hx2j"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.apache.tomcat.embed:tomcat-embed-core:GHSA-wc4r-xq3c-5cf3",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-wc4r-xq3c-5cf3",
+      "aliases": [
+        "CVE-2025-49125"
+      ],
+      "severity": "medium",
+      "title": "Apache Tomcat - Security constraint bypass for pre/post-resources",
+      "package": "org.apache.tomcat.embed:tomcat-embed-core",
+      "version": "10.1.34",
+      "fixed_in": [
+        "10.1.42"
+      ],
+      "location": "pom.xml",
+      "published": "2025-06-16",
+      "reference": "https://osv.dev/vulnerability/GHSA-wc4r-xq3c-5cf3"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.apache.tomcat.embed:tomcat-embed-core:GHSA-wmwf-9ccg-fff5",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-wmwf-9ccg-fff5",
+      "aliases": [
+        "CVE-2025-55752"
+      ],
+      "severity": "high",
+      "title": "Apache Tomcat Vulnerable to Relative Path Traversal",
+      "package": "org.apache.tomcat.embed:tomcat-embed-core",
+      "version": "10.1.34",
+      "fixed_in": [
+        "10.1.45"
+      ],
+      "location": "pom.xml",
+      "published": "2025-10-27",
+      "reference": "https://osv.dev/vulnerability/GHSA-wmwf-9ccg-fff5"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.apache.tomcat.embed:tomcat-embed-core:GHSA-wr62-c79q-cv37",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-wr62-c79q-cv37",
+      "aliases": [
+        "CVE-2025-52520"
+      ],
+      "severity": "high",
+      "title": "Apache Tomcat Catalina is vulnerable to DoS attack through bypassing of size limits",
+      "package": "org.apache.tomcat.embed:tomcat-embed-core",
+      "version": "10.1.34",
+      "fixed_in": [
+        "10.1.43"
+      ],
+      "location": "pom.xml",
+      "published": "2025-07-10",
+      "reference": "https://osv.dev/vulnerability/GHSA-wr62-c79q-cv37"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.apache.tomcat.embed:tomcat-embed-core:GHSA-x4m4-345f-5h5g",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-x4m4-345f-5h5g",
+      "aliases": [
+        "CVE-2026-34487"
+      ],
+      "severity": "high",
+      "title": "Apache Tomcat vulnerable to Insertion of Sensitive Information into Log File",
+      "package": "org.apache.tomcat.embed:tomcat-embed-core",
+      "version": "10.1.34",
+      "fixed_in": [
+        "10.1.54"
+      ],
+      "location": "pom.xml",
+      "published": "2026-04-09",
+      "reference": "https://osv.dev/vulnerability/GHSA-x4m4-345f-5h5g"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.apache.zookeeper:zookeeper:GHSA-7xrh-hqfc-g7qr",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-7xrh-hqfc-g7qr",
+      "aliases": [
+        "CVE-2026-24281"
+      ],
+      "severity": "high",
+      "title": "Apache ZooKeeper: Reverse-DNS fallback enables hostname verification bypass in ZooKeeper ZKTrustManager",
+      "package": "org.apache.zookeeper:zookeeper",
+      "version": "3.8.4",
+      "fixed_in": [
+        "3.8.6"
+      ],
+      "location": "pom.xml",
+      "published": "2026-03-07",
+      "reference": "https://osv.dev/vulnerability/GHSA-7xrh-hqfc-g7qr"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.apache.zookeeper:zookeeper:GHSA-crhr-qqj8-rpxc",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-crhr-qqj8-rpxc",
+      "aliases": [
+        "CVE-2026-24308"
+      ],
+      "severity": "high",
+      "title": "Apache ZooKeeper has improper handling of configuration values",
+      "package": "org.apache.zookeeper:zookeeper",
+      "version": "3.8.4",
+      "fixed_in": [
+        "3.8.6"
+      ],
+      "location": "pom.xml",
+      "published": "2026-03-07",
+      "reference": "https://osv.dev/vulnerability/GHSA-crhr-qqj8-rpxc"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.assertj:assertj-core:GHSA-rqfh-9r24-8c9r",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-rqfh-9r24-8c9r",
+      "aliases": [
+        "CVE-2026-24400"
+      ],
+      "severity": "high",
+      "title": "AssertJ has XML External Entity (XXE) vulnerability when parsing untrusted XML via isXmlEqualTo assertion",
+      "package": "org.assertj:assertj-core",
+      "version": "3.26.3",
+      "fixed_in": [
+        "3.27.7"
+      ],
+      "location": "pom.xml",
+      "published": "2026-01-26",
+      "reference": "https://osv.dev/vulnerability/GHSA-rqfh-9r24-8c9r"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.bitbucket.b_c:jose4j:GHSA-3677-xxcr-wjqv",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-3677-xxcr-wjqv",
+      "aliases": [
+        "CVE-2024-29371"
+      ],
+      "severity": "high",
+      "title": "jose4j is vulnerable to DoS via compressed JWE content",
+      "package": "org.bitbucket.b_c:jose4j",
+      "version": "0.9.4",
+      "fixed_in": [
+        "0.9.6"
+      ],
+      "location": "pom.xml",
+      "published": "2025-12-17",
+      "reference": "https://osv.dev/vulnerability/GHSA-3677-xxcr-wjqv"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.lz4:lz4-java:GHSA-343h-94h5-c4wr",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-343h-94h5-c4wr",
+      "aliases": [
+        "CVE-2026-106449"
+      ],
+      "severity": "low",
+      "title": "yawkat LZ4 Java: LZ4BlockInputStream with stopOnEmptyBlock=false recurses once per empty block, causing StackOverflowError",
+      "package": "org.lz4:lz4-java",
+      "version": "1.8.0",
+      "fixed_in": [],
+      "location": "pom.xml",
+      "published": "2026-10-07",
+      "reference": "https://osv.dev/vulnerability/GHSA-343h-94h5-c4wr"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.lz4:lz4-java:GHSA-4v53-57pg-c464",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-4v53-57pg-c464",
+      "aliases": [
+        "CVE-2026-106452"
+      ],
+      "severity": "medium",
+      "title": "yawkat LZ4 Java: LZ4BlockInputStream allocates an unvalidated compressed length from the stream header",
+      "package": "org.lz4:lz4-java",
+      "version": "1.8.0",
+      "fixed_in": [],
+      "location": "pom.xml",
+      "published": "2026-10-07",
+      "reference": "https://osv.dev/vulnerability/GHSA-4v53-57pg-c464"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.lz4:lz4-java:GHSA-6cx8-rjf8-pr8g",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-6cx8-rjf8-pr8g",
+      "aliases": [
+        "CVE-2026-106453"
+      ],
+      "severity": "medium",
+      "title": "yawkat LZ4 Java: LZ4DecompressorWithLength allocates the unvalidated size from the 4-byte length header, so a 5-byte input triggers a 1 GiB allocation and OutOfMemoryError",
+      "package": "org.lz4:lz4-java",
+      "version": "1.8.0",
+      "fixed_in": [],
+      "location": "pom.xml",
+      "published": "2026-10-07",
+      "reference": "https://osv.dev/vulnerability/GHSA-6cx8-rjf8-pr8g"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.lz4:lz4-java:GHSA-cmp6-m4wj-q63q",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-cmp6-m4wj-q63q",
+      "aliases": [
+        "CVE-2025-66566"
+      ],
+      "severity": "high",
+      "title": "yawkat LZ4 Java has a possible information leak in Java safe decompressor",
+      "package": "org.lz4:lz4-java",
+      "version": "1.8.0",
+      "fixed_in": [],
+      "location": "pom.xml",
+      "published": "2025-12-05",
+      "reference": "https://osv.dev/vulnerability/GHSA-cmp6-m4wj-q63q"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.lz4:lz4-java:GHSA-gm45-99xc-r7wv",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-gm45-99xc-r7wv",
+      "aliases": [
+        "CVE-2026-106450"
+      ],
+      "severity": "medium",
+      "title": "yawkat LZ4 Java: LZ4FrameInputStream reallocates block buffers for every frame, allowing CPU and GC amplification from small inputs",
+      "package": "org.lz4:lz4-java",
+      "version": "1.8.0",
+      "fixed_in": [],
+      "location": "pom.xml",
+      "published": "2026-10-07",
+      "reference": "https://osv.dev/vulnerability/GHSA-gm45-99xc-r7wv"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.lz4:lz4-java:GHSA-mcr4-qmvw-px4g",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-mcr4-qmvw-px4g",
+      "aliases": [
+        "CVE-2026-106451"
+      ],
+      "severity": "high",
+      "title": "yawkat LZ4 Java: Native library extraction to a shared temporary directory is vulnerable to file replacement by another local user",
+      "package": "org.lz4:lz4-java",
+      "version": "1.8.0",
+      "fixed_in": [],
+      "location": "pom.xml",
+      "published": "2026-10-07",
+      "reference": "https://osv.dev/vulnerability/GHSA-mcr4-qmvw-px4g"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.lz4:lz4-java:GHSA-vqf4-7m7x-wgfc",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-vqf4-7m7x-wgfc",
+      "aliases": [
+        "CVE-2025-12183"
+      ],
+      "severity": "high",
+      "title": "LZ4 Java Compression has Out-of-bounds memory operations which can cause DoS",
+      "package": "org.lz4:lz4-java",
+      "version": "1.8.0",
+      "fixed_in": [
+        "1.8.1"
+      ],
+      "location": "pom.xml",
+      "published": "2025-11-28",
+      "reference": "https://osv.dev/vulnerability/GHSA-vqf4-7m7x-wgfc"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.lz4:lz4-java:GHSA-xx22-p4ch-683r",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-xx22-p4ch-683r",
+      "aliases": [
+        "CVE-2026-59949"
+      ],
+      "severity": "medium",
+      "title": "LZ4 Java: Native XXHash implementations can crash the JVM when passed invalid byte array ranges",
+      "package": "org.lz4:lz4-java",
+      "version": "1.8.0",
+      "fixed_in": [],
+      "location": "pom.xml",
+      "published": "2026-07-24",
+      "reference": "https://osv.dev/vulnerability/GHSA-xx22-p4ch-683r"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.postgresql:postgresql:GHSA-98qh-xjc8-98pq",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-98qh-xjc8-98pq",
+      "aliases": [
+        "CVE-2026-42198"
+      ],
+      "severity": "high",
+      "title": "pgjdbc: Unbounded PBKDF2 iterations in SCRAM authentication allows CPU exhaustion DoS",
+      "package": "org.postgresql:postgresql",
+      "version": "42.7.5",
+      "fixed_in": [
+        "42.7.11"
+      ],
+      "location": "pom.xml",
+      "published": "2026-05-05",
+      "reference": "https://osv.dev/vulnerability/GHSA-98qh-xjc8-98pq"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.postgresql:postgresql:GHSA-hq9p-pm7w-8p54",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-hq9p-pm7w-8p54",
+      "aliases": [
+        "CVE-2025-49146"
+      ],
+      "severity": "high",
+      "title": "pgjdbc Client Allows Fallback to Insecure Authentication Despite channelBinding=require Configuration",
+      "package": "org.postgresql:postgresql",
+      "version": "42.7.5",
+      "fixed_in": [
+        "42.7.7"
+      ],
+      "location": "pom.xml",
+      "published": "2025-06-11",
+      "reference": "https://osv.dev/vulnerability/GHSA-hq9p-pm7w-8p54"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.postgresql:postgresql:GHSA-j92g-9f8w-j867",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-j92g-9f8w-j867",
+      "aliases": [
+        "CVE-2026-54291"
+      ],
+      "severity": "high",
+      "title": "PostgreSQL JDBC Driver: Silent channel-binding authentication downgrade via unsupported certificate algorithms",
+      "package": "org.postgresql:postgresql",
+      "version": "42.7.5",
+      "fixed_in": [
+        "42.7.12"
+      ],
+      "location": "pom.xml",
+      "published": "2026-07-21",
+      "reference": "https://osv.dev/vulnerability/GHSA-j92g-9f8w-j867"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.springframework.boot:spring-boot:GHSA-rc42-6c7j-7h5r",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-rc42-6c7j-7h5r",
+      "aliases": [
+        "CVE-2025-22235"
+      ],
+      "severity": "high",
+      "title": "Spring Boot EndpointRequest.to() creates wrong matcher if actuator endpoint is not exposed",
+      "package": "org.springframework.boot:spring-boot",
+      "version": "3.4.2",
+      "fixed_in": [
+        "3.4.5"
+      ],
+      "location": "pom.xml",
+      "published": "2025-04-28",
+      "reference": "https://osv.dev/vulnerability/GHSA-rc42-6c7j-7h5r"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.springframework.boot:spring-boot:GHSA-wwpq-f5c3-7hvx",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-wwpq-f5c3-7hvx",
+      "aliases": [
+        "CVE-2026-40973"
+      ],
+      "severity": "high",
+      "title": "Spring Boot accepts predictable temp directory without ownership verification",
+      "package": "org.springframework.boot:spring-boot",
+      "version": "3.4.2",
+      "fixed_in": [
+        "3.5.14"
+      ],
+      "location": "pom.xml",
+      "published": "2026-04-28",
+      "reference": "https://osv.dev/vulnerability/GHSA-wwpq-f5c3-7hvx"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.springframework.boot:spring-boot-autoconfigure:GHSA-ggg2-9786-hwc8",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-ggg2-9786-hwc8",
+      "aliases": [
+        "CVE-2026-41001"
+      ],
+      "severity": "medium",
+      "title": "Spring Boot: Predictable Temp Directory in Artemis Auto-configuration",
+      "package": "org.springframework.boot:spring-boot-autoconfigure",
+      "version": "3.4.2",
+      "fixed_in": [
+        "3.5.15"
+      ],
+      "location": "pom.xml",
+      "published": "2026-06-11",
+      "reference": "https://osv.dev/vulnerability/GHSA-ggg2-9786-hwc8"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.springframework.data:spring-data-commons:GHSA-5m4m-73w9-8433",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-5m4m-73w9-8433",
+      "aliases": [
+        "CVE-2026-41721"
+      ],
+      "severity": "medium",
+      "title": "Spring Data Commons: Denial of Service via excessive memory allocation in projection binding",
+      "package": "org.springframework.data:spring-data-commons",
+      "version": "3.4.2",
+      "fixed_in": [
+        "3.5.12"
+      ],
+      "location": "pom.xml",
+      "published": "2026-06-10",
+      "reference": "https://osv.dev/vulnerability/GHSA-5m4m-73w9-8433"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.springframework.data:spring-data-commons:GHSA-5vpf-xvv7-c8vh",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-5vpf-xvv7-c8vh",
+      "aliases": [
+        "CVE-2026-41711"
+      ],
+      "severity": "medium",
+      "title": "Spring Data Commons: StackOverflowException when parsing Sort parameters (DoS)",
+      "package": "org.springframework.data:spring-data-commons",
+      "version": "3.4.2",
+      "fixed_in": [
+        "3.5.12"
+      ],
+      "location": "pom.xml",
+      "published": "2026-06-10",
+      "reference": "https://osv.dev/vulnerability/GHSA-5vpf-xvv7-c8vh"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.springframework.data:spring-data-commons:GHSA-88fw-v6x4-3f58",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-88fw-v6x4-3f58",
+      "aliases": [
+        "CVE-2026-41695"
+      ],
+      "severity": "high",
+      "title": "Spring Data: Unbounded property-path cache keyed by externally-supplied path string",
+      "package": "org.springframework.data:spring-data-commons",
+      "version": "3.4.2",
+      "fixed_in": [
+        "3.5.12"
+      ],
+      "location": "pom.xml",
+      "published": "2026-07-31",
+      "reference": "https://osv.dev/vulnerability/GHSA-88fw-v6x4-3f58"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.springframework.data:spring-data-commons:GHSA-9fw2-h3hf-293r",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-9fw2-h3hf-293r",
+      "aliases": [
+        "CVE-2026-41716"
+      ],
+      "severity": "high",
+      "title": "Spring Data Commons: Heap exhaustion from unbounded property-lookup cache retaining crafted string keys",
+      "package": "org.springframework.data:spring-data-commons",
+      "version": "3.4.2",
+      "fixed_in": [
+        "3.5.12"
+      ],
+      "location": "pom.xml",
+      "published": "2026-06-10",
+      "reference": "https://osv.dev/vulnerability/GHSA-9fw2-h3hf-293r"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.springframework.kafka:spring-kafka:GHSA-53w6-v7cv-fc9h",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-53w6-v7cv-fc9h",
+      "aliases": [
+        "CVE-2026-41727"
+      ],
+      "severity": "medium",
+      "title": "Spring for Apache Kafka: Improper Validation of Retry Topic Header Values Leads to Retry Sequence Manipulation",
+      "package": "org.springframework.kafka:spring-kafka",
+      "version": "3.3.2",
+      "fixed_in": [
+        "3.3.16"
+      ],
+      "location": "pom.xml",
+      "published": "2026-06-10",
+      "reference": "https://osv.dev/vulnerability/GHSA-53w6-v7cv-fc9h"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.springframework.kafka:spring-kafka:GHSA-xq69-5h5v-x9x4",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-xq69-5h5v-x9x4",
+      "aliases": [
+        "CVE-2026-41731"
+      ],
+      "severity": "high",
+      "title": "In Spring for Apache Kafka, overly broad trusted-package matching in header mappers exposes JDK classes to deserialization",
+      "package": "org.springframework.kafka:spring-kafka",
+      "version": "3.3.2",
+      "fixed_in": [
+        "3.3.16"
+      ],
+      "location": "pom.xml",
+      "published": "2026-06-10",
+      "reference": "https://osv.dev/vulnerability/GHSA-xq69-5h5v-x9x4"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.springframework.kafka:spring-kafka:GHSA-xvfq-4q6q-gxx7",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-xvfq-4q6q-gxx7",
+      "aliases": [
+        "CVE-2026-41726"
+      ],
+      "severity": "medium",
+      "title": "In Spring for Apache Kafka, unbounded delegate cache keyed on user-controlled, potentially malicious selector header",
+      "package": "org.springframework.kafka:spring-kafka",
+      "version": "3.3.2",
+      "fixed_in": [
+        "3.3.16"
+      ],
+      "location": "pom.xml",
+      "published": "2026-06-10",
+      "reference": "https://osv.dev/vulnerability/GHSA-xvfq-4q6q-gxx7"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.springframework.retry:spring-retry:GHSA-2827-2mxx-j8pv",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-2827-2mxx-j8pv",
+      "aliases": [
+        "CVE-2026-41710"
+      ],
+      "severity": "medium",
+      "title": "Spring Retry has Cache Exhaustion in Stateful Retries that leads to Denial of Service",
+      "package": "org.springframework.retry:spring-retry",
+      "version": "2.0.11",
+      "fixed_in": [
+        "2.0.13"
+      ],
+      "location": "pom.xml",
+      "published": "2026-06-09",
+      "reference": "https://osv.dev/vulnerability/GHSA-2827-2mxx-j8pv"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.springframework:spring-context:GHSA-4wp7-92pw-q264",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-4wp7-92pw-q264",
+      "aliases": [
+        "CVE-2025-22233"
+      ],
+      "severity": "low",
+      "title": "Spring Framework DataBinder Case Sensitive Match Exception",
+      "package": "org.springframework:spring-context",
+      "version": "6.2.2",
+      "fixed_in": [
+        "6.2.7"
+      ],
+      "location": "pom.xml",
+      "published": "2025-05-16",
+      "reference": "https://osv.dev/vulnerability/GHSA-4wp7-92pw-q264"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.springframework:spring-core:GHSA-659m-px2c-25wj",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-659m-px2c-25wj",
+      "aliases": [
+        "CVE-2026-41848"
+      ],
+      "severity": "low",
+      "title": "Spring Framework Denial of Service via AntPathMatcher",
+      "package": "org.springframework:spring-core",
+      "version": "6.2.2",
+      "fixed_in": [
+        "6.2.19"
+      ],
+      "location": "pom.xml",
+      "published": "2026-06-09",
+      "reference": "https://osv.dev/vulnerability/GHSA-659m-px2c-25wj"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.springframework:spring-core:GHSA-jmp9-x22r-554x",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-jmp9-x22r-554x",
+      "aliases": [
+        "CVE-2025-41249"
+      ],
+      "severity": "high",
+      "title": "Spring Framework annotation detection mechanism may result in improper authorization",
+      "package": "org.springframework:spring-core",
+      "version": "6.2.2",
+      "fixed_in": [
+        "6.2.11"
+      ],
+      "location": "pom.xml",
+      "published": "2025-09-16",
+      "reference": "https://osv.dev/vulnerability/GHSA-jmp9-x22r-554x"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.springframework:spring-expression:GHSA-9f52-rjqv-25qv",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-9f52-rjqv-25qv",
+      "aliases": [
+        "CVE-2026-41852"
+      ],
+      "severity": "low",
+      "title": "Spring Framework Arbitrary Method Invocation in SpEL Expressions",
+      "package": "org.springframework:spring-expression",
+      "version": "6.2.2",
+      "fixed_in": [
+        "6.2.19"
+      ],
+      "location": "pom.xml",
+      "published": "2026-06-09",
+      "reference": "https://osv.dev/vulnerability/GHSA-9f52-rjqv-25qv"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.springframework:spring-expression:GHSA-r5w3-xv2f-j59q",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-r5w3-xv2f-j59q",
+      "aliases": [
+        "CVE-2026-41850"
+      ],
+      "severity": "high",
+      "title": "Spring Framework Algorithmic Denial of Service via SpEL Expressions",
+      "package": "org.springframework:spring-expression",
+      "version": "6.2.2",
+      "fixed_in": [
+        "6.2.19"
+      ],
+      "location": "pom.xml",
+      "published": "2026-06-09",
+      "reference": "https://osv.dev/vulnerability/GHSA-r5w3-xv2f-j59q"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.springframework:spring-expression:GHSA-wxpp-56q6-5pcg",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-wxpp-56q6-5pcg",
+      "aliases": [
+        "CVE-2026-41851"
+      ],
+      "severity": "medium",
+      "title": "Spring Framework Denial of Service via Unbounded Cache in SpEL",
+      "package": "org.springframework:spring-expression",
+      "version": "6.2.2",
+      "fixed_in": [
+        "6.2.19"
+      ],
+      "location": "pom.xml",
+      "published": "2026-06-09",
+      "reference": "https://osv.dev/vulnerability/GHSA-wxpp-56q6-5pcg"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.springframework:spring-web:GHSA-6r3c-xf4w-jxjm",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-6r3c-xf4w-jxjm",
+      "aliases": [
+        "CVE-2025-41234"
+      ],
+      "severity": "medium",
+      "title": "Spring Framework vulnerable to a reflected file download (RFD)",
+      "package": "org.springframework:spring-web",
+      "version": "6.2.2",
+      "fixed_in": [
+        "6.2.8"
+      ],
+      "location": "pom.xml",
+      "published": "2025-06-13",
+      "reference": "https://osv.dev/vulnerability/GHSA-6r3c-xf4w-jxjm"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.springframework:spring-web:GHSA-7m2p-62gw-p8qq",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-7m2p-62gw-p8qq",
+      "aliases": [
+        "CVE-2026-41854"
+      ],
+      "severity": "medium",
+      "title": "Spring Framework Server-Side Request Forgery via UriComponentsBuilder",
+      "package": "org.springframework:spring-web",
+      "version": "6.2.2",
+      "fixed_in": [
+        "6.2.19"
+      ],
+      "location": "pom.xml",
+      "published": "2026-06-09",
+      "reference": "https://osv.dev/vulnerability/GHSA-7m2p-62gw-p8qq"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.springframework:spring-webmvc:GHSA-3chg-m5w7-qfv5",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-3chg-m5w7-qfv5",
+      "aliases": [
+        "CVE-2026-41845"
+      ],
+      "severity": "high",
+      "title": "Spring Framework Cross-site Scripting via JavaScriptUtils",
+      "package": "org.springframework:spring-webmvc",
+      "version": "6.2.2",
+      "fixed_in": [
+        "6.2.19"
+      ],
+      "location": "pom.xml",
+      "published": "2026-06-09",
+      "reference": "https://osv.dev/vulnerability/GHSA-3chg-m5w7-qfv5"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.springframework:spring-webmvc:GHSA-4773-3jfm-qmx3",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-4773-3jfm-qmx3",
+      "aliases": [
+        "CVE-2026-22737"
+      ],
+      "severity": "medium",
+      "title": "Spring Framework Improper Path Limitation with Script View Templates",
+      "package": "org.springframework:spring-webmvc",
+      "version": "6.2.2",
+      "fixed_in": [
+        "6.2.17"
+      ],
+      "location": "pom.xml",
+      "published": "2026-03-20",
+      "reference": "https://osv.dev/vulnerability/GHSA-4773-3jfm-qmx3"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.springframework:spring-webmvc:GHSA-6hcq-hmm3-jj3c",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-6hcq-hmm3-jj3c",
+      "aliases": [
+        "CVE-2026-22735"
+      ],
+      "severity": "low",
+      "title": "Spring MVC and WebFlux has Server Sent Event stream corruption",
+      "package": "org.springframework:spring-webmvc",
+      "version": "6.2.2",
+      "fixed_in": [
+        "6.2.17"
+      ],
+      "location": "pom.xml",
+      "published": "2026-03-20",
+      "reference": "https://osv.dev/vulnerability/GHSA-6hcq-hmm3-jj3c"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.springframework:spring-webmvc:GHSA-6p4f-wcwh-5vvm",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-6p4f-wcwh-5vvm",
+      "aliases": [
+        "CVE-2026-22745"
+      ],
+      "severity": "medium",
+      "title": "Spring MVC and WebFlux applications are vulnerable to Denial of Service attacks when resolving static resources",
+      "package": "org.springframework:spring-webmvc",
+      "version": "6.2.2",
+      "fixed_in": [
+        "6.2.18"
+      ],
+      "location": "pom.xml",
+      "published": "2026-04-29",
+      "reference": "https://osv.dev/vulnerability/GHSA-6p4f-wcwh-5vvm"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.springframework:spring-webmvc:GHSA-72pg-x5f8-j25j",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-72pg-x5f8-j25j",
+      "aliases": [
+        "CVE-2026-41843"
+      ],
+      "severity": "medium",
+      "title": "Spring Framework Path Traversal via Versioned Static Resources in Spring MVC and WebFlux",
+      "package": "org.springframework:spring-webmvc",
+      "version": "6.2.2",
+      "fixed_in": [
+        "6.2.19"
+      ],
+      "location": "pom.xml",
+      "published": "2026-06-09",
+      "reference": "https://osv.dev/vulnerability/GHSA-72pg-x5f8-j25j"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.springframework:spring-webmvc:GHSA-957g-f97v-vppc",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-957g-f97v-vppc",
+      "aliases": [
+        "CVE-2026-41846"
+      ],
+      "severity": "medium",
+      "title": "Spring Framework Cross-site Scripting via JSP Form Tags",
+      "package": "org.springframework:spring-webmvc",
+      "version": "6.2.2",
+      "fixed_in": [
+        "6.2.19"
+      ],
+      "location": "pom.xml",
+      "published": "2026-06-09",
+      "reference": "https://osv.dev/vulnerability/GHSA-957g-f97v-vppc"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.springframework:spring-webmvc:GHSA-cjpg-rgq5-fr37",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-cjpg-rgq5-fr37",
+      "aliases": [
+        "CVE-2026-41853"
+      ],
+      "severity": "medium",
+      "title": "Spring Framework Multipart Request Smuggling in Spring MVC and WebFlux",
+      "package": "org.springframework:spring-webmvc",
+      "version": "6.2.2",
+      "fixed_in": [
+        "6.2.19"
+      ],
+      "location": "pom.xml",
+      "published": "2026-06-09",
+      "reference": "https://osv.dev/vulnerability/GHSA-cjpg-rgq5-fr37"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.springframework:spring-webmvc:GHSA-h3qp-gqrc-q736",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-h3qp-gqrc-q736",
+      "aliases": [
+        "CVE-2026-41844"
+      ],
+      "severity": "medium",
+      "title": "Spring Framework Open Redirect in Spring MVC and WebFlux",
+      "package": "org.springframework:spring-webmvc",
+      "version": "6.2.2",
+      "fixed_in": [
+        "6.2.19"
+      ],
+      "location": "pom.xml",
+      "published": "2026-06-09",
+      "reference": "https://osv.dev/vulnerability/GHSA-h3qp-gqrc-q736"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.springframework:spring-webmvc:GHSA-j9f9-w8pj-32f8",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-j9f9-w8pj-32f8",
+      "aliases": [
+        "CVE-2026-47890"
+      ],
+      "severity": "critical",
+      "title": "Spring Framework Server Sent Event stream corruption while rendering fragments",
+      "package": "org.springframework:spring-webmvc",
+      "version": "6.2.2",
+      "fixed_in": [
+        "7.0.9"
+      ],
+      "location": "pom.xml",
+      "published": "2026-08-27",
+      "reference": "https://osv.dev/vulnerability/GHSA-j9f9-w8pj-32f8"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.springframework:spring-webmvc:GHSA-mq64-j8f9-9gcj",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-mq64-j8f9-9gcj",
+      "aliases": [
+        "CVE-2026-41841"
+      ],
+      "severity": "medium",
+      "title": "Spring Framework Information Disclosure via Static Resource Cache in Spring MVC and WebFlux",
+      "package": "org.springframework:spring-webmvc",
+      "version": "6.2.2",
+      "fixed_in": [
+        "6.2.19"
+      ],
+      "location": "pom.xml",
+      "published": "2026-06-09",
+      "reference": "https://osv.dev/vulnerability/GHSA-mq64-j8f9-9gcj"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.springframework:spring-webmvc:GHSA-pc63-qcmh-9cmg",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-pc63-qcmh-9cmg",
+      "aliases": [
+        "CVE-2026-47884"
+      ],
+      "severity": "critical",
+      "title": "Spring Framework Improper Path Limitation in XsltView",
+      "package": "org.springframework:spring-webmvc",
+      "version": "6.2.2",
+      "fixed_in": [
+        "7.0.9"
+      ],
+      "location": "pom.xml",
+      "published": "2026-08-27",
+      "reference": "https://osv.dev/vulnerability/GHSA-pc63-qcmh-9cmg"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.springframework:spring-webmvc:GHSA-r936-gwx5-v52f",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-r936-gwx5-v52f",
+      "aliases": [
+        "CVE-2025-41242"
+      ],
+      "severity": "medium",
+      "title": "Spring Framework MVC Applications Path Traversal Vulnerability",
+      "package": "org.springframework:spring-webmvc",
+      "version": "6.2.2",
+      "fixed_in": [
+        "6.2.10"
+      ],
+      "location": "pom.xml",
+      "published": "2025-08-18",
+      "reference": "https://osv.dev/vulnerability/GHSA-r936-gwx5-v52f"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.springframework:spring-webmvc:GHSA-wg35-8jpf-2xv3",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-wg35-8jpf-2xv3",
+      "aliases": [
+        "CVE-2026-22741"
+      ],
+      "severity": "low",
+      "title": "Spring MVC and WebFlux applications are vulnerable to cache poisoning when resolving static resources.",
+      "package": "org.springframework:spring-webmvc",
+      "version": "6.2.2",
+      "fixed_in": [
+        "6.2.18"
+      ],
+      "location": "pom.xml",
+      "published": "2026-04-29",
+      "reference": "https://osv.dev/vulnerability/GHSA-wg35-8jpf-2xv3"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:org.springframework:spring-webmvc:GHSA-x23c-287f-qqv5",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "dependency",
+      "source": "osv.dev",
+      "advisory": "GHSA-x23c-287f-qqv5",
+      "aliases": [
+        "CVE-2026-41842"
+      ],
+      "severity": "high",
+      "title": "Spring Framework Denial of Service via Versioned Resources in Spring MVC and WebFlux",
+      "package": "org.springframework:spring-webmvc",
+      "version": "6.2.2",
+      "fixed_in": [
+        "6.2.19"
+      ],
+      "location": "pom.xml",
+      "published": "2026-06-09",
+      "reference": "https://osv.dev/vulnerability/GHSA-x23c-287f-qqv5"
+    },
+    {
+      "id": "Securities-Trade-Processing-System:secret:src/main/resources/application.properties:spring.datasource.password",
+      "repo": "Securities-Trade-Processing-System",
+      "kind": "credential",
+      "source": "pci-rescan secret check",
+      "advisory": "CWE-798",
+      "aliases": [],
+      "severity": "high",
+      "title": "Literal credential in src/main/resources/application.properties (spring.datasource.password)",
+      "package": null,
+      "version": null,
+      "fixed_in": [],
+      "location": "src/main/resources/application.properties:18",
+      "published": null,
+      "reference": "https://cwe.mitre.org/data/definitions/798.html"
+    }
+  ]
+}
