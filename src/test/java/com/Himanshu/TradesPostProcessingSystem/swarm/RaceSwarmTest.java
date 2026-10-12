@@ -79,7 +79,7 @@ class RaceSwarmTest {
     }
 
     @Test
-    void race1_integrityFailureForATradeThatIsNotBookedStillFails() {
+    void guard_integrityFailureForATradeThatIsNotBookedStillFails() {
         TradeRepository repo = mock(TradeRepository.class);
         when(repo.save(any(TradeEntity.class))).thenThrow(new DataIntegrityViolationException("null value in column \"symbol\""));
         when(repo.findByTradeId(anyString())).thenReturn(null);
