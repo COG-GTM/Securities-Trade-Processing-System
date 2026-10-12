@@ -5,10 +5,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
+import java.math.BigDecimal;
+
 @Service
 public class TradeService {
 
     private static final String TOPIC = "trades";
+    static final int PRICE_MAX_DECIMALS = 4;
 
     @Autowired
     private KafkaTemplate<String, Trade> kafkaTemplate;
@@ -23,6 +26,9 @@ public class TradeService {
         }
         if (price <= 0) {
             return "❌ Error: Price must be greater than zero!";
+        }
+        if (Double.isFinite(price) && BigDecimal.valueOf(price).stripTrailingZeros().scale() > PRICE_MAX_DECIMALS) {
+            return "❌ Error: Price must be a multiple of the 0.0001 tick!";
         }
 
         // ✅ Create Trade Object
