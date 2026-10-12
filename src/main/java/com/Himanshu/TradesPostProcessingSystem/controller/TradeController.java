@@ -11,7 +11,7 @@ public class TradeController {
     @Autowired
     private TradeService tradeService;
 
-    @GetMapping("/sendTrade")
+    @PostMapping("/sendTrade")
     public String sendTrade(
         @RequestParam(value = "symbol") String symbol,
         @RequestParam(value = "quantity") int quantity,
