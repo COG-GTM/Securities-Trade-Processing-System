@@ -76,7 +76,7 @@ class INJECTSwarmTest {
                 "attacker <script> reflected in a " + ct + " response: " + body);
     }
 
-    // INJECT-2: log forging. CR/LF in a trade field (from the REST symbol, or any producer on the topic)
+    // INJECT-2: log forging. CR/LF (or a bidi override) in a trade field (from the REST symbol, or any producer on the topic)
     // must not create extra, attacker-authored lines in the consumer's log output.
     @Test
     void inject2_crlfInTradeFieldsCannotForgeConsumerLogLines() {
@@ -86,7 +86,7 @@ class INJECTSwarmTest {
 
         Trade trade = new Trade();
         trade.setTradeId("6f1c2b1e-0000-4000-8000-000000000001");
-        trade.setSymbol("AAPL'}\r\n✅ Trade stored in database: TradeEntity{id=999, tradeId='FORGED', symbol='MSFT', quantity=1000000, price=0.01}");
+        trade.setSymbol("AAPL\u202E'}\r\n✅ Trade stored in database: TradeEntity{id=999, tradeId='FORGED', symbol='MSFT', quantity=1000000, price=0.01}");
         trade.setQuantity(1);
         trade.setPrice(1.0);
 
@@ -96,6 +96,7 @@ class INJECTSwarmTest {
         assertEquals(2, lines.length, "one consumeTrade call must emit exactly two log lines, got: " + Arrays.toString(lines));
         assertFalse(out.contains("tradeId='FORGED'") && Arrays.stream(lines).anyMatch(l -> l.startsWith("✅ Trade stored in database: TradeEntity{id=999")),
                 "forged log line injected");
+        assertFalse(out.matches("(?s).*[\\u202A-\\u202E\\u2066-\\u2069].*"), "bidi override reached the log");
     }
 
     // INJECT-3: Kafka header injection. Any producer on the "trades" topic can set the __TypeId__ header;
