@@ -15,7 +15,7 @@ public class TradeConsumerService {
 
     @KafkaListener(topics = "trades", groupId = "trade-group", containerFactory = "kafkaListenerContainerFactory")
     public void consumeTrade(Trade trade) {
-        System.out.println("✅ Received Trade: " + trade);
+        System.out.println("✅ Received Trade: " + forLog(trade));
 
         // Convert Trade model to TradeEntity (for database storage)
         TradeEntity tradeEntity = new TradeEntity(trade.getTradeId(), trade.getSymbol(), trade.getQuantity(), trade.getPrice());
@@ -23,6 +23,10 @@ public class TradeConsumerService {
         // Save trade to PostgreSQL
         tradeRepository.save(tradeEntity);
 
-        System.out.println("✅ Trade stored in database: " + tradeEntity);
+        System.out.println("✅ Trade stored in database: " + forLog(tradeEntity));
+    }
+
+    private static String forLog(Object value) {
+        return String.valueOf(value).replaceAll("[\\p{Cc}\\p{Cf}\\u2028\\u2029]", "_");
     }
 }
