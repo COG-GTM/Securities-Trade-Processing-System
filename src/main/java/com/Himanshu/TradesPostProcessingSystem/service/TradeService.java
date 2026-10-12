@@ -3,12 +3,14 @@ package com.Himanshu.TradesPostProcessingSystem.service;
 import com.Himanshu.TradesPostProcessingSystem.model.Trade;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.core.KafkaTemplate;
+import org.springframework.kafka.support.SendResult;
 import org.springframework.stereotype.Service;
 
 import java.nio.charset.StandardCharsets;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.UUID;
+import java.util.concurrent.CompletableFuture;
 
 @Service
 public class TradeService {
@@ -66,9 +68,30 @@ public class TradeService {
             }
         }
 
-        // ✅ Send Trade to Kafka
-        kafkaTemplate.send(TOPIC, trade.getTradeId(), trade);
+        // ✅ Send Trade to Kafka; a key whose publish fails is released so an identical retry publishes again
+        CompletableFuture<SendResult<String, Trade>> sent;
+        try {
+            sent = kafkaTemplate.send(TOPIC, trade.getTradeId(), trade);
+        } catch (RuntimeException e) {
+            forget(idempotencyKey, trade);
+            throw e;
+        }
+        if (idempotencyKey != null) {
+            sent.whenComplete((result, failure) -> {
+                if (failure != null) {
+                    forget(idempotencyKey, trade);
+                }
+            });
+        }
         return "✅ Trade sent successfully: " + trade;
+    }
+
+    private void forget(String idempotencyKey, Trade trade) {
+        if (idempotencyKey != null) {
+            synchronized (tradesByIdempotencyKey) {
+                tradesByIdempotencyKey.remove(idempotencyKey, trade);
+            }
+        }
     }
 
     private static boolean sameEconomics(Trade a, Trade b) {

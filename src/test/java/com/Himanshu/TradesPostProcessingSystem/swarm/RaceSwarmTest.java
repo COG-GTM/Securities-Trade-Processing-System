@@ -120,4 +120,36 @@ class RaceSwarmTest {
         assertTrue(second.contains("Error"), "a replayed key with altered economics must be rejected: " + second);
         verify(template, times(1)).send(eq("trades"), anyString(), any(Trade.class));
     }
+
+    @Test
+    void race2_retryAfterAFailedPublishIsPublishedAgain() throws Exception {
+        KafkaTemplate<String, Trade> template = mock(KafkaTemplate.class);
+        CompletableFuture<SendResult<String, Trade>> brokerDown = new CompletableFuture<>();
+        brokerDown.completeExceptionally(new org.springframework.kafka.KafkaException("broker unavailable"));
+        when(template.send(anyString(), anyString(), any(Trade.class)))
+                .thenReturn(brokerDown)
+                .thenReturn(CompletableFuture.completedFuture(mock(SendResult.class)));
+        MockMvc mvc = mvcOver(template);
+
+        // The first publish never reaches Kafka; an identical retry must publish rather than replay "already accepted".
+        for (int i = 0; i < 2; i++) {
+            mvc.perform(get("/api/trade/sendTrade").header("Idempotency-Key", "desk7-order-47")
+                    .param("symbol", "AAPL").param("quantity", "100").param("price", "150.50"));
+        }
+        verify(template, times(2)).send(eq("trades"), anyString(), any(Trade.class));
+    }
+
+    @Test
+    void race2_retryAfterASendThatThrowsIsPublishedAgain() {
+        KafkaTemplate<String, Trade> template = mock(KafkaTemplate.class);
+        when(template.send(anyString(), anyString(), any(Trade.class)))
+                .thenThrow(new org.springframework.kafka.KafkaException("serializer unavailable"))
+                .thenReturn(CompletableFuture.completedFuture(mock(SendResult.class)));
+        TradeService service = new TradeService();
+        ReflectionTestUtils.setField(service, "kafkaTemplate", template);
+
+        assertThrows(RuntimeException.class, () -> service.generateAndSendTrade("AAPL", 100, 150.50, "desk7-order-48"));
+        assertTrue(service.generateAndSendTrade("AAPL", 100, 150.50, "desk7-order-48").contains("sent successfully"));
+        verify(template, times(2)).send(eq("trades"), anyString(), any(Trade.class));
+    }
 }
