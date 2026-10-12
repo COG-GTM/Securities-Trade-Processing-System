@@ -21,6 +21,9 @@ public class TradeService {
         if (quantity <= 0) {
             return "❌ Error: Quantity must be greater than zero!";
         }
+        if (!Double.isFinite(price)) {
+            return "❌ Error: Price must be a finite number!";
+        }
         if (price <= 0) {
             return "❌ Error: Price must be greater than zero!";
         }
