@@ -95,7 +95,7 @@ class RaceSwarmTest {
     }
 
     @Test
-    void race2_distinctKeysAndKeylessRequestsStillBookSeparately() throws Exception {
+    void guard_distinctKeysAndKeylessRequestsStillBookSeparately() throws Exception {
         KafkaTemplate<String, Trade> template = acceptingTemplate();
         MockMvc mvc = mvcOver(template);
         mvc.perform(get("/api/trade/sendTrade").header("Idempotency-Key", "desk7-order-44")
@@ -122,7 +122,7 @@ class RaceSwarmTest {
     }
 
     @Test
-    void race2_retryAfterAFailedPublishIsPublishedAgain() throws Exception {
+    void guard_retryAfterAFailedPublishIsPublishedAgain() throws Exception {
         KafkaTemplate<String, Trade> template = mock(KafkaTemplate.class);
         CompletableFuture<SendResult<String, Trade>> brokerDown = new CompletableFuture<>();
         brokerDown.completeExceptionally(new org.springframework.kafka.KafkaException("broker unavailable"));
@@ -140,7 +140,7 @@ class RaceSwarmTest {
     }
 
     @Test
-    void race2_retryAfterASendThatThrowsIsPublishedAgain() {
+    void guard_retryAfterASendThatThrowsIsPublishedAgain() {
         KafkaTemplate<String, Trade> template = mock(KafkaTemplate.class);
         when(template.send(anyString(), anyString(), any(Trade.class)))
                 .thenThrow(new org.springframework.kafka.KafkaException("serializer unavailable"))
