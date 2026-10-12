@@ -15,9 +15,10 @@ public class TradeController {
     public String sendTrade(
         @RequestParam(value = "symbol") String symbol,
         @RequestParam(value = "quantity") int quantity,
-        @RequestParam(value = "price") double price) {
+        @RequestParam(value = "price") double price,
+        @RequestHeader(value = "Idempotency-Key", required = false) String idempotencyKey) {
         
         // ✅ Call Trade Service with Validation
-        return tradeService.generateAndSendTrade(symbol, quantity, price);
+        return tradeService.generateAndSendTrade(symbol, quantity, price, idempotencyKey);
     }
 }
