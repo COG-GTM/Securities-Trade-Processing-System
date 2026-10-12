@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 public class TradeService {
 
     private static final String TOPIC = "trades";
+    static final double MAX_NOTIONAL = 1_000_000_000_000d;
 
     @Autowired
     private KafkaTemplate<String, Trade> kafkaTemplate;
@@ -23,6 +24,9 @@ public class TradeService {
         }
         if (price <= 0) {
             return "❌ Error: Price must be greater than zero!";
+        }
+        if ((double) quantity * price > MAX_NOTIONAL) {
+            return "❌ Error: Trade notional exceeds the maximum allowed!";
         }
 
         // ✅ Create Trade Object
