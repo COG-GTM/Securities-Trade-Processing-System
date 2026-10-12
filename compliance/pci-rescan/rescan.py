@@ -295,7 +295,7 @@ Remediation targets (organisation policy in `scope.json`): {', '.join(f"{k} {v} 
 {chr(10).join(f"- `{x['id']}` until {x['accepted_until']} ({x.get('acceptance_ref')})" for x in d['accepted']) or "- none"}
 
 ## Control mapping
-- PCI DSS v4.0.1 Requirement 11.3.1: internal vulnerability scan at least once every three months, with rescans confirming high-risk and critical findings are resolved. This pack is the quarterly scan record; the Closed section is the rescan confirmation.
+- PCI DSS v4.0.1 Requirement 11.3.1: internal vulnerability scans at least once every three months, high-risk and critical vulnerabilities resolved, and rescans confirming it. This pack is the application-dependency part of that record; the Closed section is the rescan confirmation. It does not replace infrastructure scans or the qualified, independent reviewer the requirement calls for.
 - PCI DSS v4.0.1 Requirement 6.3.3: patches for critical vulnerabilities installed within one month of release; all other applicable patches within a time frame set by the entity's assessment of risk. The organisation's policy in `scope.json` also applies 30 days to high. Due dates above follow that policy.
 """
 
