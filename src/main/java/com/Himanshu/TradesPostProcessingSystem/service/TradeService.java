@@ -5,10 +5,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.TimeoutException;
+
 @Service
 public class TradeService {
 
     private static final String TOPIC = "trades";
+    public static final long SEND_TIMEOUT_SECONDS = 10;
 
     @Autowired
     private KafkaTemplate<String, Trade> kafkaTemplate;
@@ -28,8 +33,21 @@ public class TradeService {
         // ✅ Create Trade Object
         Trade trade = new Trade(symbol, quantity, price);
 
-        // ✅ Send Trade to Kafka
-        kafkaTemplate.send(TOPIC, trade.getTradeId(), trade);
+        // ✅ Send Trade to Kafka and only report success once the broker has acknowledged it
+        try {
+            kafkaTemplate.send(TOPIC, trade.getTradeId(), trade).get(SEND_TIMEOUT_SECONDS, TimeUnit.SECONDS);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+            return notConfirmed(trade);
+        } catch (TimeoutException | ExecutionException | RuntimeException e) {
+            // A failed or late acknowledgement does not prove the broker dropped the record, so the outcome is unknown.
+            return notConfirmed(trade);
+        }
         return "✅ Trade sent successfully: " + trade;
+    }
+
+    private static String notConfirmed(Trade trade) {
+        return "❌ Error: Trade not confirmed by the broker, status unknown for tradeId " + trade.getTradeId()
+                + "; look up that tradeId before submitting again";
     }
 }
