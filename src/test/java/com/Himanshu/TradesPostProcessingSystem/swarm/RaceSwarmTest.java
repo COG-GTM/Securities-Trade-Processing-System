@@ -46,7 +46,7 @@ class RaceSwarmTest {
     }
 
     @Test
-    void race3_acceptedSendIsStillReportedAsSuccess() {
+    void guard_acceptedSendIsStillReportedAsSuccess() {
         KafkaTemplate<String, Trade> template = mock(KafkaTemplate.class);
         when(template.send(anyString(), anyString(), any(Trade.class)))
                 .thenReturn(CompletableFuture.completedFuture(mock(SendResult.class)));
