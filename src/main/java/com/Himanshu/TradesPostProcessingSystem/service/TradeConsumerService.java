@@ -27,6 +27,6 @@ public class TradeConsumerService {
     }
 
     private static String forLog(Object value) {
-        return String.valueOf(value).replaceAll("[\\p{Cc}\\u2028\\u2029]", "_");
+        return String.valueOf(value).replaceAll("[\\p{Cc}\\p{Cf}\\u2028\\u2029]", "_");
     }
 }
