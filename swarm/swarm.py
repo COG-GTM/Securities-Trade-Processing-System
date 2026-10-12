@@ -3,6 +3,7 @@
 
   plan     build one child prompt per attacker persona (dry-run) or launch them (--live, needs DEVIN_API_KEY)
   confirm  run the swarm confirmation tests (mvn -Pswarm test) and map each test to a finding
+  collect  (live only) pull each child's structured findings into swarm/out/persona-findings.json
   report   deduplicate persona findings, join test results, write swarm/out/swarm-report.{md,html}
 
 Fan-out mechanics follow Demo 1 (traderx arden/finserv-estate/demo/scanner/fanout.py): one child per unit of work,
@@ -70,13 +71,20 @@ def cmd_plan(a):
 
 def run_confirm():
     env = dict(os.environ)
-    env.setdefault("JAVA_HOME", "/usr/lib/jvm/java-21-openjdk-amd64")
+    jdk21 = "/usr/lib/jvm/java-21-openjdk-amd64"
+    if "21" not in env.get("JAVA_HOME", "") and os.path.isdir(jdk21):
+        env["JAVA_HOME"] = jdk21
     for f in glob.glob(str(ROOT / "target/surefire-reports/*")):
         os.remove(f)
-    subprocess.run(["mvn", "-q", "-B", "-o", "test", "-Pswarm"], cwd=ROOT, env=env,
-                   stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    proc = subprocess.run(["mvn", "-q", "-B", "-o", "test", "-Pswarm"], cwd=ROOT, env=env,
+                          capture_output=True, text=True)
+    reports = glob.glob(str(ROOT / "target/surefire-reports/TEST-*.xml"))
+    if proc.returncode != 0 or (not reports and "Tests run" not in proc.stdout and "No tests" not in proc.stdout
+                                and glob.glob(str(ROOT / "src/test/java/**/swarm/*.java"), recursive=True)):
+        sys.stderr.write(proc.stdout[-4000:] + proc.stderr[-4000:])
+        sys.exit(f"confirm: Maven build failed (exit {proc.returncode}); no confirmation results recorded")
     results = {}
-    for x in glob.glob(str(ROOT / "target/surefire-reports/TEST-*.xml")):
+    for x in reports:
         for tc in ET.parse(x).getroot().iter("testcase"):
             name = tc.get("name").split("(")[0]
             m = re.match(r"([a-z]+)(\d+)_", name)
@@ -100,14 +108,52 @@ def cmd_confirm(a):
     (OUT / "confirm.json").write_text(json.dumps(res, indent=2))
 
 
+def pr_link(url):
+    if not url or not re.fullmatch(r"https://github\.com/[\w.-]+/[\w.-]+/pull/\d+", url):
+        return "-"
+    return f"<a href='{html.escape(url, quote=True)}'>PR</a>"
+
+
+def get_session(sid):
+    req = urllib.request.Request(os.environ.get("DEVIN_API", "https://api.devin.ai") + f"/v1/session/{sid}",
+                                 headers={"Authorization": f"Bearer {os.environ['DEVIN_API_KEY']}"})
+    with urllib.request.urlopen(req, timeout=30) as r:
+        return json.loads(r.read())
+
+
+def cmd_collect(a):
+    plan = load(OUT / "fanout-plan.json")
+    findings, pending = [], []
+    for c in plan["children"]:
+        sid = (c.get("session") or {}).get("session_id")
+        if not sid:
+            sys.exit("collect: fanout-plan.json has no live sessions; run `plan --live` first")
+        s = get_session(sid)
+        so = s.get("structured_output") or {}
+        if not so.get("findings"):
+            pending.append(f"{c['persona']} ({s.get('status_enum') or s.get('status')})")
+            continue
+        findings += so["findings"]
+    (OUT / "persona-findings.json").write_text(json.dumps(findings, indent=2))
+    print(f"collected {len(findings)} findings" + (f"; still running: {', '.join(pending)}" if pending else ""))
+    if pending:
+        sys.exit(1)
+
+
+def default_findings():
+    live = OUT / "persona-findings.json"
+    return str(live if live.exists() else HERE / "fixtures" / "persona-findings.json")
+
+
 def cmd_report(a):
-    raw = load(a.findings)
+    raw = load(a.findings or default_findings())
     confirm = load(OUT / "confirm.json") if (OUT / "confirm.json").exists() else {}
     groups = {}
     for f in raw:
-        groups.setdefault((f["cwe"], f["sink"]), []).append(f)
+        # Only merge findings a persona marked as the same root cause; distinct bugs in one method stay separate.
+        groups.setdefault((f["cwe"], f["sink"], f.get("root_cause") or f["id"]), []).append(f)
     rows = []
-    for (cwe, sink), fs in groups.items():
+    for fs in groups.values():
         fs.sort(key=lambda f: SEV_RANK[f["severity"]])
         lead = dict(fs[0])
         lead["duplicates"] = [f["id"] for f in fs[1:]]
@@ -136,7 +182,7 @@ def cmd_report(a):
         f"<tr><td>{r['swarm_id']}</td><td style='color:{color[r['severity']]};font-weight:600'>{r['severity']}</td>"
         f"<td>{html.escape(r['title'])}</td><td>{r['cwe']}</td><td><code>{html.escape(r['sink'])}</code></td>"
         f"<td>{', '.join(r['reported_by'])}</td><td>{html.escape(r['test_state'])}</td><td>{r['disposition']}</td>"
-        f"<td>{('<a href=' + chr(39) + r['pr'] + chr(39) + '>PR</a>') if r.get('pr') else '-'}</td></tr>" for r in rows)
+        f"<td>{pr_link(r.get('pr'))}</td></tr>" for r in rows)
     (OUT / "swarm-report.html").write_text(
         "<!doctype html><meta charset=utf-8><title>STPS adversarial swarm</title><style>body{font-family:system-ui;margin:32px}"
         "table{border-collapse:collapse}td,th{border:1px solid #ccc;padding:6px 10px;text-align:left}th{background:#f3f3f3}</style>"
@@ -152,7 +198,8 @@ if __name__ == "__main__":
     sp = ap.add_subparsers(dest="cmd", required=True)
     p = sp.add_parser("plan"); p.add_argument("--live", action="store_true"); p.set_defaults(fn=cmd_plan)
     sp.add_parser("confirm").set_defaults(fn=cmd_confirm)
-    p = sp.add_parser("report"); p.add_argument("--findings", default=str(HERE / "fixtures" / "persona-findings.json"))
+    sp.add_parser("collect").set_defaults(fn=cmd_collect)
+    p = sp.add_parser("report"); p.add_argument("--findings", default=None)
     p.set_defaults(fn=cmd_report)
     a = ap.parse_args()
     a.fn(a)

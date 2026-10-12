@@ -24,5 +24,5 @@ You are one attacker persona in a swarm launched by a parent Devin session again
 
 ## Final report (required)
 End your session with one fenced `json` block, a list of findings:
-`{"id","persona","title","cwe","sink":"<Class#method or component@version>","severity":"critical|high|medium|low",
+`{"id","persona","title","cwe","root_cause":"<short slug, e.g. missing-finite-price-check>","sink":"<Class#method or component@version>","severity":"critical|high|medium|low",
 "confirmed_by_test":"<Test#method or null>","pr":"<url or null>","disposition":"fix-pr|report-only|not-exploitable"}`
