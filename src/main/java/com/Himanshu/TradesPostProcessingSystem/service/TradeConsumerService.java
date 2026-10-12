@@ -17,6 +17,11 @@ public class TradeConsumerService {
     public void consumeTrade(Trade trade) {
         System.out.println("✅ Received Trade: " + trade);
 
+        if (!isBookable(trade)) {
+            System.out.println("❌ Rejected invalid trade from topic: " + trade);
+            return;
+        }
+
         // Convert Trade model to TradeEntity (for database storage)
         TradeEntity tradeEntity = new TradeEntity(trade.getTradeId(), trade.getSymbol(), trade.getQuantity(), trade.getPrice());
 
@@ -24,5 +29,12 @@ public class TradeConsumerService {
         tradeRepository.save(tradeEntity);
 
         System.out.println("✅ Trade stored in database: " + tradeEntity);
+    }
+
+    private static boolean isBookable(Trade trade) {
+        return trade.getTradeId() != null && !trade.getTradeId().isBlank()
+                && trade.getSymbol() != null && !trade.getSymbol().isBlank()
+                && trade.getQuantity() > 0
+                && Double.isFinite(trade.getPrice()) && trade.getPrice() > 0;
     }
 }
