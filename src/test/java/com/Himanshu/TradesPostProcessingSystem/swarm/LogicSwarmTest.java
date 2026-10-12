@@ -58,6 +58,8 @@ class LogicSwarmTest {
     void logic6_malformedSymbolIsRejected() throws Exception {
         send("NOT A TICKER!!", "100", "150.50");
         send("A".repeat(50), "100", "150.50");
+        send("\u0131", "100", "150.50"); // dotless i upper-cases to ASCII "I"
+        send("stra\u00dfe", "100", "150.50"); // sharp s upper-cases to "SS"
         assertNothingPublished();
     }
 

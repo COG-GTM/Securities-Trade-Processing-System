@@ -12,7 +12,7 @@ import java.util.regex.Pattern;
 public class TradeService {
 
     private static final String TOPIC = "trades";
-    private static final Pattern SYMBOL = Pattern.compile("[A-Z0-9][A-Z0-9.\\-]{0,11}");
+    private static final Pattern SYMBOL = Pattern.compile("[A-Za-z0-9][A-Za-z0-9.\\-]{0,11}");
 
     @Autowired
     private KafkaTemplate<String, Trade> kafkaTemplate;
@@ -22,10 +22,11 @@ public class TradeService {
         if (symbol == null || symbol.trim().isEmpty()) {
             return "❌ Error: Stock symbol cannot be empty!";
         }
-        symbol = symbol.trim().toUpperCase(Locale.ROOT);
+        symbol = symbol.trim();
         if (!SYMBOL.matcher(symbol).matches()) {
             return "❌ Error: Stock symbol must be 1-12 characters of A-Z, 0-9, '.' or '-'!";
         }
+        symbol = symbol.toUpperCase(Locale.ROOT);
         if (quantity <= 0) {
             return "❌ Error: Quantity must be greater than zero!";
         }
