@@ -13,7 +13,7 @@ import java.util.concurrent.TimeoutException;
 public class TradeService {
 
     private static final String TOPIC = "trades";
-    private static final long SEND_TIMEOUT_SECONDS = 10;
+    public static final long SEND_TIMEOUT_SECONDS = 10;
 
     @Autowired
     private KafkaTemplate<String, Trade> kafkaTemplate;
@@ -38,12 +38,16 @@ public class TradeService {
             kafkaTemplate.send(TOPIC, trade.getTradeId(), trade).get(SEND_TIMEOUT_SECONDS, TimeUnit.SECONDS);
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
-            return "❌ Error: Trade not confirmed by the broker, status unknown for tradeId " + trade.getTradeId();
-        } catch (TimeoutException e) {
-            return "❌ Error: Trade not confirmed by the broker, status unknown for tradeId " + trade.getTradeId();
-        } catch (ExecutionException | RuntimeException e) {
-            return "❌ Error: Trade was not accepted by the broker, please resubmit: tradeId " + trade.getTradeId();
+            return notConfirmed(trade);
+        } catch (TimeoutException | ExecutionException | RuntimeException e) {
+            // A failed or late acknowledgement does not prove the broker dropped the record, so the outcome is unknown.
+            return notConfirmed(trade);
         }
         return "✅ Trade sent successfully: " + trade;
+    }
+
+    private static String notConfirmed(Trade trade) {
+        return "❌ Error: Trade not confirmed by the broker, status unknown for tradeId " + trade.getTradeId()
+                + "; look up that tradeId before submitting again";
     }
 }

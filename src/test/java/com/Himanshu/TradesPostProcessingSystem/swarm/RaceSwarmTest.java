@@ -55,4 +55,30 @@ class RaceSwarmTest {
 
         assertTrue(service.generateAndSendTrade("AAPL", 100, 150.50).contains("Trade sent successfully"));
     }
+
+    @Test
+    void race3_producerCannotBlockLongerThanTheSendBudget() {
+        Object maxBlock = ((org.springframework.kafka.core.DefaultKafkaProducerFactory<String, Trade>)
+                new com.Himanshu.TradesPostProcessingSystem.config.KafkaProducerConfig().producerFactory())
+                .getConfigurationProperties().get(org.apache.kafka.clients.producer.ProducerConfig.MAX_BLOCK_MS_CONFIG);
+        // Kafka's default max.block.ms is 60000: send() can hang on metadata long before the 10s get() budget starts.
+        assertNotNull(maxBlock, "max.block.ms unset, so send() can block for 60s during a broker outage");
+        assertTrue(Long.parseLong(maxBlock.toString()) <= 10_000L, "max.block.ms exceeds the send budget: " + maxBlock);
+    }
+
+    @Test
+    void race3_ambiguousSendFailureDoesNotInviteABlindResubmission() {
+        KafkaTemplate<String, Trade> template = mock(KafkaTemplate.class);
+        CompletableFuture<SendResult<String, Trade>> ackLost = new CompletableFuture<>();
+        ackLost.completeExceptionally(new KafkaException("Expiring 1 record(s) for trades-0: 120000 ms has passed since batch creation"));
+        when(template.send(anyString(), anyString(), any(Trade.class))).thenReturn(ackLost);
+        TradeService service = new TradeService();
+        ReflectionTestUtils.setField(service, "kafkaTemplate", template);
+
+        String response = service.generateAndSendTrade("AAPL", 100, 150.50);
+
+        // A failed future does not prove the broker dropped the record; a resubmission gets a new tradeId and can book twice.
+        assertFalse(response.contains("resubmit"), "caller told to resubmit an outcome that is unknown: " + response);
+        assertTrue(response.contains("status unknown"), response);
+    }
 }
