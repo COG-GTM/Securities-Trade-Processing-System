@@ -81,4 +81,39 @@ class RaceSwarmTest {
         verify(template, atLeastOnce()).send(argThat((ProducerRecord<String, Trade> r) ->
                 r.topic().matches("trades[.-](DLT|dlt)") && "5b7d-db-outage".equals(r.key())));
     }
+
+    @Test
+    void race4_failedDeadLetterPublishIsNotTreatedAsRecovered() throws Exception {
+        KafkaTemplate<String, Trade> template = mock(KafkaTemplate.class);
+        AtomicInteger deadLetterAttempts = new AtomicInteger();
+        when(template.send(any(ProducerRecord.class))).thenAnswer(inv -> {
+            deadLetterAttempts.incrementAndGet();
+            CompletableFuture<SendResult<String, Trade>> rejected = new CompletableFuture<>();
+            rejected.completeExceptionally(new org.springframework.kafka.KafkaException("trades-dlt has fewer partitions than trades"));
+            return rejected;
+        });
+        ConcurrentKafkaListenerContainerFactory<String, Trade> factory =
+                new KafkaConsumerConfig().kafkaListenerContainerFactory(template);
+        CommonErrorHandler handler = factory.createContainer("trades").getCommonErrorHandler();
+
+        ConsumerRecord<String, Trade> record = new ConsumerRecord<>("trades", 2, 43L, "5b7d-dlt-down",
+                trade("5b7d-dlt-down", "AAPL", 100, 150.50));
+        MessageListenerContainer listenerContainer = mock(MessageListenerContainer.class);
+        when(listenerContainer.isRunning()).thenReturn(true);
+        Consumer<?, ?> consumer = mock(Consumer.class);
+        RuntimeException dbDown = new org.springframework.dao.DataAccessResourceFailureException("Connection refused: tradesdb");
+        boolean seekedBackAfterFailedPublish = false;
+        for (int attempt = 0; attempt < 50 && deadLetterAttempts.get() == 0; attempt++) {
+            try {
+                handler.handleRemaining(dbDown, List.of(record), consumer, listenerContainer);
+                seekedBackAfterFailedPublish = false;
+            } catch (RuntimeException rethrownForSeek) {
+                seekedBackAfterFailedPublish = true;
+            }
+        }
+
+        assertTrue(deadLetterAttempts.get() > 0, "dead-letter publish never attempted");
+        // Returning normally commits past the record: it would be in neither the database nor the DLT.
+        assertTrue(seekedBackAfterFailedPublish, "trade skipped although its dead-letter publish failed");
+    }
 }

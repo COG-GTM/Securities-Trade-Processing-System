@@ -42,9 +42,11 @@ public class KafkaConsumerConfig {
             KafkaTemplate<String, Trade> kafkaTemplate) {
         ConcurrentKafkaListenerContainerFactory<String, Trade> factory = new ConcurrentKafkaListenerContainerFactory<>();
         factory.setConsumerFactory(consumerFactory());
-        // Trades that still fail after retries are parked on "trades.DLT" for repair and replay instead of being skipped.
-        factory.setCommonErrorHandler(new DefaultErrorHandler(
-                new DeadLetterPublishingRecoverer(kafkaTemplate), new FixedBackOff(RETRY_INTERVAL_MS, MAX_RETRIES)));
+        // Trades that still fail after retries are parked on "trades-dlt" for repair and replay instead of being skipped.
+        DeadLetterPublishingRecoverer recoverer = new DeadLetterPublishingRecoverer(kafkaTemplate);
+        // A rejected dead-letter publish must fail recovery so the trade is redelivered, not committed past.
+        recoverer.setFailIfSendResultIsError(true);
+        factory.setCommonErrorHandler(new DefaultErrorHandler(recoverer, new FixedBackOff(RETRY_INTERVAL_MS, MAX_RETRIES)));
         return factory;
     }
 }
