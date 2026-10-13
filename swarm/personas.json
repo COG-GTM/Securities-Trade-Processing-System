@@ -1,0 +1,46 @@
+{
+  "target": {
+    "repo": "COG-GTM/Securities-Trade-Processing-System",
+    "base_branch": "devin/fs-swarm-1791848400-adversarial-swarm",
+    "surface": [
+      "src/main/java/com/Himanshu/TradesPostProcessingSystem/controller/TradeController.java",
+      "src/main/java/com/Himanshu/TradesPostProcessingSystem/service/TradeService.java",
+      "src/main/java/com/Himanshu/TradesPostProcessingSystem/service/TradeConsumerService.java",
+      "src/main/java/com/Himanshu/TradesPostProcessingSystem/entity/TradeEntity.java",
+      "pom.xml"
+    ]
+  },
+  "personas": [
+    {
+      "id": "AUTHZ",
+      "name": "Authorization and access-control attacker",
+      "goal": "Book, read, or change a trade you should not be allowed to touch.",
+      "techniques": ["missing authentication", "IDOR (guessing another desk's trade id)", "cross-site request forgery on state-changing endpoints", "HTTP verb tampering"]
+    },
+    {
+      "id": "INJECT",
+      "name": "Injection attacker",
+      "goal": "Get attacker-controlled input interpreted as code, markup, or log structure anywhere downstream.",
+      "techniques": ["reflected script injection in responses", "log forging with CR/LF", "SQL/JPQL injection", "Kafka header or key injection"]
+    },
+    {
+      "id": "RACE",
+      "name": "Race-condition and replay attacker",
+      "goal": "Make one economic event settle twice or not at all.",
+      "techniques": ["message replay and at-least-once redelivery", "concurrent duplicate submission", "non-idempotent consumers", "check-then-act gaps"]
+    },
+    {
+      "id": "LOGIC",
+      "name": "Business-logic abuser",
+      "goal": "Get a trade booked that a trade-support analyst would reject on sight.",
+      "techniques": ["negative or zero quantity", "non-finite numbers (NaN, Infinity)", "integer overflow on notional", "duplicate settlement", "boundary values the validation forgets"]
+    },
+    {
+      "id": "SUPPLY",
+      "name": "Third-party component attacker",
+      "goal": "Find an exploitable weakness in a library or server the service ships with.",
+      "techniques": ["resolve the real dependency versions from the Spring Boot BOM", "match against CISA KEV and NVD", "check whether the vulnerable code path is reachable in this configuration"],
+      "report_only": true
+    }
+  ]
+}
