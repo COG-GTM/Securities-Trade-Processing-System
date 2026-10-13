@@ -194,7 +194,7 @@ def cmd_report(a):
         f"<td>{pr_link(r.get('pr'))}</td></tr>" for r in rows)
     (OUT / "swarm-report.html").write_text(
         "<!doctype html><meta charset=utf-8><title>STPS adversarial swarm</title><style>body{font-family:system-ui;margin:32px}"
-        "table{border-collapse:collapse}td,th{border:1px solid #ccc;padding:6px 10px;text-align:left}th{background:#f3f3f3}</style>"
+        "table{border-collapse:collapse}td,th{border:1px solid #ccc;padding:4px 8px;text-align:left;font-size:13px}code{font-size:11px}th{background:#f3f3f3}</style>"
         f"<h1>Adversarial swarm: STPS trade capture</h1><p>{len(raw)} raw persona findings, {len(rows)} unique after dedupe. "
         "Every fix PR carries a test that failed on main before the fix.</p><table><tr><th>Swarm id</th><th>Severity</th>"
         "<th>Finding</th><th>CWE</th><th>Sink</th><th>Reported by</th><th>Confirmation test</th><th>Test on main</th><th>Disposition</th><th>PR</th></tr>"
