@@ -92,7 +92,9 @@ def run_confirm():
                 continue
             fid = f"{m.group(1).upper()}-{m.group(2)}"
             failed = tc.find("failure") is not None or tc.find("error") is not None
-            results[fid] = {"test": f"{tc.get('classname').split('.')[-1]}#{name}", "exploit_reproduces": failed}
+            r = results.setdefault(fid, {"test": f"{tc.get('classname').split('.')[-1]}#{name}", "exploit_reproduces": False})
+            if failed and not r["exploit_reproduces"]:
+                r.update(test=f"{tc.get('classname').split('.')[-1]}#{name}", exploit_reproduces=True)
     return results
 
 
@@ -159,8 +161,15 @@ def cmd_report(a):
         lead["duplicates"] = [f["id"] for f in fs[1:]]
         lead["reported_by"] = sorted({f["persona"] for f in fs})
         c = confirm.get(lead["id"]) or next((confirm[d] for d in lead["duplicates"] if d in confirm), None)
-        lead["test_state"] = ("reproduces" if c["exploit_reproduces"] else "defended") if c else (
-            "n/a (third-party)" if lead["disposition"] == "report-only" else "no test")
+        if c:
+            lead["confirmed_by_test"] = c["test"]
+            lead["test_state"] = "reproduces" if c["exploit_reproduces"] else "defended"
+        elif lead["persona"] == "SUPPLY":
+            lead["test_state"] = "n/a (third-party)"
+        elif lead.get("pr"):
+            lead["test_state"] = "red on PR branch"
+        else:
+            lead["test_state"] = "advisory" if lead["disposition"] == "report-only" else "no test"
         rows.append(lead)
     rows.sort(key=lambda r: (SEV_RANK[r["severity"]], r["id"]))
     for i, r in enumerate(rows, 1):
@@ -181,14 +190,14 @@ def cmd_report(a):
     trs = "".join(
         f"<tr><td>{r['swarm_id']}</td><td style='color:{color[r['severity']]};font-weight:600'>{r['severity']}</td>"
         f"<td>{html.escape(r['title'])}</td><td>{r['cwe']}</td><td><code>{html.escape(r['sink'])}</code></td>"
-        f"<td>{', '.join(r['reported_by'])}</td><td>{html.escape(r['test_state'])}</td><td>{r['disposition']}</td>"
+        f"<td>{', '.join(r['reported_by'])}</td><td><code>{html.escape(r.get('confirmed_by_test') or '-')}</code></td><td>{html.escape(r['test_state'])}</td><td>{r['disposition']}</td>"
         f"<td>{pr_link(r.get('pr'))}</td></tr>" for r in rows)
     (OUT / "swarm-report.html").write_text(
         "<!doctype html><meta charset=utf-8><title>STPS adversarial swarm</title><style>body{font-family:system-ui;margin:32px}"
         "table{border-collapse:collapse}td,th{border:1px solid #ccc;padding:6px 10px;text-align:left}th{background:#f3f3f3}</style>"
         f"<h1>Adversarial swarm: STPS trade capture</h1><p>{len(raw)} raw persona findings, {len(rows)} unique after dedupe. "
         "Every fix PR carries a test that failed on main before the fix.</p><table><tr><th>Swarm id</th><th>Severity</th>"
-        "<th>Finding</th><th>CWE</th><th>Sink</th><th>Reported by</th><th>Test on main</th><th>Disposition</th><th>PR</th></tr>"
+        "<th>Finding</th><th>CWE</th><th>Sink</th><th>Reported by</th><th>Confirmation test</th><th>Test on main</th><th>Disposition</th><th>PR</th></tr>"
         + trs + "</table>")
     print(f"report -> swarm/out/swarm-report.md, swarm/out/swarm-report.html")
 
