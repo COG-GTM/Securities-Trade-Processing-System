@@ -59,11 +59,15 @@ def maven_deps(repo_dir: pathlib.Path) -> list[tuple[str, str]]:
     out.parent.mkdir(parents=True, exist_ok=True)
     subprocess.run(["mvn", "-q", "-B", "dependency:list", f"-DoutputFile={out}"], cwd=repo_dir, check=True,
                    stdout=subprocess.DEVNULL)
+    return parse_dependency_list(out.read_text())
+
+
+def parse_dependency_list(text: str) -> list[tuple[str, str]]:
     deps = set()
-    for line in out.read_text().splitlines():
+    for line in text.splitlines():
         parts = line.strip().split(" ")[0].split(":")
-        if len(parts) >= 5:
-            deps.add((f"{parts[0]}:{parts[1]}", parts[3]))
+        if len(parts) >= 5:  # group:artifact:type[:classifier]:version:scope
+            deps.add((f"{parts[0]}:{parts[1]}", parts[-2]))
     return sorted(deps)
 
 
@@ -181,6 +185,15 @@ def route(f: dict, scope: dict) -> dict:
     return f
 
 
+def due_date(f: dict, today: dt.date, days: dict) -> str:
+    """Critical: one month from the advisory's release (PCI DSS v4.0.1 6.3.3), so a late detection is already late.
+    Everything else: the organisation's risk-based interval from first detection."""
+    due = today + dt.timedelta(days=days[f["severity"]])
+    if f["severity"] == "critical" and f.get("published"):
+        due = dt.date.fromisoformat(f["published"]) + dt.timedelta(days=days["critical"])
+    return due.isoformat()
+
+
 def diff(scan: dict, baseline: dict, scope: dict, today: dt.date) -> dict:
     prior = {e["id"]: e for e in baseline.get("entries", [])}
     days = scope["remediation_days"]
@@ -196,7 +209,7 @@ def diff(scan: dict, baseline: dict, scope: dict, today: dt.date) -> dict:
             out["accepted"].append(route(rank(f, scope), scope))
             continue
         if p and p["status"] == "open":
-            f.update(status="carried", first_seen=p["first_seen"], due=p["due"])
+            f.update(status="carried", first_seen=p["first_seen"], due=p["due"], regression=p.get("regression", False))
             f = route(rank(f, scope), scope)
             f["owner"] = p.get("owner", f["owner"])
             out["carried"].append(f)
@@ -204,7 +217,7 @@ def diff(scan: dict, baseline: dict, scope: dict, today: dt.date) -> dict:
         f["regression"] = bool(p and p["status"] == "fixed")
         f.update(status="new", first_seen=today.isoformat())
         f = route(rank(f, scope), scope)
-        f["due"] = (today + dt.timedelta(days=days[f["severity"]])).isoformat()
+        f["due"] = due_date(f, today, days)
         out["new"].append(f)
     for fid, p in prior.items():
         if fid not in seen and p["status"] == "open":
@@ -229,13 +242,14 @@ def autofix_plan(new: list[dict]) -> list[dict]:
 
 
 def next_ledger(quarter: str, d: dict, baseline: dict) -> dict:
-    keep = [e for e in baseline.get("entries", []) if e["status"] in ("fixed", "risk-accepted")
-            and e["id"] not in {f["id"] for f in d["accepted"]}]
+    active = {f["id"] for f in d["accepted"] + d["carried"] + d["new"]}
+    keep = [e for e in baseline.get("entries", []) if e["status"] in ("fixed", "risk-accepted") and e["id"] not in active]
     entries = keep + [{"id": c["id"], "status": "fixed", "first_seen": c["first_seen"], "fixed_on": c["closed_on"],
                        "evidence": c["closure_evidence"]} for c in d["closed"]]
     for f in d["carried"] + d["new"]:
         entries.append({"id": f["id"], "status": "open", "first_seen": f["first_seen"], "due": f["due"],
-                        "severity": f["severity"], "route": f["route"], "owner": f["owner"]})
+                        "severity": f["severity"], "route": f["route"], "owner": f["owner"],
+                        "regression": bool(f.get("regression"))})
     for f in d["accepted"]:
         entries.append({"id": f["id"], "status": "risk-accepted", "first_seen": f["first_seen"],
                         "accepted_until": f["accepted_until"], "acceptance_ref": f.get("acceptance_ref")})
@@ -324,9 +338,11 @@ def digest_md(meta: dict, d: dict, plan: list[dict]) -> str:
     sev = lambda fs, s: sum(1 for f in fs if f["severity"] == s)  # noqa: E731
     today = meta["run_date"]
     overdue = sum(1 for f in d["carried"] if f["due"] < today)
+    new_late = sum(1 for f in d["new"] if f["due"] < today)
     watch = [f for f in d["new"] if f["route"] == "watch-list"]
     lines = [f"*PCI quarterly rescan {meta['quarter']}* (PCI DSS v4.0.1 Req 11.3.1 / 6.3.3)",
-             f"New since {meta['baseline']}: *{c['new']}* (critical {sev(d['new'], 'critical')}, high {sev(d['new'], 'high')}) | "
+             f"New since {meta['baseline']}: *{c['new']}* (critical {sev(d['new'], 'critical')}, high {sev(d['new'], 'high')}"
+             f"{f'; {new_late} already past the one-month critical window' if new_late else ''}) | "
              f"carried open: {c['carried']} ({overdue} past due) | closed by rescan: {c['closed']} | "
              f"risk-accepted: {c['accepted']}"]
     for p in plan:
@@ -342,9 +358,10 @@ def digest_md(meta: dict, d: dict, plan: list[dict]) -> str:
     return "\n".join(lines) + "\n"
 
 
-def write_pack(outdir: pathlib.Path, meta: dict, d: dict, plan: list[dict], ledger: dict) -> None:
+def write_pack(outdir: pathlib.Path, meta: dict, d: dict, plan: list[dict], ledger: dict, scan: dict) -> None:
     outdir.mkdir(parents=True, exist_ok=True)
     files = {
+        "scan.json": json.dumps(scan, indent=2) + "\n",
         "evidence.json": json.dumps({"meta": meta, **d}, indent=2) + "\n",
         "evidence.md": evidence_md(meta, d, plan),
         "digest.md": digest_md(meta, d, plan),
@@ -367,6 +384,7 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--date", help="run date (YYYY-MM-DD); default today (UTC)")
     ap.add_argument("--baseline-dir", default=str(HERE / "baseline"))
     ap.add_argument("--out", default=str(HERE / "out"))
+    ap.add_argument("--first-run", action="store_true", help="allow a missing prior-quarter ledger (bootstrap only)")
     a = ap.parse_args(argv)
 
     scope = json.loads(pathlib.Path(a.scope).read_text())
@@ -379,10 +397,18 @@ def main(argv: list[str] | None = None) -> int:
     else:
         ap.error("pass --workspace (live) or --snapshot (replay)")
     if a.save_snapshot:
-        pathlib.Path(a.save_snapshot).write_text(json.dumps(scan, indent=2) + "\n")
+        snap = pathlib.Path(a.save_snapshot)
+        snap.parent.mkdir(parents=True, exist_ok=True)
+        snap.write_text(json.dumps(scan, indent=2) + "\n")
 
     base_path = pathlib.Path(a.baseline_dir) / f"{prev}.json"
-    baseline = json.loads(base_path.read_text()) if base_path.exists() else {"quarter": prev, "entries": []}
+    if base_path.exists():
+        baseline = json.loads(base_path.read_text())
+    elif a.first_run:
+        baseline = {"quarter": prev, "entries": []}
+    else:
+        ap.error(f"prior-quarter ledger {base_path} not found; merge last quarter's evidence PR first, "
+                 "or pass --first-run to bootstrap with an empty ledger")
     d = diff(scan, baseline, scope, today)
     plan = autofix_plan(d["new"])
     meta = {"quarter": quarter, "run_date": today.isoformat(), "baseline": prev if base_path.exists() else "none (first run)",
@@ -390,7 +416,7 @@ def main(argv: list[str] | None = None) -> int:
             "scope": {r: {"pci_scope": c["pci_scope"]} for r, c in scope["repos"].items()},
             "remediation_days": scope["remediation_days"]}
     outdir = pathlib.Path(a.out) / quarter
-    write_pack(outdir, meta, d, plan, next_ledger(quarter, d, baseline))
+    write_pack(outdir, meta, d, plan, next_ledger(quarter, d, baseline), scan)
     sys.stdout.write(digest_md(meta, d, plan))
     print(f"evidence pack: {outdir}")
     return 0

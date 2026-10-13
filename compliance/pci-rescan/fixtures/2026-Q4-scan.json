@@ -1,5 +1,5 @@
 {
-  "scanned_at": "2026-10-12T23:45:13+00:00",
+  "scanned_at": "2026-10-13T00:13:35+00:00",
   "scanner": "Maven dependency:list + OSV.dev querybatch; pci-rescan secret check",
   "repos": {
     "Springboot-BankApp": {
@@ -7,7 +7,7 @@
       "path": "/home/ubuntu/pci-workspace/Springboot-BankApp"
     },
     "Securities-Trade-Processing-System": {
-      "commit": "e48795df5da55cb333f572bc6050490b416b77a3",
+      "commit": "e75a070cc0c45a65cb581bbe46c776ecded5bb49",
       "path": "/home/ubuntu/pci-workspace/Securities-Trade-Processing-System"
     }
   },
@@ -2845,26 +2845,6 @@
       "location": "pom.xml",
       "published": "2025-06-10",
       "reference": "https://osv.dev/vulnerability/GHSA-76qp-h5mr-frr4"
-    },
-    {
-      "id": "Securities-Trade-Processing-System:org.apache.kafka:kafka_2.13:GHSA-mcwh-c9pg-xw43",
-      "repo": "Securities-Trade-Processing-System",
-      "kind": "dependency",
-      "source": "osv.dev",
-      "advisory": "GHSA-mcwh-c9pg-xw43",
-      "aliases": [
-        "CVE-2025-27819"
-      ],
-      "severity": "high",
-      "title": "Apache Kafka Deserialization of Untrusted Data vulnerability",
-      "package": "org.apache.kafka:kafka_2.13",
-      "version": "test",
-      "fixed_in": [
-        "3.4.0"
-      ],
-      "location": "pom.xml",
-      "published": "2025-06-10",
-      "reference": "https://osv.dev/vulnerability/GHSA-mcwh-c9pg-xw43"
     },
     {
       "id": "Securities-Trade-Processing-System:org.apache.logging.log4j:log4j-api:GHSA-qv9r-c865-cp47",

@@ -35,7 +35,7 @@ python3 - "$HERE/out/2026-Q4/evidence.json" <<'PY'
 import json, sys
 e = json.load(open(sys.argv[1]))
 counts = {k: len(e[k]) for k in ("new", "carried", "closed", "accepted")}
-assert counts == {"new": 44, "carried": 177, "closed": 0, "accepted": 2}, counts
+assert counts == {"new": 44, "carried": 176, "closed": 0, "accepted": 2}, counts
 print("replay check ok:", counts)
 PY
 rm -rf "$HERE/out"

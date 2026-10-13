@@ -127,3 +127,49 @@ def test_recorded_snapshot_end_to_end(tmp_path):
     assert [g["subject"] for g in decisions] == ["org.springframework:spring-webmvc"]
     for name in ("evidence.md", "digest.md", "autofix-plan.json", "ledger-next.json", "MANIFEST.sha256"):
         assert (tmp_path / "2026-Q4" / name).exists()
+
+
+def test_dependency_list_parser_handles_classifiers():
+    text = ("   org.apache.kafka:kafka_2.13:jar:test:3.8.1:test -- module kafka [auto]\n"
+            "   org.yaml:snakeyaml:jar:2.3:compile -- module org.yaml.snakeyaml\n")
+    assert rescan.parse_dependency_list(text) == [("org.apache.kafka:kafka_2.13", "3.8.1"),
+                                                   ("org.yaml:snakeyaml", "2.3")]
+
+
+def test_regression_stays_with_a_human_next_quarter():
+    import datetime as dt
+    f = dep("bank", "a:b", "1.0", "1.1", adv="G1")
+    q3 = {"entries": [{"id": f["id"], "status": "fixed", "first_seen": "2026-04-01", "fixed_on": "2026-06-01"}]}
+    q4 = run([f], q3["entries"])
+    assert q4["new"][0]["route"] == "human-owner"
+    ledger = rescan.next_ledger("2026-Q4", q4, q3)
+    assert [e["status"] for e in ledger["entries"] if e["id"] == f["id"]] == ["open"]
+    q1 = rescan.diff({"findings": [f]}, ledger, SCOPE, dt.date(2027, 1, 5))
+    assert q1["carried"][0]["route"] == "human-owner" and rescan.autofix_plan(q1["carried"]) == []
+
+
+def test_critical_due_date_runs_from_advisory_release():
+    f = dep("bank", "t:tomcat", "10.1.28", "10.1.58", sev="critical", adv="G1")
+    f["published"] = "2026-08-26"
+    assert run([f], [])["new"][0]["due"] == "2026-09-25"
+    h = dep("bank", "j:core", "2.17.2", "2.18.11", sev="high", adv="G2")
+    assert run([h], [])["new"][0]["due"] == "2026-11-11"
+
+
+def test_missing_prior_ledger_fails_closed(tmp_path, capsys):
+    import pytest
+    here = pathlib.Path(rescan.__file__).parent
+    args = ["--snapshot", str(here / "fixtures/2026-Q4-scan.json"), "--date", "2026-10-12",
+            "--baseline-dir", str(tmp_path / "none"), "--out", str(tmp_path / "out")]
+    with pytest.raises(SystemExit):
+        rescan.main(args)
+    assert rescan.main(args + ["--first-run"]) == 0
+
+
+def test_snapshot_saved_into_new_directory_and_pack(tmp_path):
+    here = pathlib.Path(rescan.__file__).parent
+    snap = tmp_path / "does/not/exist/scan.json"
+    rescan.main(["--snapshot", str(here / "fixtures/2026-Q4-scan.json"), "--date", "2026-10-12",
+                 "--out", str(tmp_path / "out"), "--save-snapshot", str(snap)])
+    assert snap.exists()
+    assert "scan.json" in (tmp_path / "out/2026-Q4/MANIFEST.sha256").read_text()

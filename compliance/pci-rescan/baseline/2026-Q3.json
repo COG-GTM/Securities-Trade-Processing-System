@@ -196,14 +196,6 @@
       "owner": "appsec-oncall"
     },
     {
-      "id": "Securities-Trade-Processing-System:org.apache.kafka:kafka_2.13:GHSA-mcwh-c9pg-xw43",
-      "status": "open",
-      "first_seen": "2026-07-01",
-      "due": "2026-07-31",
-      "severity": "high",
-      "owner": "appsec-oncall"
-    },
-    {
       "id": "Securities-Trade-Processing-System:org.apache.tomcat.embed:tomcat-embed-core:GHSA-23hv-mwm6-g8jf",
       "status": "open",
       "first_seen": "2026-07-01",
