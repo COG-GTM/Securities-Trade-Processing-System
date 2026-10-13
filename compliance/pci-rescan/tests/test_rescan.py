@@ -79,7 +79,7 @@ def test_routing_and_risk_priority():
     assert by["G2"]["route"] == "human-owner" and by["G2"]["owner"] == "appsec"
     assert by["G3"]["route"] == "watch-list" and by["G3"]["priority"] == "P3"
     assert by["CWE-798"]["route"] == "human-owner"
-    assert by["G1"]["due"] == "2026-11-11" and by["G3"]["due"] == "2027-01-10"
+    assert by["G1"]["due"] == "2026-08-31" and by["G3"]["due"] == "2027-01-10"
 
 
 def test_autofix_plan_groups_per_repo_and_takes_highest_fix():
