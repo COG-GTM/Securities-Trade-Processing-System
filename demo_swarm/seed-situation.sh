@@ -16,6 +16,9 @@ GH_REPO=COG-GTM/Securities-Trade-Processing-System
 PROTECTED_MAX_PR=42
 PROTECTED_EXTRA_PRS="48 49 50 51 52 53"
 LIVE_BRANCH_RE='^demo/swarm-live-[0-9]+-[a-z]+-[0-9]+$'
+# Always-open example fix PR the presenter can click before the live PRs exist. Its base is not $SEED, so the reseed never closes it.
+EXAMPLE_HEAD=demo/swarm-example-race-1
+EXAMPLE_BASE=demo/swarm-example-before
 PUSH=1; PLAN_ONLY=0
 case "${1:-}" in
   --no-push) PUSH=0 ;;
@@ -137,6 +140,13 @@ if [ "$PUSH" -eq 1 ]; then
   git push -q -f origin "HEAD:refs/heads/$SEED"
   REMOTE_SHA="$(git ls-remote origin "refs/heads/$SEED" | awk '{print $1}')"
   [ "$REMOTE_SHA" = "$SEED_SHA" ] || fail "remote $SEED is $REMOTE_SHA, expected $SEED_SHA"
+  ex="$(gh api "repos/$GH_REPO/pulls?state=all&base=$EXAMPLE_BASE&head=${GH_REPO%%/*}:$EXAMPLE_HEAD" -q '.[0] | "\(.number) \(.state)"')"
+  [ -n "$ex" ] || fail "example PR $EXAMPLE_HEAD -> $EXAMPLE_BASE not found"
+  if [ "${ex#* }" = closed ]; then
+    gh api -X PATCH "repos/$GH_REPO/pulls/${ex%% *}" -f state=open >/dev/null
+    echo "reopened example PR #${ex%% *}"
+  fi
+  echo "example PR (open): https://github.com/$GH_REPO/pull/${ex%% *}"
   echo "READY: https://github.com/$GH_REPO/tree/$SEED @ ${SEED_SHA:0:8}"
 else
   echo "READY (local only, not pushed): $SEED_SHA"
