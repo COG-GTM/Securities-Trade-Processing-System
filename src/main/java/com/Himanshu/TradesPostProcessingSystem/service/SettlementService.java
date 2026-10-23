@@ -30,6 +30,9 @@ public class SettlementService {
         if (trade == null) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Trade not found");
         }
+        if ("SETTLED".equals(trade.getStatus())) {
+            throw new ResponseStatusException(HttpStatus.CONFLICT, "Trade is already settled");
+        }
         SettlementEntity settlement = new SettlementEntity(request.instructionId(), trade.getTradeId(), accountId,
                 trade.getQuantity(), trade.getQuantity() * trade.getPrice(), Instant.now());
         trade.setStatus("SETTLED");
