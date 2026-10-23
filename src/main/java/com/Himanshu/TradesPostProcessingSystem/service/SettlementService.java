@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.time.Instant;
+import java.util.List;
 
 @Service
 public class SettlementService {
@@ -29,6 +30,17 @@ public class SettlementService {
         TradeEntity trade = tradeRepository.findByTradeIdAndAccountId(request.tradeId(), accountId);
         if (trade == null) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Trade not found");
+        }
+        List<SettlementEntity> prior = settlementRepository.findByInstructionId(request.instructionId());
+        if (!prior.isEmpty()) {
+            SettlementEntity existing = prior.get(0);
+            if (existing.getAccountId().equals(accountId) && existing.getTradeId().equals(trade.getTradeId())) {
+                return existing;
+            }
+            throw new ResponseStatusException(HttpStatus.CONFLICT, "Settlement instruction id already used");
+        }
+        if ("SETTLED".equals(trade.getStatus()) || !settlementRepository.findByTradeId(trade.getTradeId()).isEmpty()) {
+            throw new ResponseStatusException(HttpStatus.CONFLICT, "Trade already settled");
         }
         SettlementEntity settlement = new SettlementEntity(request.instructionId(), trade.getTradeId(), accountId,
                 trade.getQuantity(), trade.getQuantity() * trade.getPrice(), Instant.now());
