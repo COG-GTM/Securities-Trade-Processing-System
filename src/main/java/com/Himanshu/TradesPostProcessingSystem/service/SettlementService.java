@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.time.Instant;
+import java.util.List;
 
 @Service
 public class SettlementService {
@@ -25,6 +26,14 @@ public class SettlementService {
     public SettlementEntity settle(String accountId, SettlementRequest request) {
         if (request.instructionId() == null || request.instructionId().isBlank()) {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Settlement instruction id is required");
+        }
+        List<SettlementEntity> existing = settlementRepository.findByInstructionId(request.instructionId());
+        if (!existing.isEmpty()) {
+            SettlementEntity prior = existing.get(0);
+            if (!prior.getAccountId().equals(accountId) || !prior.getTradeId().equals(request.tradeId())) {
+                throw new ResponseStatusException(HttpStatus.CONFLICT, "Settlement instruction id already used");
+            }
+            return prior;
         }
         TradeEntity trade = tradeRepository.findByTradeIdAndAccountId(request.tradeId(), accountId);
         if (trade == null) {
