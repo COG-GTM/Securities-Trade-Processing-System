@@ -28,6 +28,9 @@ public class TradeEntity {
     @Column(nullable = false)
     private String status = "BOOKED";
 
+    @Version
+    private Long version;
+
     public TradeEntity() {
     }
 
