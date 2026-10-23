@@ -23,6 +23,13 @@
 
   <dependencyManagement>
     <dependencies>
+      <!-- SNYK-JAVA-ORGAPACHECOMMONS-6254296 / CVE-2024-25710: overrides common-java-bom 2026.3.0 (1.24.0).
+           Drop once the BOM ships commons-compress >= 1.26.0. -->
+      <dependency>
+        <groupId>org.apache.commons</groupId>
+        <artifactId>commons-compress</artifactId>
+        <version>1.26.0</version>
+      </dependency>
       <dependency>
         <groupId>com.ardencm.platform</groupId>
         <artifactId>common-java-bom</artifactId>
