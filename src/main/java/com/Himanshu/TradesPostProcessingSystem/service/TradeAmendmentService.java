@@ -27,8 +27,11 @@ public class TradeAmendmentService {
         if (request.quantity() == 0) {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Amended quantity cannot be zero; cancel the trade instead");
         }
-        if (!(request.price() > 0)) {
-            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Price must be greater than zero");
+        if (request.quantity() < 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Amended quantity must be positive");
+        }
+        if (!(request.price() > 0) || !Double.isFinite(request.price())) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Price must be a finite number greater than zero");
         }
         trade.setQuantity(request.quantity());
         trade.setPrice(request.price());
