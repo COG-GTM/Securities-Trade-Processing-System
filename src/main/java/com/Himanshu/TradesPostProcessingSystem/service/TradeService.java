@@ -5,6 +5,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.TimeoutException;
+
 @Service
 public class TradeService {
 
@@ -29,7 +33,14 @@ public class TradeService {
 
         Trade trade = new Trade(accountId, symbol, quantity, price);
 
-        kafkaTemplate.send(TOPIC, trade.getTradeId(), trade);
+        try {
+            kafkaTemplate.send(TOPIC, trade.getTradeId(), trade).get(10, TimeUnit.SECONDS);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+            return "❌ Error: Trade not booked, send interrupted: " + trade.getTradeId();
+        } catch (ExecutionException | TimeoutException e) {
+            return "❌ Error: Trade not booked, broker did not acknowledge: " + trade.getTradeId();
+        }
         return "✅ Trade sent successfully: " + trade;
     }
 }
