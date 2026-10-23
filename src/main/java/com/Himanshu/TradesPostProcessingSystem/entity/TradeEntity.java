@@ -14,6 +14,9 @@ public class TradeEntity {
     private String tradeId;
 
     @Column(nullable = false)
+    private String accountId;
+
+    @Column(nullable = false)
     private String symbol;
 
     @Column(nullable = false)
@@ -22,24 +25,28 @@ public class TradeEntity {
     @Column(nullable = false)
     private double price;
 
-    // ✅ No-arg constructor (required by JPA)
+    @Column(nullable = false)
+    private String status = "BOOKED";
+
     public TradeEntity() {
     }
 
-    // ✅ Constructor for easy object creation
-    public TradeEntity(String tradeId, String symbol, int quantity, double price) {
+    public TradeEntity(String tradeId, String accountId, String symbol, int quantity, double price) {
         this.tradeId = tradeId;
+        this.accountId = accountId;
         this.symbol = symbol;
         this.quantity = quantity;
         this.price = price;
     }
 
-    // ✅ Getters and Setters
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
 
     public String getTradeId() { return tradeId; }
     public void setTradeId(String tradeId) { this.tradeId = tradeId; }
+
+    public String getAccountId() { return accountId; }
+    public void setAccountId(String accountId) { this.accountId = accountId; }
 
     public String getSymbol() { return symbol; }
     public void setSymbol(String symbol) { this.symbol = symbol; }
@@ -50,14 +57,12 @@ public class TradeEntity {
     public double getPrice() { return price; }
     public void setPrice(double price) { this.price = price; }
 
+    public String getStatus() { return status; }
+    public void setStatus(String status) { this.status = status; }
+
     @Override
     public String toString() {
-        return "TradeEntity{" +
-                "id=" + id +
-                ", tradeId='" + tradeId + '\'' +
-                ", symbol='" + symbol + '\'' +
-                ", quantity=" + quantity +
-                ", price=" + price +
-                '}';
+        return "TradeEntity{id=" + id + ", tradeId='" + tradeId + "', accountId='" + accountId + "', symbol='" + symbol
+                + "', quantity=" + quantity + ", price=" + price + ", status='" + status + "'}";
     }
 }
