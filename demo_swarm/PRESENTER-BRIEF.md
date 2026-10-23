@@ -8,7 +8,7 @@
 1. [BEFORE branch](https://github.com/COG-GTM/Securities-Trade-Processing-System/tree/demo/swarm-live-before)
 2. [The 5 attackers](https://github.com/COG-GTM/Securities-Trade-Processing-System/tree/demo/swarm-live-before/swarm/personas)
 3. [Live session](CHILD_SESSION_URL): the setup session starts it automatically and posts the link here.
-4. [Fix PRs](https://github.com/COG-GTM/Securities-Trade-Processing-System/pulls?q=is%3Apr+is%3Aopen+base%3Ademo%2Fswarm-live-before) Until they open (about minute 18), click this finished one from the prep run: [duplicate settlement fix, test + fix](https://github.com/COG-GTM/Securities-Trade-Processing-System/pull/54/files).
+4. [Fix PRs](https://github.com/COG-GTM/Securities-Trade-Processing-System/pulls?q=is%3Apr+is%3Aopen+base%3Ademo%2Fswarm-live-before). Until they open (about minute 18), click this finished one from the prep run: [duplicate settlement fix, test + fix](https://github.com/COG-GTM/Securities-Trade-Processing-System/pull/54/files).
 
 ## Beats
 1. **0:00 The ask (tab 1).** "This is a broker-dealer's trade service. The pen test is next quarter; we run five attackers today."
