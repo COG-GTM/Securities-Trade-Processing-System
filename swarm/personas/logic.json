@@ -1,0 +1,13 @@
+{
+  "id": "LOGIC",
+  "order": 4,
+  "name": "Business-logic abuser",
+  "goal": "Get the system to hold a trade or cash movement that a trade-support analyst would reject on sight.",
+  "techniques": [
+    "out-of-range values on every numeric field",
+    "non-finite numbers (NaN, Infinity)",
+    "integer or double overflow on notional",
+    "boundary values the validation forgets",
+    "state-machine skips"
+  ]
+}

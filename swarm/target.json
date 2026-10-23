@@ -1,0 +1,17 @@
+{
+  "repo": "COG-GTM/Securities-Trade-Processing-System",
+  "base_branch": "demo/swarm-live-before",
+  "child_branch_prefix": "demo/swarm-live",
+  "surface": [
+    "src/main/java/com/Himanshu/TradesPostProcessingSystem/controller/TradeController.java",
+    "src/main/java/com/Himanshu/TradesPostProcessingSystem/controller/TradeLifecycleController.java",
+    "src/main/java/com/Himanshu/TradesPostProcessingSystem/service/TradeService.java",
+    "src/main/java/com/Himanshu/TradesPostProcessingSystem/service/TradeConsumerService.java",
+    "src/main/java/com/Himanshu/TradesPostProcessingSystem/service/TradeQueryService.java",
+    "src/main/java/com/Himanshu/TradesPostProcessingSystem/service/TradeAmendmentService.java",
+    "src/main/java/com/Himanshu/TradesPostProcessingSystem/service/SettlementService.java",
+    "src/main/java/com/Himanshu/TradesPostProcessingSystem/entity/",
+    "src/main/java/com/Himanshu/TradesPostProcessingSystem/repository/",
+    "pom.xml"
+  ]
+}

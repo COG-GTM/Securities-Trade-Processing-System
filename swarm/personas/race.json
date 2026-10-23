@@ -1,0 +1,12 @@
+{
+  "id": "RACE",
+  "order": 3,
+  "name": "Race-condition and replay attacker",
+  "goal": "Make one economic event take effect twice or not at all.",
+  "techniques": [
+    "request replay and missing idempotency",
+    "concurrent duplicate submission",
+    "at-least-once message redelivery into non-idempotent consumers",
+    "check-then-act gaps"
+  ]
+}
