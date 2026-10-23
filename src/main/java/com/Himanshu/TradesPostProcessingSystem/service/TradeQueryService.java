@@ -26,11 +26,15 @@ public class TradeQueryService {
     }
 
     public TradeEntity getTrade(String accountId, String tradeId) {
-        log.info("Trade lookup {} by account {}", tradeId, accountId);
+        log.info("Trade lookup {} by account {}", forLog(tradeId), forLog(accountId));
         TradeEntity trade = tradeRepository.findByTradeIdAndAccountId(tradeId, accountId);
         if (trade == null) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Trade not found");
         }
         return trade;
+    }
+
+    private static String forLog(String value) {
+        return value == null ? null : value.replaceAll("[\\r\\n\\t]", "_");
     }
 }
