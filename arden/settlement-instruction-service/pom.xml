@@ -41,6 +41,8 @@
     <dependency>
       <groupId>com.ardencm.posttrade</groupId>
       <artifactId>core-dates</artifactId>
+      <!-- SETTLE-4471 tranche 1: trade-date-gated cycle; cut from release/1.4 (BOM line). The BOM pin (1.4.0) is not moved. -->
+      <version>1.4.2</version>
     </dependency>
     <dependency>
       <groupId>org.springframework.boot</groupId>
