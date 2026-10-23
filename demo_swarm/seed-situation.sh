@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Seed the demo_swarm BEFORE situation: branch demo/swarm-live-before = STPS main + trade lifecycle API + swarm harness.
 # Proves the three planted flaws with private probe tests (never committed), clears prior live-run branches and PRs
-# (only PRs based on demo/swarm-live-before; never #1-#42 or #48), pushes, and prints READY.
+# (only PRs based on demo/swarm-live-before; never #1-#42 or #48-#53), pushes, and prints READY.
 #   demo_swarm/seed-situation.sh                seed, verify, push, clean up prior runs
 #   demo_swarm/seed-situation.sh --no-push      seed and verify locally only
 #   demo_swarm/seed-situation.sh --plan-cleanup print which PRs and branches a reseed would close/delete, then exit
@@ -12,9 +12,9 @@ KIT="$(cd "$(dirname "$0")" && pwd)"
 REPO="$(cd "$KIT/.." && git rev-parse --show-toplevel)"
 SEED=demo/swarm-live-before
 GH_REPO=COG-GTM/Securities-Trade-Processing-System
-# PRs a reseed must never close, whatever their base: #1-#42 (estate, fallback and other demo evidence) and #48.
+# PRs a reseed must never close, whatever their base: #1-#42 (estate, fallback and other demo evidence) and #48-#53 (demo_fleetwide).
 PROTECTED_MAX_PR=42
-PROTECTED_EXTRA_PRS="48"
+PROTECTED_EXTRA_PRS="48 49 50 51 52 53"
 LIVE_BRANCH_RE='^demo/swarm-live-[0-9]+-[a-z]+-[0-9]+$'
 PUSH=1; PLAN_ONLY=0
 case "${1:-}" in
@@ -31,8 +31,8 @@ is_protected_pr() {
   for x in $PROTECTED_EXTRA_PRS; do [ "$n" -eq "$x" ] && return 0; done
   return 1
 }
-for n in 1 7 36 42 48; do is_protected_pr "$n" || fail "guard self-test: #$n must be protected"; done
-for n in 43 47 49 50; do ! is_protected_pr "$n" || fail "guard self-test: #$n must not be protected"; done
+for n in 1 7 36 42 48 51 52 53; do is_protected_pr "$n" || fail "guard self-test: #$n must be protected"; done
+for n in 43 47 54; do ! is_protected_pr "$n" || fail "guard self-test: #$n must not be protected"; done
 
 # Prints "<number> <head>" for each open PR this reseed may close; fails on anything outside the rules.
 closable_prs() {
