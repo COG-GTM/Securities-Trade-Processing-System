@@ -44,6 +44,21 @@
         <version>3.6.2</version>
         <executions>
           <execution>
+            <id>embed-snakeyaml</id>
+            <phase>package</phase>
+            <goals><goal>shade</goal></goals>
+            <configuration>
+              <!-- PTI-212: the calendar loader ships its own YAML parser so services cannot drift it under us -->
+              <artifactSet><includes><include>org.yaml:snakeyaml</include></includes></artifactSet>
+              <relocations>
+                <relocation>
+                  <pattern>org.yaml.snakeyaml</pattern>
+                  <shadedPattern>com.ardencm.posttrade.dates.internal.snakeyaml</shadedPattern>
+                </relocation>
+              </relocations>
+            </configuration>
+          </execution>
+          <execution>
             <phase>package</phase>
             <goals><goal>shade</goal></goals>
             <configuration>

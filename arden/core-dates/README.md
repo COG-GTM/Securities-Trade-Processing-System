@@ -7,7 +7,7 @@ LocalDate sd = SettlementDates.settlementDate(tradeDate, "XLON");   // market de
 String tag64 = FixDates.tag64(sd);                                   // yyyyMMdd
 ```
 
-Calendars live in `src/main/resources/holidays.yaml` (owned jointly with market-ops).
+Calendars live in `src/main/resources/holidays.yaml` (owned jointly with market-ops). The YAML parser that loads them (snakeyaml) is shaded into the core-dates jar under `com.ardencm.posttrade.dates.internal.snakeyaml`, so its version is set by the core-dates release, not by the consuming service.
 
 ## CLI (ops runbooks / parity harness)
 
