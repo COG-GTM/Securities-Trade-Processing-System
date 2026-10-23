@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 # Seed the demo_swarm BEFORE situation: branch demo/swarm-live-before = STPS main + trade lifecycle API + swarm harness.
 # Proves the three planted flaws with private probe tests (never committed), clears prior live-run branches and PRs
-# (never PRs #36 or below, which are fallback evidence), pushes, and prints READY.
-#   demo_swarm/seed-situation.sh            seed, verify, push, clean up prior runs
-#   demo_swarm/seed-situation.sh --no-push  seed and verify locally only
+# (only PRs based on demo/swarm-live-before; never #1-#42 or #48), pushes, and prints READY.
+#   demo_swarm/seed-situation.sh                seed, verify, push, clean up prior runs
+#   demo_swarm/seed-situation.sh --no-push      seed and verify locally only
+#   demo_swarm/seed-situation.sh --plan-cleanup print which PRs and branches a reseed would close/delete, then exit
 set -euo pipefail
 trap 'echo "seed-situation: FAILED at line $LINENO: $BASH_COMMAND" >&2' ERR
 
@@ -11,10 +12,52 @@ KIT="$(cd "$(dirname "$0")" && pwd)"
 REPO="$(cd "$KIT/.." && git rev-parse --show-toplevel)"
 SEED=demo/swarm-live-before
 GH_REPO=COG-GTM/Securities-Trade-Processing-System
-FALLBACK_MAX_PR=36
-PUSH=1; [ "${1:-}" = "--no-push" ] && PUSH=0
+# PRs a reseed must never close, whatever their base: #1-#42 (estate, fallback and other demo evidence) and #48.
+PROTECTED_MAX_PR=42
+PROTECTED_EXTRA_PRS="48"
+LIVE_BRANCH_RE='^demo/swarm-live-[0-9]+-[a-z]+-[0-9]+$'
+PUSH=1; PLAN_ONLY=0
+case "${1:-}" in
+  --no-push) PUSH=0 ;;
+  --plan-cleanup) PLAN_ONLY=1 ;;
+esac
 export JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64
 step() { printf '\n== %s ==\n' "$1"; }
+
+fail() { echo "seed-situation: $*" >&2; exit 1; }
+is_protected_pr() {
+  local n="$1" x
+  [ "$n" -le "$PROTECTED_MAX_PR" ] && return 0
+  for x in $PROTECTED_EXTRA_PRS; do [ "$n" -eq "$x" ] && return 0; done
+  return 1
+}
+for n in 1 7 36 42 48; do is_protected_pr "$n" || fail "guard self-test: #$n must be protected"; done
+for n in 43 47 49 50; do ! is_protected_pr "$n" || fail "guard self-test: #$n must not be protected"; done
+
+# Prints "<number> <head>" for each open PR this reseed may close; fails on anything outside the rules.
+closable_prs() {
+  local n base head
+  gh api "repos/$GH_REPO/pulls?state=open&base=$SEED&per_page=100" --paginate \
+      -q '.[] | "\(.number) \(.base.ref) \(.head.ref)"' |
+  while read -r n base head; do
+    is_protected_pr "$n" && fail "refusing to close protected PR #$n ($head -> $base)"
+    [ "$base" = "$SEED" ] || fail "refusing to close PR #$n: base is $base, not $SEED"
+    [[ "$head" =~ $LIVE_BRANCH_RE ]] || fail "refusing to close PR #$n: head $head is not a live-run branch"
+    echo "$n $head"
+  done
+}
+live_branches() {
+  git ls-remote --heads origin 'demo/swarm-live-*' | awk '{print $2}' | sed 's#refs/heads/##' |
+    grep -E "$LIVE_BRANCH_RE" || true
+}
+
+if [ "$PLAN_ONLY" -eq 1 ]; then
+  cd "$REPO"
+  plan="$(closable_prs)"
+  echo "would close (base $SEED):"; [ -n "$plan" ] && echo "$plan" | sed 's/^/  #/' || echo "  none"
+  echo "would delete branches:"; live_branches | sed 's/^/  /'
+  exit 0
+fi
 
 step "1/6 machine"
 bash "$KIT/setup-machine.sh"
@@ -77,13 +120,17 @@ rm -rf src/test/java/com/Himanshu/TradesPostProcessingSystem/swarm swarm/out swa
 
 step "6/6 publish"
 if [ "$PUSH" -eq 1 ]; then
-  for n in $(gh pr list -R "$GH_REPO" --state open --base "$SEED" --json number -q '.[].number'); do
-    [ "$n" -gt "$FALLBACK_MAX_PR" ] || fail "refusing to touch fallback PR #$n"
-    gh pr close -R "$GH_REPO" "$n" -c "Closed by demo_swarm seed reset (prior live run)." >/dev/null
-    echo "closed prior live-run PR #$n"
-  done
-  for b in $(git ls-remote --heads origin 'demo/swarm-live-*' | awk '{print $2}' | sed 's#refs/heads/##'); do
-    [ "$b" = "$SEED" ] && continue
+  plan="$(closable_prs)"
+  while read -r n head; do
+    [ -n "${n:-}" ] || continue
+    base="$(gh api "repos/$GH_REPO/pulls/$n" -q .base.ref)"
+    [ "$base" = "$SEED" ] && ! is_protected_pr "$n" || fail "refusing to close PR #$n (base $base)"
+    gh api -X POST "repos/$GH_REPO/issues/$n/comments" \
+      -f body="Closed by demo_swarm seed reset (prior live run). The red-then-green evidence stays in this PR." >/dev/null
+    gh api -X PATCH "repos/$GH_REPO/pulls/$n" -f state=closed >/dev/null
+    echo "closed prior live-run PR #$n ($head)"
+  done <<< "$plan"
+  for b in $(live_branches); do
     git push -q origin --delete "$b"
     echo "deleted prior live-run branch $b"
   done
