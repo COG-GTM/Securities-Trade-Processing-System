@@ -23,6 +23,13 @@
 
   <dependencyManagement>
     <dependencies>
+      <!-- SEC-2026-0912 / SNYK-JAVA-ORGAPACHECOMMONS-6254296 (CVE-2024-25710): overrides the BOM pin
+           (common-java-bom 2026.3.0 = 1.24.0) until the BOM ships 1.26.0+. Remove once the BOM is bumped. -->
+      <dependency>
+        <groupId>org.apache.commons</groupId>
+        <artifactId>commons-compress</artifactId>
+        <version>1.26.0</version>
+      </dependency>
       <dependency>
         <groupId>com.ardencm.platform</groupId>
         <artifactId>common-java-bom</artifactId>
