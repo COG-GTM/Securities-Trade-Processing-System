@@ -13,8 +13,10 @@ public class TradeService {
     @Autowired
     private KafkaTemplate<String, Trade> kafkaTemplate;
 
-    public String generateAndSendTrade(String symbol, int quantity, double price) {
-        // ✅ Trade Validation
+    public String generateAndSendTrade(String accountId, String symbol, int quantity, double price) {
+        if (accountId == null || accountId.trim().isEmpty()) {
+            return "❌ Error: Account cannot be empty!";
+        }
         if (symbol == null || symbol.trim().isEmpty()) {
             return "❌ Error: Stock symbol cannot be empty!";
         }
@@ -25,10 +27,8 @@ public class TradeService {
             return "❌ Error: Price must be greater than zero!";
         }
 
-        // ✅ Create Trade Object
-        Trade trade = new Trade(symbol, quantity, price);
+        Trade trade = new Trade(accountId, symbol, quantity, price);
 
-        // ✅ Send Trade to Kafka
         kafkaTemplate.send(TOPIC, trade.getTradeId(), trade);
         return "✅ Trade sent successfully: " + trade;
     }

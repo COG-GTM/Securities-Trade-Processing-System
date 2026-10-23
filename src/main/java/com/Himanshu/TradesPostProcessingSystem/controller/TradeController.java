@@ -13,11 +13,11 @@ public class TradeController {
 
     @GetMapping("/sendTrade")
     public String sendTrade(
+        @RequestHeader(value = "X-Account-Id", defaultValue = "HOUSE") String accountId,
         @RequestParam(value = "symbol") String symbol,
         @RequestParam(value = "quantity") int quantity,
         @RequestParam(value = "price") double price) {
-        
-        // ✅ Call Trade Service with Validation
-        return tradeService.generateAndSendTrade(symbol, quantity, price);
+
+        return tradeService.generateAndSendTrade(accountId, symbol, quantity, price);
     }
 }
