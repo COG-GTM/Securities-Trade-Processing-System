@@ -30,6 +30,15 @@ public class SettlementService {
         if (trade == null) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Trade not found");
         }
+        SettlementEntity replay = settlementRepository.findByInstructionId(request.instructionId()).stream()
+                .filter(s -> s.getAccountId().equals(accountId) && s.getTradeId().equals(trade.getTradeId()))
+                .findFirst().orElse(null);
+        if (replay != null) {
+            return replay;
+        }
+        if ("SETTLED".equals(trade.getStatus()) || !settlementRepository.findByTradeId(trade.getTradeId()).isEmpty()) {
+            throw new ResponseStatusException(HttpStatus.CONFLICT, "Trade is already settled");
+        }
         SettlementEntity settlement = new SettlementEntity(request.instructionId(), trade.getTradeId(), accountId,
                 trade.getQuantity(), trade.getQuantity() * trade.getPrice(), Instant.now());
         trade.setStatus("SETTLED");
