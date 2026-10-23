@@ -13,7 +13,7 @@ public class TradeController {
 
     @GetMapping("/sendTrade")
     public String sendTrade(
-        @RequestHeader(value = "X-Account-Id", defaultValue = "HOUSE") String accountId,
+        @RequestHeader("X-Account-Id") String accountId,
         @RequestParam(value = "symbol") String symbol,
         @RequestParam(value = "quantity") int quantity,
         @RequestParam(value = "price") double price) {
