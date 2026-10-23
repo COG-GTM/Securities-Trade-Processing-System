@@ -9,11 +9,11 @@ import java.util.List;
 @Repository
 public interface TradeRepository extends JpaRepository<TradeEntity, Long> {
 
-    // Custom query methods
-
-    // Find trades by symbol
     List<TradeEntity> findBySymbol(String symbol);
 
-    // Find a trade by its unique tradeId
     TradeEntity findByTradeId(String tradeId);
+
+    List<TradeEntity> findByAccountId(String accountId);
+
+    TradeEntity findByTradeIdAndAccountId(String tradeId, String accountId);
 }
