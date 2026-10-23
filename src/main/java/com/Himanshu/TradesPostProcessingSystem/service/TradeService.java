@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 public class TradeService {
 
     private static final String TOPIC = "trades";
+    private static final java.util.regex.Pattern SYMBOL = java.util.regex.Pattern.compile("[A-Za-z0-9.\\-]{1,12}");
 
     @Autowired
     private KafkaTemplate<String, Trade> kafkaTemplate;
@@ -19,6 +20,9 @@ public class TradeService {
         }
         if (symbol == null || symbol.trim().isEmpty()) {
             return "❌ Error: Stock symbol cannot be empty!";
+        }
+        if (!SYMBOL.matcher(symbol).matches()) {
+            return "❌ Error: Invalid stock symbol!";
         }
         if (quantity <= 0) {
             return "❌ Error: Quantity must be greater than zero!";
