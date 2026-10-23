@@ -1,0 +1,12 @@
+{
+  "id": "AUTHZ",
+  "order": 1,
+  "name": "Authorization and access-control attacker",
+  "goal": "As one desk (X-Account-Id), read or change data that belongs to another desk, or act with no identity at all.",
+  "techniques": [
+    "IDOR and horizontal privilege escalation on every endpoint that takes an object id",
+    "missing authentication",
+    "state change over GET (CSRF)",
+    "HTTP verb tampering"
+  ]
+}
