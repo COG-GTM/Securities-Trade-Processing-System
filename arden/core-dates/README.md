@@ -3,7 +3,7 @@
 Business-day calendars and settlement-date arithmetic for Arden Capital Markets post-trade services.
 
 ```java
-LocalDate sd = SettlementDates.settlementDate(tradeDate, "XLON");   // market default cycle
+LocalDate sd = SettlementDates.settlementDate(tradeDate, "XLON");   // cycle gated on trade date (T+1 for EU/UK/CH from 2027-10-11)
 String tag64 = FixDates.tag64(sd);                                   // yyyyMMdd
 ```
 
@@ -13,7 +13,7 @@ Calendars live in `src/main/resources/holidays.yaml` (owned jointly with market-
 
 ```bash
 mvn -q package
-java -jar target/core-dates-1.4.0-cli.jar [--cycle T_PLUS_1] < trades.csv
+java -jar target/core-dates-1.4.2-cli.jar [--cycle T_PLUS_1] < trades.csv
 ```
 
 ## Releases

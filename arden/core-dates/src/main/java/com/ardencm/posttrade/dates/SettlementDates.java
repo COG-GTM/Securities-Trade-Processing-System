@@ -7,9 +7,9 @@ public final class SettlementDates {
 
     private SettlementDates() {}
 
-    /** Contractual settlement date for a trade executed on {@code tradeDate} on market {@code mic}. */
+    /** Contractual settlement date for a trade executed on {@code tradeDate} on market {@code mic} (trade-date-gated cycle). */
     public static LocalDate settlementDate(LocalDate tradeDate, String mic) {
-        return settlementDate(tradeDate, mic, SettlementCycle.forMarket(mic));
+        return settlementDate(tradeDate, mic, SettlementCycle.forTrade(mic, tradeDate));
     }
 
     public static LocalDate settlementDate(LocalDate tradeDate, String mic, SettlementCycle cycle) {

@@ -5,7 +5,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.ardencm.posttrade</groupId>
   <artifactId>core-dates</artifactId>
-  <version>1.4.0</version>
+  <version>1.4.2</version>
   <packaging>jar</packaging>
   <name>core-dates</name>
   <description>Business-day calendars and settlement-date arithmetic shared by post-trade services.</description>
@@ -14,7 +14,7 @@
     <maven.compiler.source>17</maven.compiler.source>
     <maven.compiler.target>17</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <snakeyaml.version>1.33</snakeyaml.version>
+    <snakeyaml.version>2.2</snakeyaml.version>
   </properties>
 
   <dependencies>
