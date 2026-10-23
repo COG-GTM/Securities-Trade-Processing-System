@@ -12,9 +12,9 @@ KIT="$(cd "$(dirname "$0")" && pwd)"
 REPO="$(cd "$KIT/.." && git rev-parse --show-toplevel)"
 SEED=demo/swarm-live-before
 GH_REPO=COG-GTM/Securities-Trade-Processing-System
-# PRs a reseed must never close, whatever their base: #1-#42 (estate, fallback and other demo evidence) and #48-#53 (demo_fleetwide).
+# PRs a reseed must never close, whatever their base: #1-#42 (estate, fallback and other demo evidence), #48-#53 (demo_fleetwide) and #61 (example PR).
 PROTECTED_MAX_PR=42
-PROTECTED_EXTRA_PRS="48 49 50 51 52 53"
+PROTECTED_EXTRA_PRS="48 49 50 51 52 53 61"
 LIVE_BRANCH_RE='^demo/swarm-live-[0-9]+-[a-z]+-[0-9]+$'
 # Always-open example fix PR the presenter can click before the live PRs exist. Its base is not $SEED, so the reseed never closes it.
 EXAMPLE_HEAD=demo/swarm-example-race-1
