@@ -8,7 +8,7 @@
 1. [BEFORE branch](https://github.com/COG-GTM/Securities-Trade-Processing-System/tree/demo/swarm-live-before)
 2. [The 5 attackers](https://github.com/COG-GTM/Securities-Trade-Processing-System/tree/demo/swarm-live-before/swarm/personas)
 3. [Live session](CHILD_SESSION_URL): the setup session starts it automatically and posts the link here.
-4. [Fix PRs](https://github.com/COG-GTM/Securities-Trade-Processing-System/pulls?q=is%3Apr+is%3Aopen+base%3Ademo%2Fswarm-live-before)
+4. [Fix PRs](https://github.com/COG-GTM/Securities-Trade-Processing-System/pulls?q=is%3Apr+is%3Aopen+base%3Ademo%2Fswarm-live-before) Until they open (about minute 18), click this finished one from the prep run: [duplicate settlement fix, test + fix](https://github.com/COG-GTM/Securities-Trade-Processing-System/pull/54/files).
 
 ## Beats
 1. **0:00 The ask (tab 1).** "This is a broker-dealer's trade service. The pen test is next quarter; we run five attackers today."
@@ -17,7 +17,7 @@
 4. **~10:00 The planted flaws.** [Settlement booked twice](https://github.com/COG-GTM/Securities-Trade-Processing-System/blob/demo/swarm-live-before/src/main/java/com/Himanshu/TradesPostProcessingSystem/service/SettlementService.java#L25-L38), [negative amendment](https://github.com/COG-GTM/Securities-Trade-Processing-System/blob/demo/swarm-live-before/src/main/java/com/Himanshu/TradesPostProcessingSystem/service/TradeAmendmentService.java#L27), [another desk's trade readable](https://github.com/COG-GTM/Securities-Trade-Processing-System/blob/demo/swarm-live-before/src/main/java/com/Himanshu/TradesPostProcessingSystem/service/TradeQueryService.java#L28-L35).
 5. **~14:00 Trust.** Devin re-runs every test itself, red then green, and drops anything it can't prove.
 6. **~15:00 Hard case.** A known vulnerability in Tomcat or Kafka gets an advisory for its owner, not a patch.
-7. **~18:00 The PRs (tab 4).** Open one PR and show the test, then the fix.
+7. **~18:00 The PRs (tab 4).** Open one PR and show the test, then the fix. Live PRs not open yet? Use [the prep-run PR](https://github.com/COG-GTM/Securities-Trade-Processing-System/pull/54/files).
 - **Close.** "Five attackers in 20 minutes, every finding proven, one reviewable PR each."
 
 ## Prompt (already sent to the live session, word for word)
