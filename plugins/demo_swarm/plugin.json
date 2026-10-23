@@ -1,0 +1,8 @@
+{
+  "name": "demo_swarm",
+  "version": "1.0.0",
+  "description": "FS Golden Demo Bank: live adversarial security swarm against the STPS trade APIs. Seeds the BEFORE branch, gives the exact live prompt, and runs the five-persona swarm with red-then-green proof per finding.",
+  "author": { "name": "Cognition GTM" },
+  "repository": "https://github.com/COG-GTM/Securities-Trade-Processing-System",
+  "keywords": ["demo", "financial-services", "security", "swarm", "stps"]
+}
