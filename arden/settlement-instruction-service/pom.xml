@@ -23,6 +23,14 @@
 
   <dependencyManagement>
     <dependencies>
+      <!-- SNYK-JAVA-ORGYAML-3152153 / CVE-2022-1471: core-dates 1.4.1 is the ADR 0007 security patch (embedded
+           snakeyaml 2.2, no wire-format change). Not 1.5.0: it emits ISO-8601 in FIX tag 64/75 and breaks
+           CustodyGatewayContractTest. Drop this override once common-java-bom manages core-dates >= 1.4.1. -->
+      <dependency>
+        <groupId>com.ardencm.posttrade</groupId>
+        <artifactId>core-dates</artifactId>
+        <version>1.4.1</version>
+      </dependency>
       <dependency>
         <groupId>com.ardencm.platform</groupId>
         <artifactId>common-java-bom</artifactId>
