@@ -11,7 +11,7 @@ public class TradeController {
     @Autowired
     private TradeService tradeService;
 
-    @GetMapping("/sendTrade")
+    @PostMapping("/sendTrade")
     public String sendTrade(
         @RequestHeader(value = "X-Account-Id", defaultValue = "HOUSE") String accountId,
         @RequestParam(value = "symbol") String symbol,
