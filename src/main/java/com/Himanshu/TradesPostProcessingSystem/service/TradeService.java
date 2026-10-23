@@ -5,10 +5,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
+import java.util.regex.Pattern;
+
 @Service
 public class TradeService {
 
     private static final String TOPIC = "trades";
+    private static final Pattern SAFE_ID = Pattern.compile("[A-Za-z0-9._-]{1,32}");
 
     @Autowired
     private KafkaTemplate<String, Trade> kafkaTemplate;
@@ -19,6 +22,9 @@ public class TradeService {
         }
         if (symbol == null || symbol.trim().isEmpty()) {
             return "❌ Error: Stock symbol cannot be empty!";
+        }
+        if (!SAFE_ID.matcher(accountId).matches() || !SAFE_ID.matcher(symbol).matches()) {
+            return "❌ Error: Account and symbol may contain only letters, digits, '.', '_' or '-'!";
         }
         if (quantity <= 0) {
             return "❌ Error: Quantity must be greater than zero!";
