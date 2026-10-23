@@ -27,7 +27,7 @@ public class TradeQueryService {
 
     public TradeEntity getTrade(String accountId, String tradeId) {
         log.info("Trade lookup {} by account {}", tradeId, accountId);
-        TradeEntity trade = tradeRepository.findByTradeId(tradeId);
+        TradeEntity trade = tradeRepository.findByTradeIdAndAccountId(tradeId, accountId);
         if (trade == null) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Trade not found");
         }
