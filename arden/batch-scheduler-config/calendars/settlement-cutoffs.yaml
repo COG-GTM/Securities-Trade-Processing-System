@@ -1,0 +1,7 @@
+# Operational cut-offs by market. All times local to the market.
+cutoffs:
+  XLON: { affirmation: "12:00 T+1", csd_matching: "12:00 T+1", cycle: T+2 }
+  XPAR: { affirmation: "12:00 T+1", csd_matching: "12:00 T+1", cycle: T+2 }
+  XETR: { affirmation: "12:00 T+1", csd_matching: "12:00 T+1", cycle: T+2 }
+  XSWX: { affirmation: "12:00 T+1", csd_matching: "12:00 T+1", cycle: T+2 }
+  XNYS: { affirmation: "21:00 T",   csd_matching: "21:00 T",   cycle: T+1 }

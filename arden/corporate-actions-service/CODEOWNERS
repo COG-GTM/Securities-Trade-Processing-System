@@ -1,0 +1,3 @@
+*                 @ardencm/asset-servicing
+/ci/              @ardencm/platform-eng @ardencm/asset-servicing
+/src/main/resources/application.yml   @ardencm/asset-servicing @ardencm/market-ops

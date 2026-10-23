@@ -1,0 +1,3 @@
+*                 @ardencm/sec-lending
+/ci/              @ardencm/platform-eng @ardencm/sec-lending
+/src/main/resources/application.yml   @ardencm/sec-lending @ardencm/market-ops

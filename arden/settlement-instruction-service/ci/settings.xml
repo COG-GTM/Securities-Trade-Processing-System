@@ -1,0 +1,17 @@
+<settings xmlns="http://maven.apache.org/SETTINGS/1.2.0">
+  <!-- CI only. Token is injected by the shared workflow from the repo secret. -->
+  <servers>
+    <server>
+      <id>ardencm-artifactory</id>
+      <username>ci-settlement-instruction-service</username>
+      <password>${env.ARTIFACTORY_TOKEN}</password>
+    </server>
+  </servers>
+  <mirrors>
+    <mirror>
+      <id>ardencm-artifactory</id>
+      <mirrorOf>*</mirrorOf>
+      <url>https://artifactory.ardencm.internal/artifactory/maven-remote</url>
+    </mirror>
+  </mirrors>
+</settings>

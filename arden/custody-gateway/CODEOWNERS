@@ -1,0 +1,3 @@
+*                 @ardencm/custody-integration
+/ci/              @ardencm/platform-eng @ardencm/custody-integration
+/src/main/resources/application.yml   @ardencm/custody-integration @ardencm/market-ops

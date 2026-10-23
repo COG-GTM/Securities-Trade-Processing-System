@@ -1,0 +1,9 @@
+server:
+  port: 8082
+spring:
+  application:
+    name: confirmation-service
+confirms:
+  narrative: "This trade will settle on a T+2 basis. Expected settlement date: {settlement}. Please affirm by 12:00 local time on T+1."
+  pdf:
+    footer: "Regular-way settlement is two business days after trade date unless otherwise stated."

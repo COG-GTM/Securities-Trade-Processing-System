@@ -1,0 +1,36 @@
+/* ---------------- EOD_PRICING ---------------- */
+insert_job: EOD_PRICING            job_type: CMD
+command: /opt/arden/eod-pricing-batch/run.sh
+machine: batch-ldn-01
+owner: svc_marketdata
+start_times: "18:30"
+days_of_week: mo,tu,we,th,fr
+description: "ArdenFeed EOD snapshot"
+
+/* ---------------- SETTLE_INSTR_GEN ---------------- */
+insert_job: SETTLE_INSTR_GEN       job_type: CMD
+command: /opt/arden/settlement-instruction-service/bin/generate-instructions.sh
+machine: batch-ldn-01
+owner: svc_settlements
+start_times: "06:00"
+days_of_week: mo,tu,we,th,fr
+condition: s(EOD_PRICING)
+description: "Generate settlement instructions for trades dated T-1; instructions must reach CSD before T+1 12:00 CET match cut-off for T+2 settlement"
+
+/* ---------------- AFFIRMATION_CHASER ---------------- */
+insert_job: AFFIRMATION_CHASER     job_type: CMD
+command: /opt/arden/confirmation-service/bin/chase-unaffirmed.sh
+machine: batch-ldn-02
+owner: svc_confirms
+start_times: "09:00"
+days_of_week: mo,tu,we,th,fr
+description: "Chase clients for unaffirmed trades; deadline is 12:00 on T+1 (T+2 cycle)"
+
+/* ---------------- RECALL_SWEEP ---------------- */
+insert_job: RECALL_SWEEP           job_type: CMD
+command: /opt/arden/stock-loan-recall-service/bin/sweep.sh
+machine: batch-ldn-02
+owner: svc_seclending
+start_times: "15:30"
+days_of_week: mo,tu,we,th,fr
+description: "Issue recalls for sales dated today so shares return before S (T+2)"

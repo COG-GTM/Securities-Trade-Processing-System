@@ -1,0 +1,82 @@
+# Market holiday calendars (settlement / CSD closures). Maintained by market-ops.
+# Source of truth: CSD closure notices. Review annually in Q4. Weekends are implicit.
+#
+# NOTE for the T+1 programme: TARGET2 closures and national market closures diverge
+# (e.g. Boxing Day is XLON-closed but TARGET2-open; Whit Monday is TARGET2-closed
+# but XLON-open). Under T+2 these mismatches were absorbed by the extra day; under
+# T+1 they surface directly as settlement-date disagreements between trading venue
+# and cash leg. See docs/t1-calendar-mismatch.md.
+calendars:
+  XLON:   # London Stock Exchange / CREST
+    - "2027-01-01"
+    - "2027-03-26"
+    - "2027-03-29"
+    - "2027-05-03"
+    - "2027-05-31"
+    - "2027-08-30"
+    - "2027-12-27"
+    - "2027-12-28"
+  XPAR:   # Euronext Paris / Euroclear France
+    - "2027-01-01"
+    - "2027-03-26"
+    - "2027-03-29"
+    - "2027-12-24"
+    - "2027-12-27"
+    - "2027-12-31"
+  XETR:   # Xetra / Clearstream
+    - "2027-01-01"
+    - "2027-03-26"
+    - "2027-03-29"
+    - "2027-05-17"
+    - "2027-12-24"
+    - "2027-12-31"
+  XSWX:   # SIX Swiss Exchange / SIX SIS
+    - "2027-01-01"
+    - "2027-01-02"
+    - "2027-03-26"
+    - "2027-03-29"
+    - "2027-05-06"
+    - "2027-05-17"
+    - "2027-08-01"
+    - "2027-12-24"
+    - "2027-12-31"
+  TARGET2: # Eurosystem payment system closures (cash leg)
+    - "2027-01-01"
+    - "2027-03-26"
+    - "2027-03-29"
+    - "2027-05-01"
+    - "2027-12-25"
+    - "2027-12-26"
+  XNYS:   # NYSE / DTC
+    - "2027-01-01"
+    - "2027-01-18"
+    - "2027-02-15"
+    - "2027-03-26"
+    - "2027-05-31"
+    - "2027-06-18"
+    - "2027-07-05"
+    - "2027-09-06"
+    - "2027-11-25"
+    - "2027-12-24"
+  XNAS:
+    - "2027-01-01"
+    - "2027-01-18"
+    - "2027-02-15"
+    - "2027-03-26"
+    - "2027-05-31"
+    - "2027-06-18"
+    - "2027-07-05"
+    - "2027-09-06"
+    - "2027-11-25"
+    - "2027-12-24"
+  XTSE:
+    - "2027-01-01"
+    - "2027-02-15"
+    - "2027-03-26"
+    - "2027-05-24"
+    - "2027-07-01"
+    - "2027-08-02"
+    - "2027-09-06"
+    - "2027-10-11"
+    - "2027-12-27"
+    - "2027-12-28"

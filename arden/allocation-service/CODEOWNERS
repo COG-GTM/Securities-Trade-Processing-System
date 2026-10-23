@@ -1,0 +1,3 @@
+*                 @ardencm/post-trade-allocations
+/ci/              @ardencm/platform-eng @ardencm/post-trade-allocations
+/src/main/resources/application.yml   @ardencm/post-trade-allocations @ardencm/market-ops

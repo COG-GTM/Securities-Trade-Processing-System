@@ -1,0 +1,8 @@
+name: ci
+on: [push, pull_request]
+jobs:
+  build:
+    runs-on: [self-hosted, rhel7]
+    steps:
+      - uses: actions/checkout@v4
+      - run: ant jar

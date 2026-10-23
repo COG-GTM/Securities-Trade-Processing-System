@@ -1,0 +1,8 @@
+server:
+  port: 8086
+spring:
+  application:
+    name: stock-loan-recall-service
+recall:
+  # Recalls issued after 15:00 London count from the next business day.
+  cutoff: "15:00 Europe/London"

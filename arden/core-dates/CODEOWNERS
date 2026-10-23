@@ -1,0 +1,3 @@
+# core-dates is the post-trade "source of truth" for business-day arithmetic.
+*                         @ardencm/post-trade-core
+src/main/resources/       @ardencm/post-trade-core @ardencm/market-ops
