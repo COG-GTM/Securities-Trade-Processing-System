@@ -44,4 +44,16 @@ Devin session on STPS in another.
 - Fallback evidence from earlier swarm runs: PRs #15 to #36. Say "this is a recording of an earlier run".
 
 ## Measured
-Filled in from the pre-run of the PROMPTS.md prompt in a fresh session.
+Pre-run on 2026-10-23 of the exact PROMPTS.md prompt, in a fresh Devin session on seed `fa84abb2`:
+- Wall time: 19m40s from prompt to Devin's final report. The five children were running about 1.5 minutes in, and all ten child branches were pushed by about 10 minutes.
+- Five personas reported 10 findings. Devin re-verified all 10 red then green and merged RACE-2 into LOGIC-2 (same root cause). Nothing was dropped as unproven.
+- Seven fix PRs, each with a failing test that turns green. All seven merged together pass 21/21:
+  1. High. A settled trade can be settled again, so cash moves twice (LOGIC-2, #44).
+  2. High. A replayed settlement instruction ID books a second settlement (RACE-1, #45). Planted.
+  3. High. An amendment accepts a negative quantity or an infinite price (LOGIC-1, #43). Planted.
+  4. High. Any desk can read another desk's trade by ID (AUTHZ-1, #46). Planted.
+  5. High. Trades can be booked with a plain GET with no caller identity, and they default to HOUSE (AUTHZ-2, #47).
+  6. High. The symbol echoed by sendTrade is served as text/html (INJECT-1, #49).
+  7. Medium. CR/LF in a trade ID forges audit log lines (INJECT-2, #50).
+- Two Tomcat 10.1.34 advisories with no patch: CVE-2025-48988 (multipart part count) and CVE-2025-24813 (partial PUT). The second is not reachable as shipped.
+- Expect the count to vary between runs. All three planted flaws were found. The other four are real gaps in the upstream code, not planted ones.

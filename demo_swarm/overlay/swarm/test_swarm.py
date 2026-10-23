@@ -46,5 +46,15 @@ class ParseReportsTest(unittest.TestCase):
         self.assertEqual(rows[0]["reported_by"], ["LOGIC", "RACE"])
 
 
+class ConflictMarkerTest(unittest.TestCase):
+    def test_code_mentioning_conflict_is_not_a_merge_conflict(self):
+        clean = "changed in both\n  our    100644 a\n@@ -1 +1 @@\n+throw new ResponseStatusException(HttpStatus.CONFLICT);\n"
+        self.assertIsNone(swarm.CONFLICT_MARKER.search(clean))
+
+    def test_merge_markers_are_a_conflict(self):
+        dirty = "changed in both\n@@ -1,3 +1,7 @@\n+<<<<<<< .our\n+a\n+=======\n+b\n+>>>>>>> .their\n"
+        self.assertIsNotNone(swarm.CONFLICT_MARKER.search(dirty))
+
+
 if __name__ == "__main__":
     unittest.main()

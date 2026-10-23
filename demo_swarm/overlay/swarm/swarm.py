@@ -19,6 +19,8 @@ ROOT = HERE.parent
 OUT = HERE / "out"
 REPORTS = ROOT / "target/surefire-reports"
 JDK21 = "/usr/lib/jvm/java-21-openjdk-amd64"
+CONFLICT_MARKER = re.compile(r"^[+ ]?<{7} ", re.M)
+PERSONA_RANK = {"LOGIC": 0, "RACE": 1, "AUTHZ": 2, "INJECT": 3, "SUPPLY": 4}
 SEV_RANK = {"critical": 0, "high": 1, "medium": 2, "low": 3}
 G, R, Y, B, X = "\033[32m", "\033[31m", "\033[33m", "\033[1m", "\033[0m"
 
@@ -164,7 +166,7 @@ def cmd_conflicts(a):
     for i, x in enumerate(branches):
         for y in branches[i + 1:]:
             merged = git("merge-tree", f"origin/{base}", x, y, check=False)
-            if "<<<<<<<" in merged or "CONFLICT" in merged:
+            if CONFLICT_MARKER.search(merged):
                 bad.append((x, y))
                 print(f"  {R}CONFLICT{X} {x} <> {y}")
             else:
@@ -239,7 +241,8 @@ def dedupe(raw):
         lead["duplicates"] = [f["id"] for f in fs[1:]]
         lead["reported_by"] = sorted({f["persona"] for f in fs})
         rows.append(lead)
-    rows.sort(key=lambda r: (0 if r.get("disposition") == "fix" else 1, SEV_RANK[r["severity"]], r["id"]))
+    rows.sort(key=lambda r: (0 if r.get("disposition") == "fix" else 1, SEV_RANK[r["severity"]],
+                             PERSONA_RANK.get(r["persona"], 9), r["id"]))
     for i, r in enumerate(rows, 1):
         r["swarm_id"] = f"SW-{i}"
     return rows
