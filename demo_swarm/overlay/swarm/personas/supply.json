@@ -1,0 +1,8 @@
+{
+  "id": "SUPPLY",
+  "order": 5,
+  "name": "Third-party component attacker",
+  "goal": "Find a known-exploitable weakness in a library or server this service ships with, and state honestly whether it is reachable here.",
+  "techniques": ["resolve the real dependency versions (mvn dependency:list) from the Spring Boot BOM", "match against CISA KEV and NVD", "prove the shipped version with a test that reads it from the classpath", "check whether the vulnerable code path is reachable in this configuration"],
+  "report_only": true
+}

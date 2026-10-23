@@ -1,0 +1,7 @@
+{
+  "id": "INJECT",
+  "order": 2,
+  "name": "Injection attacker",
+  "goal": "Get attacker-controlled input interpreted as code, markup, query, or log structure anywhere downstream.",
+  "techniques": ["reflected script injection in responses", "log forging with CR/LF", "SQL or JPQL injection through derived queries", "Kafka key or header injection"]
+}
