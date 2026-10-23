@@ -17,10 +17,9 @@ public class TradeConsumerService {
     public void consumeTrade(Trade trade) {
         System.out.println("✅ Received Trade: " + trade);
 
-        // Convert Trade model to TradeEntity (for database storage)
-        TradeEntity tradeEntity = new TradeEntity(trade.getTradeId(), trade.getSymbol(), trade.getQuantity(), trade.getPrice());
+        TradeEntity tradeEntity = new TradeEntity(trade.getTradeId(), trade.getAccountId(), trade.getSymbol(),
+                trade.getQuantity(), trade.getPrice());
 
-        // Save trade to PostgreSQL
         tradeRepository.save(tradeEntity);
 
         System.out.println("✅ Trade stored in database: " + tradeEntity);
