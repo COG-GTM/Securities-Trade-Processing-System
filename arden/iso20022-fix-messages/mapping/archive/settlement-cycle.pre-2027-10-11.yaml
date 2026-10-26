@@ -1,0 +1,12 @@
+# Canonical settlement cycle mapping used when we generate outbound messages.
+# FIX tag 63 (SettlType): 0=Regular, 1=Cash(T+0), 2=NextDay(T+1), 3=T+2, 4=T+3
+default_cycle: T+2
+default_fix_settl_type: "3"
+markets:
+  XNYS: { cycle: T+1, fix_settl_type: "2" }
+  XNAS: { cycle: T+1, fix_settl_type: "2" }
+  XTSE: { cycle: T+1, fix_settl_type: "2" }
+  XLON: { cycle: T+2, fix_settl_type: "3" }
+  XPAR: { cycle: T+2, fix_settl_type: "3" }
+  XETR: { cycle: T+2, fix_settl_type: "3" }
+  XSWX: { cycle: T+2, fix_settl_type: "3" }
