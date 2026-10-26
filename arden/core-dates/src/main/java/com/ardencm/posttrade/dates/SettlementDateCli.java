@@ -12,7 +12,7 @@ import java.time.LocalDate;
  * </pre>
  *
  * Input CSV: {@code trade_id,trade_date,mic}. Output CSV: {@code trade_id,settlement_date,tag64,tag63,affirmation_deadline}.
- * Without {@code --cycle} the market default from {@link SettlementCycle#forMarket(String)} is used.
+ * Without {@code --cycle} the market default for the trade date from {@link SettlementCycle#forMarket(String, LocalDate)} is used.
  */
 public final class SettlementDateCli {
 
@@ -40,7 +40,7 @@ public final class SettlementDateCli {
             String tradeId = cols[0].trim();
             LocalDate tradeDate = LocalDate.parse(cols[1].trim());
             String mic = cols[2].trim();
-            SettlementCycle cycle = override != null ? override : SettlementCycle.forMarket(mic);
+            SettlementCycle cycle = override != null ? override : SettlementCycle.forMarket(mic, tradeDate);
             LocalDate sd = SettlementDates.settlementDate(tradeDate, mic, cycle);
             System.out.println(String.join(",",
                     tradeId,

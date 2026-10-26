@@ -13,7 +13,7 @@ Calendars live in `src/main/resources/holidays.yaml` (owned jointly with market-
 
 ```bash
 mvn -q package
-java -jar target/core-dates-1.4.0-cli.jar [--cycle T_PLUS_1] < trades.csv
+java -jar target/core-dates-1.4.2-cli.jar [--cycle T_PLUS_1] < trades.csv
 ```
 
 ## Releases
