@@ -34,3 +34,9 @@ Run an adversarial test swarm against the STPS trade APIs on this branch. Launch
 - [ ] One PR per finding (7 in past runs; don't promise a number).
 
 **Fallback:** "Here's the run we did while preparing the demo." [Session](https://devin-gtm.devinenterprise.com/sessions/bf9e8dcaa335442981b213a7cea60e93), PRs [#54](https://github.com/COG-GTM/Securities-Trade-Processing-System/pull/54) to [#60](https://github.com/COG-GTM/Securities-Trade-Processing-System/pull/60).
+
+## Why this demo
+- **The problem:** banks pen-test trading systems once or twice a year. New code ships in between, and scanners hand engineers long lists of "possible" issues to triage.
+- **What Devin shows:** one prompt sends five attackers at a real trade service. A finding counts only if a test fails on it, so there's nothing to triage. Every fix is a small PR whose test goes from red to green.
+- **The judgment moment:** third-party bugs (Tomcat, Kafka) go to their owners as advisories. Devin knows what not to touch.
+- **Takeaway:** "A pen test every day instead of once a year: every finding proven, every fix reviewable, and your engineers decide what merges."
