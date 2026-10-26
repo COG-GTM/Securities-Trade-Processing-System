@@ -23,6 +23,12 @@
 
   <dependencyManagement>
     <dependencies>
+      <!-- SNYK-JAVA-ORGYAML-3152153 / CVE-2022-1471: core-dates embeds snakeyaml; override the BOM's 1.4.0 with the 1.4.x security patch (ADR 0007). Not 1.5.0: it changes FIX tag 64/75 to ISO-8601. -->
+      <dependency>
+        <groupId>com.ardencm.posttrade</groupId>
+        <artifactId>core-dates</artifactId>
+        <version>1.4.1</version>
+      </dependency>
       <dependency>
         <groupId>com.ardencm.platform</groupId>
         <artifactId>common-java-bom</artifactId>
