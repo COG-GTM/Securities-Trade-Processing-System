@@ -40,7 +40,7 @@ public final class SettlementDateCli {
             String tradeId = cols[0].trim();
             LocalDate tradeDate = LocalDate.parse(cols[1].trim());
             String mic = cols[2].trim();
-            SettlementCycle cycle = override != null ? override : SettlementCycle.forMarket(mic);
+            SettlementCycle cycle = override != null ? override : SettlementCycle.forMarket(mic, tradeDate);
             LocalDate sd = SettlementDates.settlementDate(tradeDate, mic, cycle);
             System.out.println(String.join(",",
                     tradeId,
