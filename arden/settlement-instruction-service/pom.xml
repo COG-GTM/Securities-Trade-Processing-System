@@ -19,6 +19,8 @@
 
   <properties>
     <java.version>17</java.version>
+    <!-- SETTLE-4471: trade-date-gated T+1 from the 1.4 line; BOM (2026.3.0) still pins 1.4.0 -->
+    <core-dates.version>1.4.2</core-dates.version>
   </properties>
 
   <dependencyManagement>
@@ -41,6 +43,7 @@
     <dependency>
       <groupId>com.ardencm.posttrade</groupId>
       <artifactId>core-dates</artifactId>
+      <version>${core-dates.version}</version>
     </dependency>
     <dependency>
       <groupId>org.springframework.boot</groupId>
