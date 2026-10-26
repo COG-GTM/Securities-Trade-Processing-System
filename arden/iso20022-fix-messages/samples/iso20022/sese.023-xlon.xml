@@ -5,7 +5,7 @@
     <SttlmTpAndAddtlParams><SctiesMvmntTp>DELI</SctiesMvmntTp><Pmt>APMT</Pmt></SttlmTpAndAddtlParams>
     <TradDtls>
       <TradDt><Dt><Dt>2027-10-11</Dt></Dt></TradDt>
-      <SttlmDt><Dt><Dt>2027-10-13</Dt></Dt></SttlmDt>
+      <SttlmDt><Dt><Dt>2027-10-12</Dt></Dt></SttlmDt>
     </TradDtls>
     <FinInstrmId><ISIN>GB0002634946</ISIN></FinInstrmId>
   </SctiesSttlmTxInstr>
