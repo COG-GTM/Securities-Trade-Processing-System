@@ -8,16 +8,46 @@ import org.junit.jupiter.api.Test;
 class SettlementDatesTest {
 
     @Test
-    void londonTradeSettlesTwoBusinessDaysLater() {
+    void londonTradeBeforeGoLiveSettlesTwoBusinessDaysLater() {
+        // Friday 8 Oct 2027 -> Tuesday 12 Oct under T+2
+        LocalDate sd = SettlementDates.settlementDate(LocalDate.of(2027, 10, 8), "XLON");
+        assertEquals(LocalDate.of(2027, 10, 12), sd);
+    }
+
+    @Test
+    void londonTradeOnGoLiveSettlesNextBusinessDay() {
         LocalDate sd = SettlementDates.settlementDate(LocalDate.of(2027, 10, 11), "XLON");
-        assertEquals(LocalDate.of(2027, 10, 13), sd);
+        assertEquals(LocalDate.of(2027, 10, 12), sd);
     }
 
     @Test
     void weekendIsSkipped() {
-        // Thursday trade -> Monday settlement under T+2
-        LocalDate sd = SettlementDates.settlementDate(LocalDate.of(2027, 10, 14), "XLON");
+        // Friday trade -> Monday settlement under T+1
+        LocalDate sd = SettlementDates.settlementDate(LocalDate.of(2027, 10, 15), "XLON");
         assertEquals(LocalDate.of(2027, 10, 18), sd);
+    }
+
+    @Test
+    void euUkChCycleIsGatedOnTradeDate() {
+        for (String mic : new String[] {"XLON", "XPAR", "XETR", "XSWX"}) {
+            assertEquals(SettlementCycle.T_PLUS_2, SettlementCycle.forMarket(mic, LocalDate.of(2027, 10, 10)), mic);
+            assertEquals(SettlementCycle.T_PLUS_1, SettlementCycle.forMarket(mic, LocalDate.of(2027, 10, 11)), mic);
+        }
+    }
+
+    @Test
+    @SuppressWarnings("deprecation")
+    void legacyEntryPointsKeepPreGoLiveCycle() {
+        assertEquals(SettlementCycle.T_PLUS_2, SettlementCycle.standard());
+        assertEquals(SettlementCycle.T_PLUS_2, SettlementCycle.forMarket("XLON"));
+        assertEquals(SettlementCycle.T_PLUS_1, SettlementCycle.forMarket("XNYS"));
+    }
+
+    @Test
+    void marketsOutsideScopeAreUnchanged() {
+        assertEquals(SettlementCycle.T_PLUS_1, SettlementCycle.forMarket("XNYS", LocalDate.of(2027, 9, 1)));
+        assertEquals(SettlementCycle.T_PLUS_1, SettlementCycle.forMarket("XTSE", LocalDate.of(2027, 11, 1)));
+        assertEquals(SettlementCycle.T_PLUS_2, SettlementCycle.forMarket("XTKS", LocalDate.of(2027, 11, 1)));
     }
 
     @Test
@@ -39,7 +69,8 @@ class SettlementDatesTest {
     }
 
     @Test
-    void fixTag63ForStandardCycleIsTPlusTwo() {
-        assertEquals("3", FixDates.tag63(SettlementCycle.standard()));
+    void fixTag63FollowsTheCycle() {
+        assertEquals("3", FixDates.tag63(SettlementCycle.standard(LocalDate.of(2027, 10, 8))));
+        assertEquals("2", FixDates.tag63(SettlementCycle.standard(LocalDate.of(2027, 10, 11))));
     }
 }
